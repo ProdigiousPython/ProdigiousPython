@@ -1,0 +1,40 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: 1. Introduction to Python 🐍
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_1/1_Getting_Started_With_Python_Language
+    - file: pythonworkshop/Chapter_1/2_Creating_Variables_and_Assigning_Values
+    - file: pythonworkshop/Chapter_1/3_Keywords_and_Variable_naming
+    - file: pythonworkshop/Chapter_1/4_Datatypes
+    - file: pythonworkshop/Chapter_1/5_Collection_Types
+    - file: pythonworkshop/Chapter_1/6_IDEs_for_Python
+    - file: pythonworkshop/Chapter_1/7_User_Input
+    - file: pythonworkshop/Chapter_1/8_Builtins
+    - file: pythonworkshop/Chapter_1/9_Modules
+    - file: pythonworkshop/Chapter_1/10_String_representations_of_objects
+    - file: pythonworkshop/Chapter_1/11_Installing_Packages
+    - file: pythonworkshop/Chapter_1/12_Help_Utility
+  - caption: 2. Indendation
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_2/1_Indendation
+  - caption: 3. Comments and Docstrings
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_3/1_Comments_and_docstrings
+  - caption: 4. Functions
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_4/1_Functions
+    - file: pythonworkshop/Chapter_4/2_Positional_Arguments
+    - file: pythonworkshop/Chapter_4/3_Unnamed_Positional_Arguments
+    - file: pythonworkshop/Chapter_4/4_Keyword_only_arguments
+    - file: pythonworkshop/Chapter_4/5_Keyword_arguments
+    - file: pythonworkshop/Chapter_4/6_Default_Arguments
+    - file: pythonworkshop/Chapter_4/7_TLDR_about_Functions_arguments
+    - file: pythonworkshop/Chapter_4/8_Lambda_functions
