@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Python Workshop 🐍</title>
+    <title>Python Workshop &#8212; Python Workshop 🐍</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -83,7 +83,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to Python Workshop. 🐍
+   Python Workshop
   </a>
  </li>
 </ul>
@@ -265,9 +265,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.rst"><button type="button"
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -310,7 +310,22 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Python Workshop
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-setup">
+   Development setup
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#made-with">
+   Made with ❤️
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -322,7 +337,48 @@
         
               <div>
                 
-  
+  <div class="section" id="python-workshop">
+<h1>Python Workshop<a class="headerlink" href="#python-workshop" title="Permalink to this headline">¶</a></h1>
+<p>🚀 <a class="reference external" href="https://prodigiouspython.github.io/PythonWorkshop/">Homepage</a></p>
+<p>📖 <a class="reference external" href="https://drive.google.com/file/d/1DF1IhLzjnLSzSlNO3PE1hcuv_Cgx6bAS/view?usp=sharing">PDF</a></p>
+<p>Welcome to Python Workshop 🐍</p>
+<p>Idea of Python Workshop is to be different from the traditional books.</p>
+<p>We wanted Python Workshop to be:</p>
+<ul class="simple">
+<li><p>Fun 🎉</p></li>
+<li><p>Executable 🤖</p></li>
+<li><p>Publishable via static web pages and PDF ⚙️</p></li>
+</ul>
+</div>
+<div class="section" id="development-setup">
+<h1>Development setup<a class="headerlink" href="#development-setup" title="Permalink to this headline">¶</a></h1>
+<p>First things first, We need to clone our repo</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ProdigiousPython/PythonWorkshop.git
+</pre></div>
+</div>
+<p>We use <a class="reference external" href="https://python-poetry.org/">Poetry</a> for the dependency mangement.</p>
+<p>Let’s install the packages required using the below command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry install
+</pre></div>
+</div>
+<p>To run the jupyter-lab:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jupyter-lab
+</pre></div>
+</div>
+<p>To convert the notebooks to html</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build .
+</pre></div>
+</div>
+<p>To convert the notebooks to pdf</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build --builder<span class="o">=</span>pdfhtml .
+</pre></div>
+</div>
+<p>The generated files would be present in <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder.</p>
+</div>
+<div class="section" id="made-with">
+<h1>Made with ❤️<a class="headerlink" href="#made-with" title="Permalink to this headline">¶</a></h1>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,

@@ -2,6 +2,8 @@
 
 🚀 [Homepage](https://prodigiouspython.github.io/PythonWorkshop/)
 
+📖 [PDF](https://drive.google.com/file/d/1DF1IhLzjnLSzSlNO3PE1hcuv_Cgx6bAS/view?usp=sharing)
+
 Welcome to Python Workshop 🐍
 
 Idea of Python Workshop is to be different from the traditional books. 
