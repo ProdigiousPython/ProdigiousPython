@@ -4,7 +4,7 @@
 
 Welcome to Python Workshop 🐍
 
-Idea of Python workshop is too be different from the traditional books. 
+Idea of Python Workshop is to be different from the traditional books. 
 
 We wanted Python Workshop to be:
 
