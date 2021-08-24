@@ -50,4 +50,4 @@ poetry run jb build --builder=pdfhtml .
 The generated files would be present in `_build` folder.
 
 
-# Made with ❤️
+**Made with ❤️**
