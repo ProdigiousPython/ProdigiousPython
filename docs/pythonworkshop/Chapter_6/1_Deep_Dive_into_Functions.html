@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keywords &#8212; Python Workshop 🐍</title>
+    <title>Deep Dive into Functions &#8212; Python Workshop 🐍</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -225,6 +225,18 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  5. Mathematical Operators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/1_Mathematical_Operators.html">
+   23. Mathematical Operators
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -265,7 +277,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_5/1_Keywords.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_6/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -285,7 +297,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_5/1_Keywords.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_6/1_Deep_Dive_into_Functions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -306,7 +318,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_5/1_Keywords.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_6/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -323,6 +335,73 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Deep Dive into Functions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unpacking-returned-attributes">
+     Unpacking returned attributes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#map">
+     Map
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduce">
+     Reduce
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter">
+     Filter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial">
+   Partial
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#closure">
+     Closure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursive-functions">
+     Recursive Functions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recursion-limit">
+     Recursion Limit
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decorators">
+     Decorators
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generators">
+     Generators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -331,61 +410,38 @@
         
               <div>
                 
-  <div class="section" id="keywords">
-<h1>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">keyword</span>
-</pre></div>
+  <div class="section" id="deep-dive-into-functions">
+<h1>Deep Dive into Functions<a class="headerlink" href="#deep-dive-into-functions" title="Permalink to this headline">¶</a></h1>
+<p>In the earlier chapter, we have touched about functions, function arguments, types of function arguments 😊. Now, it’s time for a little deep dive into functions 🏊.</p>
+<div class="section" id="unpacking-returned-attributes">
+<h2>Unpacking returned attributes<a class="headerlink" href="#unpacking-returned-attributes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="map">
+<h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reduce">
+<h2>Reduce<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="filter">
+<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
+<div class="section" id="partial">
+<h1>Partial<a class="headerlink" href="#partial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="closure">
+<h2>Closure<a class="headerlink" href="#closure" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="recursive-functions">
+<h2>Recursive Functions<a class="headerlink" href="#recursive-functions" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="recursion-limit">
+<h2>Recursion Limit<a class="headerlink" href="#recursion-limit" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-None
-True
-__peg_parser__
-and
-as
-assert
-async
-await
-break
-class
-continue
-def
-del
-elif
-else
-except
-finally
-for
-from
-global
-if
-import
-in
-is
-lambda
-nonlocal
-not
-or
-pass
-raise
-return
-try
-while
-with
-yield
-</pre></div>
+<div class="section" id="decorators">
+<h2>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
 </div>
-</div>
+<div class="section" id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -402,7 +458,7 @@ yield
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./pythonworkshop/Chapter_5"
+            path: "./pythonworkshop/Chapter_6"
         },
         predefinedOutput: true
     }
