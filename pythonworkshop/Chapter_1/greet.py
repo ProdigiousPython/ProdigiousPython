@@ -4,6 +4,7 @@ import getpass
 
 
 def hello():
+    """Greets the user."""
     username: str = getpass.getuser().capitalize()
     print(f"Hello {username}. Have a great day :)")
 
