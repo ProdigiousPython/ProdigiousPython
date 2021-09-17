@@ -42,3 +42,7 @@ parts:
     numbered: True
     chapters:
     - file: pythonworkshop/Chapter_5/1_Mathematical_Operators
+  - caption: 6. Boolean Operators
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_6/1_Boolean_Operators
