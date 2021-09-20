@@ -1387,7 +1387,7 @@ test = ["pytest", "pytest-cov", "html5lib", "cython", "typed-ast"]
 
 [[package]]
 name = "sphinx-book-theme"
-version = "0.1.3"
+version = "0.1.4"
 description = "Jupyter Book: Create an online book with Jupyter Notebooks"
 category = "main"
 optional = false
@@ -1395,17 +1395,17 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 beautifulsoup4 = ">=4.6.1,<5"
-click = "*"
-docutils = ">=0.15"
+click = ">=7.1,<8.0"
+docutils = ">=0.15,<0.17"
 pydata-sphinx-theme = ">=0.6.0,<0.7.0"
 pyyaml = "*"
-sphinx = ">=2,<4"
+sphinx = ">=3,<5"
 
 [package.extras]
 code_style = ["pre-commit (>=2.7.0,<2.8.0)"]
 live-dev = ["sphinx-autobuild", "web-compile (>=0.2.1,<0.3.0)"]
-sphinx = ["ablog (>=0.10.13,<0.11.0)", "ipywidgets", "folium", "numpy", "matplotlib", "myst-nb (>=0.11.1,<0.12.0)", "nbclient", "pandas", "plotly", "sphinx-design", "sphinx-copybutton", "sphinx-togglebutton (>=0.2.1)", "sphinx-thebe", "sphinxcontrib-bibtex (>=2.2,<3.0)", "sphinxext-opengraph"]
-testing = ["myst-nb (>=0.11.1,<0.12.0)", "sphinx-thebe", "coverage", "pytest (>=6.0.1,<6.1.0)", "pytest-cov", "pytest-regressions (>=2.0.1,<2.1.0)"]
+sphinx = ["ablog (>=0.10.13,<0.11.0)", "ipywidgets", "folium", "numpy", "matplotlib", "myst-nb (>=0.13,<1.0)", "nbclient", "pandas", "plotly", "sphinx (>=4.0,<5.0)", "sphinx-design", "sphinx-copybutton", "sphinx-togglebutton (>=0.2.1)", "sphinx-thebe", "sphinxcontrib-bibtex (>=2.2,<3.0)", "sphinxext-opengraph"]
+testing = ["coverage", "myst-nb (>=0.13,<1.0)", "pytest (>=6.0.1,<6.1.0)", "pytest-cov", "pytest-regressions (>=2.0.1,<2.1.0)", "sphinx-thebe"]
 
 [[package]]
 name = "sphinx-comments"
@@ -2552,8 +2552,8 @@ sphinx = [
     {file = "Sphinx-3.5.4.tar.gz", hash = "sha256:19010b7b9fa0dc7756a6e105b2aacd3a80f798af3c25c273be64d7beeb482cb1"},
 ]
 sphinx-book-theme = [
-    {file = "sphinx-book-theme-0.1.3.tar.gz", hash = "sha256:2fa4320264f4e365959f6a1370df7f76922781f0cc755a9e0974b1b17fa99888"},
-    {file = "sphinx_book_theme-0.1.3-py3-none-any.whl", hash = "sha256:ae530dcb78195723e335f1b9adeedfd46b3e1920fa5a566dd0ef1687ec546684"},
+    {file = "sphinx-book-theme-0.1.4.tar.gz", hash = "sha256:212b2a91ef3a01bb37d16d5978ace4f79db4537e965a9e99dfa6dadaced44cb6"},
+    {file = "sphinx_book_theme-0.1.4-py3-none-any.whl", hash = "sha256:a81d768fec8936caaacb072b27d9297384dd6ab474783426b8dd319f77091cad"},
 ]
 sphinx-comments = [
     {file = "sphinx-comments-0.0.3.tar.gz", hash = "sha256:00170afff27019fad08e421da1ae49c681831fb2759786f07c826e89ac94cf21"},
