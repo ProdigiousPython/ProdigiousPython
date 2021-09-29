@@ -522,7 +522,7 @@ testing = ["ipykernel", "coverage", "pytest (>=3.6,<4)", "pytest-cov", "pytest-r
 
 [[package]]
 name = "jupyter-client"
-version = "7.0.3"
+version = "7.0.4"
 description = "Jupyter protocol implementation and client libraries"
 category = "main"
 optional = false
@@ -1459,20 +1459,20 @@ testing = ["coverage", "pytest (>=3.6,<4)", "pytest-cov", "pytest-regressions"]
 
 [[package]]
 name = "sphinx-jupyterbook-latex"
-version = "0.4.2"
+version = "0.4.3"
 description = "Latex specific features for jupyter book"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-sphinx = ">=3,<4"
+sphinx = ">=3,<5"
 
 [package.extras]
 code_style = ["pre-commit (>=2.12,<3.0)"]
-myst = ["myst-nb (>=0.11,<0.13)"]
+myst = ["myst-nb (>=0.13,<0.14)"]
 rtd = ["myst-parser", "sphinx-book-theme"]
-testing = ["coverage (<5.0)", "jupyter-book (>=0.11.0a1,<0.12)", "pytest (>=3.6,<4)", "pytest-cov (>=2.8,<3.0)", "pytest-regressions", "sphinx-external-toc (>=0.1.0,<0.3.0)", "sphinxcontrib-bibtex (>=2.2.1,<2.3.0)", "texsoup"]
+testing = ["coverage (<5.0)", "myst-nb (>=0.13,<0.14)", "pytest (>=3.6,<4)", "pytest-cov (>=2.8,<3.0)", "pytest-regressions", "sphinx-external-toc (>=0.1.0,<0.3.0)", "sphinxcontrib-bibtex (>=2.2.1,<2.3.0)", "texsoup"]
 
 [[package]]
 name = "sphinx-multitoc-numbering"
@@ -1822,7 +1822,7 @@ notebook = ">=4.4.1"
 
 [[package]]
 name = "zipp"
-version = "3.5.0"
+version = "3.5.1"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 category = "main"
 optional = false
@@ -2114,8 +2114,8 @@ jupyter-cache = [
     {file = "jupyter_cache-0.4.3-py3-none-any.whl", hash = "sha256:6d5d662d81f565d18009e8dcfd3a56fb876af47eafead2a19ef0045aba8ffe3b"},
 ]
 jupyter-client = [
-    {file = "jupyter_client-7.0.3-py3-none-any.whl", hash = "sha256:b07ceecb8f845f908bbd0f78bb17c0abac7b393de9d929bd92190e36c24c201e"},
-    {file = "jupyter_client-7.0.3.tar.gz", hash = "sha256:bb58e3218d74e072673948bd1e2a6bb3b65f32447b3e8c143eeca16b946ee230"},
+    {file = "jupyter_client-7.0.4-py3-none-any.whl", hash = "sha256:0b18f85dfc4b2c48ee65ccd7d57382d151ecb8469cedde0138b7294c1a747d46"},
+    {file = "jupyter_client-7.0.4.tar.gz", hash = "sha256:67aaadbbbb022cd481146924e5911b56863177456aaf5622049c96ae384edc06"},
 ]
 jupyter-core = [
     {file = "jupyter_core-4.8.1-py3-none-any.whl", hash = "sha256:8dd262ec8afae95bd512518eb003bc546b76adbf34bf99410e9accdf4be9aa3a"},
@@ -2569,8 +2569,8 @@ sphinx-external-toc = [
     {file = "sphinx_external_toc-0.2.3.tar.gz", hash = "sha256:22d1d63f74206b388fb4e1d67e0c0d0b4de2ea98a2820f97a03ae3f3141dc525"},
 ]
 sphinx-jupyterbook-latex = [
-    {file = "sphinx_jupyterbook_latex-0.4.2-py3-none-any.whl", hash = "sha256:f88bb6467fbebd25518b0bd3b060103774b1297cf43a3a81ae8b30b632ea3b94"},
-    {file = "sphinx_jupyterbook_latex-0.4.2.tar.gz", hash = "sha256:06d6c15f5ee572d4852421fb9e94ed1dcfd0ff68e03eb0ba61c2829b8114ac8e"},
+    {file = "sphinx_jupyterbook_latex-0.4.3-py3-none-any.whl", hash = "sha256:869b4af57a6ed7b2da0881d75a930f067006ec4d0a90d7c7c18efb4c2577fb16"},
+    {file = "sphinx_jupyterbook_latex-0.4.3.tar.gz", hash = "sha256:dbc997ae9ee1fd51277c6ad66e93c9cad2a6158fa02b304621e703ea6d3bae98"},
 ]
 sphinx-multitoc-numbering = [
     {file = "sphinx-multitoc-numbering-0.1.3.tar.gz", hash = "sha256:c9607671ac511236fa5d61a7491c1031e700e8d498c9d2418e6c61d1251209ae"},
@@ -2784,6 +2784,6 @@ widgetsnbextension = [
     {file = "widgetsnbextension-3.5.1.tar.gz", hash = "sha256:079f87d87270bce047512400efd70238820751a11d2d8cb137a5a5bdbaf255c7"},
 ]
 zipp = [
-    {file = "zipp-3.5.0-py3-none-any.whl", hash = "sha256:957cfda87797e389580cb8b9e3870841ca991e2125350677b2ca83a0e99390a3"},
-    {file = "zipp-3.5.0.tar.gz", hash = "sha256:f5812b1e007e48cff63449a5e9f4e7ebea716b4111f9c4f9a645f91d579bf0c4"},
+    {file = "zipp-3.5.1-py3-none-any.whl", hash = "sha256:8dc6c4d5a809d659067cc713f76bcf42fae8ae641db12fddfa93694a15abc96b"},
+    {file = "zipp-3.5.1.tar.gz", hash = "sha256:1fc9641b26f3bd81069b7738b039f2819cab6e3fc3399a953e19d92cc81eff4d"},
 ]
