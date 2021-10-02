@@ -48,4 +48,8 @@ parts:
     numbered: True
     chapters:
     - file: pythonworkshop/Chapter_6/1_Conditionals
+  - caption: 7. Loops
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_7/1_Loops
     
