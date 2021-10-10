@@ -22,7 +22,7 @@ parts:
   - caption: 2. Indendation
     numbered: True
     chapters:
-    - file: pythonworkshop/Chapter_2/1_Indendation
+    - file: pythonworkshop/Chapter_2/1_Indentation
   - caption: 3. Comments and Docstrings
     numbered: True
     chapters:
