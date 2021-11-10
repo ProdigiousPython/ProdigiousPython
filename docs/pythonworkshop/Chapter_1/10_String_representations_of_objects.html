@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -160,19 +160,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_2/1_Indendation.html">
-   13. Indendation
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -184,7 +184,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -231,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -253,7 +253,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -265,7 +265,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -274,6 +274,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_7/1_Loops.html">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -383,14 +395,14 @@
         
               <div>
                 
-  <div class="section" id="string-representations-of-objects-str-vs-repr">
+  <div class="tex2jax_ignore mathjax_ignore section" id="string-representations-of-objects-str-vs-repr">
 <h1><span class="section-number">10. </span>String representations of objects: str() vs repr()<a class="headerlink" href="#string-representations-of-objects-str-vs-repr" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">str()</span></code> and <code class="docutils literal notranslate"><span class="pre">repr()</span></code> are builtin functions used to represent the object in the form of string.</p>
 <p>Suppose we have an object <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">str(x)</span></code> would be calling the dunder (double underscore) <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method of <code class="docutils literal notranslate"><span class="pre">x</span></code> as <code class="docutils literal notranslate"><span class="pre">x.__str__()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">repr(x)</span></code> would be calling the dunder (double underscore) <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> method of <code class="docutils literal notranslate"><span class="pre">x</span></code> as <code class="docutils literal notranslate"><span class="pre">x.__repr__()</span></code></p>
 <p>😑 Well, what all are these new terms <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> 🤔?</p>
-<p>As we know that Python is object oriented language, and so supports inheritance. In Python, all the classes would inherit from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>. <code class="docutils literal notranslate"><span class="pre">object</span></code> class has the methods <code class="docutils literal notranslate"><span class="pre">__str__</span></code>, <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> and a lot more (which can be deepdived in someother notebook 😉). Hence every class would be having <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> implicitly 😊</p>
+<p>As we know that Python is object oriented language, and so supports inheritance. In Python, all the classes would inherit from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>. <code class="docutils literal notranslate"><span class="pre">object</span></code> class has the methods <code class="docutils literal notranslate"><span class="pre">__str__</span></code>, <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> and a lot more (which can be deepdived in some other notebook 😉). Hence every class would be having <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> implicitly 😊</p>
 <p>Python’s official documentations states that <code class="docutils literal notranslate"><span class="pre">__str__</span></code> should be used to represent a object which is human readable(informal), whereas <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> is used for official representation of an object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -404,8 +416,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2021, 10, 2, 19, 5, 21, 811097)
-The str of now is: 2021-10-02 19:05:21.811097
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2021, 11, 10, 14, 36, 31, 25996)
+The str of now is: 2021-11-10 14:36:31.025996
 </pre></div>
 </div>
 </div>
@@ -424,8 +436,8 @@ The str of now is: 2021-10-02 19:05:21.811097
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fe1683ae6d0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fe1683ae6d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f1804458c10&gt;
+The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f1804458c10&gt;
 </pre></div>
 </div>
 </div>
@@ -455,7 +467,7 @@ The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fe1683
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7fe1683ae700
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f1804402eb0
 The str of human_obj is: I am IronMan of age 48
 </pre></div>
 </div>

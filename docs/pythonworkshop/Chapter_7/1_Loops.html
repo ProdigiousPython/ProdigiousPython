@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -51,6 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="28. Class" href="../Chapter_8/1_Classes.html" />
     <link rel="prev" title="26. Conditionals" href="../Chapter_6/1_Conditionals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -92,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -159,19 +160,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_2/1_Indendation.html">
-   13. Indendation
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -183,7 +184,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -230,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -252,7 +253,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -264,7 +265,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -273,6 +274,18 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -494,7 +507,7 @@
         
               <div>
                 
-  <div class="section" id="loops">
+  <div class="tex2jax_ignore mathjax_ignore section" id="loops">
 <h1><span class="section-number">27. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h1>
 <p>I just had an heated argument 🔥 with my girlfriend. I need to write 5 times <strong>I love you ❤️</strong> as punishment. Let’s start writing 🙁</p>
 <div class="cell docutils container">
@@ -549,7 +562,7 @@ I love you ❤️
 <li><p><code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
 </ul>
-<p>To exit the loops explicitly, we can use <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword exits the right loop which it is indended in.</p>
+<p>To exit the loops explicitly, we can use <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword exits the right loop which it is indented in.</p>
 <div class="section" id="while">
 <h2><span class="section-number">27.1. </span><code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop also works based on the Truth values of the condition/object, if the truth value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the loop continues to execute, else breaks the loop. The syntax of <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is:</p>
@@ -684,7 +697,7 @@ Factorial of 10 is 3628800
 <p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> are used to explicitly control the flow of loops by residing in the loop.</p>
 <p>If all the objects in the iteration are completed or while condition turns falsy, the loop gets exited, but if we want to exit the loop explicitly or before completion of all objects in the loop, <code class="docutils literal notranslate"><span class="pre">break</span></code> comes in handy. we just need to have a break statement as <code class="docutils literal notranslate"><span class="pre">break</span></code> and the nearest enclosing loop in which this <code class="docutils literal notranslate"><span class="pre">break</span></code> is present exits.</p>
 <p><code class="docutils literal notranslate"><span class="pre">continue</span></code> in a loop stop s the execution of the next code in the current iteration and starts the next iteration of the enclosing loop.</p>
-<p>🙈 Sometimes sentences make the explantion harder to understand. In this case, it’s better to understand using examples.</p>
+<p>🙈 Sometimes sentences make the explanation harder to understand. In this case, it’s better to understand using examples.</p>
 <div class="section" id="break">
 <h3><span class="section-number">27.4.1. </span><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
 <p>I want to know if a particular number is present in a list or not.</p>
@@ -714,8 +727,8 @@ We found the number 🏁
 <p class="admonition-title">Hint</p>
 <p>The way of searching for the number in the above code is called Linear Search. As we can see it is pretty easy to implement, but note that it isn’t efficient for huge amount of data.</p>
 </div>
-<p>Let’s get to know what has happend here 🤔? we have a list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, and we needed to search for a number 13 if it is present in the my_list or not.</p>
-<p>We have started iterating over the <code class="docutils literal notranslate"><span class="pre">my_list</span></code> list, once we find the number 13 in our list, we are breaking the loop. In this way, we are ensuring that it doesn’t iterate over next items unneccessarily as we already achieved what we want 😊.</p>
+<p>Let’s get to know what has happened here 🤔? we have a list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, and we needed to search for a number 13 if it is present in the my_list or not.</p>
+<p>We have started iterating over the <code class="docutils literal notranslate"><span class="pre">my_list</span></code> list, once we find the number 13 in our list, we are breaking the loop. In this way, we are ensuring that it doesn’t iterate over next items unnecessarily as we already achieved what we want 😊.</p>
 <p>How do we know if we exited the loop? As we can see that only 3 print statements saying <strong>We are checking on the number:</strong> can be found. If we don’t have a break, we would be having three more print statements as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -903,6 +916,15 @@ We are checking on the number: 8
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="../Chapter_8/1_Classes.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">28. </span>Class</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

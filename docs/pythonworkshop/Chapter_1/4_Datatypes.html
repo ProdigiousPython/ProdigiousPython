@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -160,19 +160,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_2/1_Indendation.html">
-   13. Indendation
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -184,7 +184,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -231,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -253,7 +253,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -265,7 +265,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -274,6 +274,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_7/1_Loops.html">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -490,7 +502,7 @@
         
               <div>
                 
-  <div class="section" id="data-types">
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-types">
 <h1><span class="section-number">4. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">Kiddo</span> <span class="pre">explanation</span> <span class="pre">😇:</span> </code></p>
 <p>We might use many materials like sand, bricks, concrete to construct a house. These are basic and essential needs to have the construction done and each of them have a specific role or usage.</p>
@@ -556,7 +568,7 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 <span class="n">new_environment_variable_value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1991&quot;</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">new_environment_variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_environment_variable_value</span>
 
-<span class="c1"># Now let&#39;s try to fetch a envrionment&#39;s variable value</span>
+<span class="c1"># Now let&#39;s try to fetch a environment&#39;s variable value</span>
 <span class="n">value</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">new_environment_variable_name</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There is no environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -657,7 +669,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Like integer objects float objects are used for decimal arithmetics</span>
 <span class="c1"># A few simple operations are addition, subtraction, multiplication, division etc..</span>
-<span class="c1"># We are typcasting integer or float value to float values explicitly.</span>
+<span class="c1"># We are typecasting integer or float value to float values explicitly.</span>
 <span class="n">operand_1</span> <span class="o">=</span> <span class="mf">3.18</span>
 <span class="n">operand_2</span> <span class="o">=</span> <span class="mf">6.24</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">operand_1</span> <span class="o">+</span> <span class="n">operand_2</span><span class="p">)</span>
@@ -720,7 +732,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 <div class="section" id="tuple">
 <h2><span class="section-number">4.8. </span><strong>tuple</strong><a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
-<p>tuple object is an immutable datatype which can have any datatype objects inside it and is created by enclosing paranthesis <code class="docutils literal notranslate"><span class="pre">()</span></code> and objects are separated by a comma.</p>
+<p>tuple object is an immutable datatype which can have any datatype objects inside it and is created by enclosing parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code> and objects are separated by a comma.</p>
 <p>Once the tuple object is created, the tuple can’t be modified, although if the objects in the tuple are mutable, they can be changed 😊</p>
 <p>The objects in the tuple are ordered, So the objects in the tuple can be accessed by using its index ranging from 0 to (number of elements - 1).</p>
 <div class="cell docutils container">
@@ -799,7 +811,7 @@ it is created by using <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3, 4, &#39;Python&#39;, 6, &#39;Golang&#39;, 10}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3, 4, 6, &#39;Python&#39;, 10, &#39;Golang&#39;}
 </pre></div>
 </div>
 </div>

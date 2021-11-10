@@ -52,4 +52,8 @@ parts:
     numbered: True
     chapters:
     - file: pythonworkshop/Chapter_7/1_Loops
+  - caption: 8. Classes
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_8/1_Classes
     
