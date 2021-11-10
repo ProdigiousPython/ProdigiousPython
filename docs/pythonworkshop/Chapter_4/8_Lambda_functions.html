@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -160,19 +160,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_2/1_Indendation.html">
-   13. Indendation
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -184,7 +184,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -231,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -253,7 +253,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -265,7 +265,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -274,6 +274,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_7/1_Loops.html">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -383,7 +395,7 @@
         
               <div>
                 
-  <div class="section" id="lambda-functions">
+  <div class="tex2jax_ignore mathjax_ignore section" id="lambda-functions">
 <h1><span class="section-number">22. </span>Lambda Functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">¶</a></h1>
 <p>Lambda functions are inline functions which have only 1 statement. They are created by using the keyword <code class="docutils literal notranslate"><span class="pre">lambda</span></code> They do not have any name, so they are also known as Anonymous functions. Although they don’t have a name, they can be bound to a variable.</p>
 <p>A simple lambda function to greets us 👋:</p>
@@ -441,7 +453,7 @@
 </div>
 </div>
 </div>
-<p>In the above example, we are creating the lambda expression enclosed in paranthesis and calling the function by using <code class="docutils literal notranslate"><span class="pre">()</span></code> at the end. As there is no name for the lambda function we just called, this is the reason why Lambda expressions/functions are also called as Anonymous functions.</p>
+<p>In the above example, we are creating the lambda expression enclosed in parenthesis and calling the function by using <code class="docutils literal notranslate"><span class="pre">()</span></code> at the end. As there is no name for the lambda function we just called, this is the reason why Lambda expressions/functions are also called as Anonymous functions.</p>
 <p>We can pass parameters as well to the lambda function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -456,7 +468,7 @@
 </div>
 </div>
 </div>
-<p>Till now, everything about <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">functions</span></code> and <code class="docutils literal notranslate"><span class="pre">regular</span> <span class="pre">functions</span></code> do look the same, Is there any differnce? Yup, here it is, Lambda functions do have the Lexical closures similar to loops in regular functions. What the heck is Lexical closure 🤔? At the end of the lexical scope, the value is stil remembered unlike  in the programming languages C, Golang etc.. Let’s try it out with an example 🙂</p>
+<p>Till now, everything about <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">functions</span></code> and <code class="docutils literal notranslate"><span class="pre">regular</span> <span class="pre">functions</span></code> do look the same, Is there any difference? Yup, here it is, Lambda functions do have the Lexical closures similar to loops in regular functions. What the heck is Lexical closure 🤔? At the end of the lexical scope, the value is still remembered unlike  in the programming languages C, Golang etc.. Let’s try it out with an example 🙂</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_sum</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>

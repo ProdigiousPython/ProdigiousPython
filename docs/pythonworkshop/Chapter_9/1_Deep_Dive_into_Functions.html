@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -91,7 +91,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -158,7 +158,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
@@ -170,7 +170,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -182,7 +182,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -229,7 +229,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -251,7 +251,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -263,7 +263,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -272,6 +272,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_7/1_Loops.html">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -315,7 +327,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_8/1_Deep_Dive_into_Functions.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -335,7 +347,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_8/1_Deep_Dive_into_Functions.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -356,7 +368,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_8/1_Deep_Dive_into_Functions.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -439,7 +451,7 @@
         
               <div>
                 
-  <div class="section" id="deep-dive-into-functions">
+  <div class="tex2jax_ignore mathjax_ignore section" id="deep-dive-into-functions">
 <h1>Deep Dive into Functions<a class="headerlink" href="#deep-dive-into-functions" title="Permalink to this headline">¶</a></h1>
 <p>In the earlier chapter, we have touched about functions, function arguments, types of function arguments 😊. Now, it’s time for a little deep dive into functions 🏊.</p>
 <div class="section" id="unpacking-returned-attributes">
@@ -487,7 +499,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./pythonworkshop/Chapter_8"
+            path: "./pythonworkshop/Chapter_9"
         },
         predefinedOutput: true
     }

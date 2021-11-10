@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -160,19 +160,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_2/1_Indendation.html">
-   13. Indendation
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -184,7 +184,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -231,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   5. Operators
  </span>
@@ -253,7 +253,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   6. Conditionals
  </span>
@@ -265,7 +265,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   7. Loops
  </span>
@@ -274,6 +274,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_7/1_Loops.html">
    27. Loops
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
   </a>
  </li>
 </ul>
@@ -487,7 +499,7 @@
         
               <div>
                 
-  <div class="section" id="comparison-operators">
+  <div class="tex2jax_ignore mathjax_ignore section" id="comparison-operators">
 <h1><span class="section-number">25. </span>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">¶</a></h1>
 <p>The comparison operators help to compare two objects. The comparison operators we have in Python are:</p>
 <table class="colwidths-auto table">
@@ -639,7 +651,7 @@ True
 </div>
 </div>
 </div>
-<p>Comparision of float values works the same way 🍿.</p>
+<p>Comparison of float values works the same way 🍿.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
@@ -789,7 +801,7 @@ False
 </div>
 <div class="section" id="is-operator">
 <h2><span class="section-number">25.7. </span><code class="docutils literal notranslate"><span class="pre">is</span></code> operator<a class="headerlink" href="#is-operator" title="Permalink to this headline">¶</a></h2>
-<p>Finally, we reached the destination to know about <code class="docutils literal notranslate"><span class="pre">is</span></code> operator. <code class="docutils literal notranslate"><span class="pre">is</span></code> operator is specific to Python, first let us see an example, then we would get into explantation 😬</p>
+<p>Finally, we reached the destination to know about <code class="docutils literal notranslate"><span class="pre">is</span></code> operator. <code class="docutils literal notranslate"><span class="pre">is</span></code> operator is specific to Python, first let us see an example, then we would get into explanation 😬</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>  <span class="c1"># Creating a list and assigning it to a.</span>
@@ -810,7 +822,7 @@ True
 </div>
 <p>Hurray 💥! We see <code class="docutils literal notranslate"><span class="pre">True</span></code> for both <code class="docutils literal notranslate"><span class="pre">a==b</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code>, Wait what 🙄! Then what is the difference between <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> operator?</p>
 <p>Now, let’s see the above example code again, but slowly 😅… instead of creating a new object and assigning it to b as <code class="docutils literal notranslate"><span class="pre">b=</span> <span class="pre">[1,</span> <span class="pre">&quot;a&quot;,</span> <span class="pre">None,</span> <span class="pre">False]</span></code>, we have just assigned a to b. In this way, we are making <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> pointing to the same object.</p>
-<p>You might be having trust issues with me 🤥, let’s check if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are really the same objects programatically 😬.</p>
+<p>You might be having trust issues with me 🤥, let’s check if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are really the same objects programmatically 😬.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>How do we find if the objects are same? The Built-in function <code class="docutils literal notranslate"><span class="pre">id</span></code> helps here, <code class="docutils literal notranslate"><span class="pre">id(&lt;obj&gt;)</span></code> returns the address of the object, and so if the address is same, so does the objects.</p>
@@ -826,8 +838,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139961107932032
-139961107932032
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140151631190720
+140151631190720
 id of a is equal to id of b: True
 </pre></div>
 </div>
@@ -848,7 +860,7 @@ id of a is equal to id of b: True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 139961107932416 and b is 139961107934784
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140151631195392 and b is 140151631195328
 True
 False
 </pre></div>
@@ -892,7 +904,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 139961107943296 and y is 139961107939264
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140151631200640 and y is 140151631206208
 True
 </pre></div>
 </div>
