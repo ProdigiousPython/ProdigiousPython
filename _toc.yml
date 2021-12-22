@@ -56,4 +56,5 @@ parts:
     numbered: True
     chapters:
     - file: pythonworkshop/Chapter_8/1_Classes
+    - file: pythonworkshop/Chapter_8/2_Class_Attributes_Class_Static_methods
     
