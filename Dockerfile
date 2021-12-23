@@ -13,11 +13,35 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 
-COPY requirements.txt ${HOME}
-RUN ls
+COPY pyproject.toml poetry.lock ${HOME}/
 
-# install the notebook package
-RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache -r requirements.txt
+# Upgrading PIP.
+RUN python -m pip install -U pip
+
+# Installing Poetry.
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+
+# Force poetry addition of path.
+ENV PATH = "${PATH}:/home/${NB_USER}/.local/bin"
+
+# Configuring poetry to not create a virtualenv as Docker itself meant for Isolation.
+RUN poetry config virtualenvs.create false
+
+# Installing packages using Poetry.
+RUN poetry install
+
+COPY . ${HOME}/
+
+RUN chown -R ${NB_USER} ${HOME}/
 
 USER ${USER}
+
+# Copy the repo to the workdir.
+
+RUN ls -l
+
+# Exposing port 8888.
+EXPOSE 8888
+
+# Configuring entrypoint for the docker container
+ENTRYPOINT [ "poetry", "run", "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser"]
