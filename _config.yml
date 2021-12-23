@@ -32,3 +32,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  google_analytics_id: UA-208617608-1

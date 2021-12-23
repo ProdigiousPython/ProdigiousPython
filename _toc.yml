@@ -22,7 +22,7 @@ parts:
   - caption: 2. Indendation
     numbered: True
     chapters:
-    - file: pythonworkshop/Chapter_2/1_Indendation
+    - file: pythonworkshop/Chapter_2/1_Indentation
   - caption: 3. Comments and Docstrings
     numbered: True
     chapters:
@@ -38,10 +38,23 @@ parts:
     - file: pythonworkshop/Chapter_4/6_Default_Arguments
     - file: pythonworkshop/Chapter_4/7_TLDR_about_Functions_arguments
     - file: pythonworkshop/Chapter_4/8_Lambda_functions
-  - caption: 5.  Operators
+  - caption: 5. Operators
     numbered: True
     chapters:
     - file: pythonworkshop/Chapter_5/1_Mathematical_Operators
     - file: pythonworkshop/Chapter_5/2_Boolean_Operators
     - file: pythonworkshop/Chapter_5/3_Comparison_Operators
+  - caption: 6. Conditionals
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_6/1_Conditionals
+  - caption: 7. Loops
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_7/1_Loops
+  - caption: 8. Classes
+    numbered: True
+    chapters:
+    - file: pythonworkshop/Chapter_8/1_Classes
+    - file: pythonworkshop/Chapter_8/2_Class_Attributes_Class_Static_methods
     

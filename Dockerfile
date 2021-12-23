@@ -1,14 +1,20 @@
-FROM python:3.9.6
+FROM python:3.10.0
 
-# Switch to non-root user.
-RUN useradd -ms /bin/bash pythonist
-USER pythonist
+# Create user with a home directory.
+ARG NB_USER=pythonist
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV HOME /home/${NB_USER}
 
-# Switch Workdir.
-WORKDIR /home/pythonist/pythonworkshop
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
 
-# Copying installation specific files as they would be cached when no changes are done on them which would save time to build the image.
-COPY pyproject.toml poetry.lock /home/pythonist/pythonworkshop/
+# Switching to workdirectory.
+WORKDIR ${HOME}
+
+COPY pyproject.toml poetry.lock ${HOME}/
 
 # Upgrading PIP.
 RUN python -m pip install -U pip
@@ -17,7 +23,7 @@ RUN python -m pip install -U pip
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 
 # Force poetry addition of path.
-ENV PATH = "${PATH}:/home/pythonist/.local/bin"
+ENV PATH = "${PATH}:/home/${NB_USER}/.local/bin"
 
 # Configuring poetry to not create a virtualenv as Docker itself meant for Isolation.
 RUN poetry config virtualenvs.create false
@@ -26,10 +32,18 @@ RUN poetry config virtualenvs.create false
 RUN poetry install
 
 # Copy the repo to the workdir.
-COPY . /home/pythonist/pythonworkshop/
+COPY . ${HOME}/
+
+# Change owner of all the files present in the working directory to NB_USER
+RUN chown -R ${NB_USER} ${HOME}/
+
+# Switch user from root to NB_USER.
+USER ${USER}
 
 # Exposing port 8888.
 EXPOSE 8888
 
-# Configuring entrypoint for the docker container
-ENTRYPOINT [ "poetry", "run", "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser"]
+# Configuring entrypoint for the docker container.
+ENTRYPOINT [ "poetry", "run" ]
+
+CMD [ "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser" ]

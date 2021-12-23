@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Indendation &#8212; Python Workshop 🐍</title>
+    <title>Deep Dive into Functions &#8212; Python Workshop 🐍</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -31,19 +31,19 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -51,11 +51,22 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="14. Comments and Docstrings" href="../Chapter_3/1_Comments_and_docstrings.html" />
-    <link rel="prev" title="12. Help Utility" href="../Chapter_1/12_Help_Utility.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-208617608-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -70,6 +81,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
@@ -89,7 +104,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -156,19 +171,19 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   2. Indendation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   13. Indendation
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   3. Comments and Docstrings
  </span>
@@ -180,7 +195,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   4. Functions
  </span>
@@ -227,9 +242,9 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  5.  Operators
+  5. Operators
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -246,6 +261,47 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_5/3_Comparison_Operators.html">
    25. Comparison operators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  6. Conditionals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_6/1_Conditionals.html">
+   26. Conditionals
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  7. Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_7/1_Loops.html">
+   27. Loops
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/2_Class_Attributes_Class_Static_methods.html">
+   29. Class Attributes, Class Methods and Static Methods
   </a>
  </li>
 </ul>
@@ -289,7 +345,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_2/1_Indendation.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/pythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -309,7 +365,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_2/1_Indendation.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProdigiousPython/PythonWorkshop/issues/new?title=Issue%20on%20page%20%2Fpythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -330,7 +386,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_2/1_Indendation.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/PythonWorkshop/main?urlpath=tree/docs/pythonworkshop/Chapter_9/1_Deep_Dive_into_Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -353,8 +409,53 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-meme-on-indendation">
-   13.1. A meme on indendation 😜
+  <a class="reference internal nav-link" href="#unpacking-returned-attributes">
+   Unpacking returned attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#map">
+   Map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduce">
+   Reduce
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filter">
+   Filter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial">
+   Partial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#closure">
+   Closure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursive-functions">
+   Recursive Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursion-limit">
+   Recursion Limit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decorators">
+   Decorators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generators">
+   Generators
   </a>
  </li>
 </ul>
@@ -368,44 +469,38 @@
         
               <div>
                 
-  <div class="section" id="indendation">
-<h1><span class="section-number">13. </span>Indendation<a class="headerlink" href="#indendation" title="Permalink to this headline">¶</a></h1>
-<p>I have seen memes of people fighting about opening braces, whether they should be starting in the same line or in next line in the programming languages like C, Java etc… 👻</p>
-<p><img alt="Types of using curly braces" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/type_of_using_curly_braces.jpg?raw=true" /></p>
-<p><strong>Python Developers be like:</strong> Hold my Beer 🍺</p>
-<p><img alt="Python developers: we don't do that here" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/curly_braces_we_dont_do_that_here.jpg?raw=true" /></p>
-<p>In Python, we don’t use curly braces for grouping the statements. Instead, we use Indendation.</p>
-<p>Each group of statements are indended using spaces or tabs.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Example</span><span class="p">:</span>
-    <span class="c1"># Every method belonging to a class must be indended equally.</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;indendation example&quot;</span>
-
-    <span class="k">def</span> <span class="nf">check_for_odd_or_even</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="c1"># Everything that belongs to this method are indended as well.</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even.&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is odd.&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># We can see that the say_hello_multiple_times is not indended inside the Example class.</span>
-<span class="c1"># Hence, say_hello_multiple_times function doesn&#39;t belong to Example class.</span>
-<span class="k">def</span> <span class="nf">say_hello_multiple_times</span><span class="p">(</span><span class="n">count</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
-        <span class="c1"># Loops or conditions are also needed to be intended.</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
-</pre></div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="deep-dive-into-functions">
+<h1>Deep Dive into Functions<a class="headerlink" href="#deep-dive-into-functions" title="Permalink to this headline">¶</a></h1>
+<p>In the earlier chapter, we have touched about functions, function arguments, types of function arguments 😊. Now, it’s time for a little deep dive into functions 🏊.</p>
+<div class="section" id="unpacking-returned-attributes">
+<h2>Unpacking returned attributes<a class="headerlink" href="#unpacking-returned-attributes" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="map">
+<h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="reduce">
+<h2>Reduce<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
 </div>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP-8</a> recommends to use <strong>4 Spaces instead of Tabs</strong>. Although using of Tabs do work, but ensure <strong>not</strong> to mix both tabs and spaces, as you might get <code class="docutils literal notranslate"><span class="pre">TabError</span></code> for such indendations.</p>
-<div class="section" id="a-meme-on-indendation">
-<h2><span class="section-number">13.1. </span>A meme on indendation 😜<a class="headerlink" href="#a-meme-on-indendation" title="Permalink to this headline">¶</a></h2>
-<p>If using a normal text editor like notepad where it doesn’t show the warnings or errors, sometimes we might get errors due to wrong indendation or mix usage of both tabs and spaces, we get an error and it would be tricky to resolve it as it is invisible.</p>
-<p><img alt="Get Error for extra space" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/funny_get_errors_for_extra_space.jpg?raw=true" /></p>
+<div class="section" id="filter">
+<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="partial">
+<h2>Partial<a class="headerlink" href="#partial" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="closure">
+<h2>Closure<a class="headerlink" href="#closure" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="recursive-functions">
+<h2>Recursive Functions<a class="headerlink" href="#recursive-functions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="recursion-limit">
+<h2>Recursion Limit<a class="headerlink" href="#recursion-limit" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="decorators">
+<h2>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -422,7 +517,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./pythonworkshop/Chapter_2"
+            path: "./pythonworkshop/Chapter_9"
         },
         predefinedOutput: true
     }
@@ -432,36 +527,13 @@
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../Chapter_1/12_Help_Utility.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">12. </span>Help Utility</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="../Chapter_3/1_Comments_and_docstrings.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">14. </span>Comments and Docstrings</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -477,8 +549,7 @@
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
