@@ -1,7 +1,6 @@
 FROM python:3.10.0
 
-
-# create user with a home directory
+# Create user with a home directory.
 ARG NB_USER=pythonist
 ARG NB_UID=1000
 ENV USER ${NB_USER}
@@ -11,6 +10,8 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
+
+# Switching to workdirectory.
 WORKDIR ${HOME}
 
 COPY pyproject.toml poetry.lock ${HOME}/
@@ -30,20 +31,19 @@ RUN poetry config virtualenvs.create false
 # Installing packages using Poetry.
 RUN poetry install
 
+# Copy the repo to the workdir.
 COPY . ${HOME}/
 
+# Change owner of all the files present in the working directory to NB_USER
 RUN chown -R ${NB_USER} ${HOME}/
 
+# Switch user from root to NB_USER.
 USER ${USER}
-
-# Copy the repo to the workdir.
-
-RUN ls -l
 
 # Exposing port 8888.
 EXPOSE 8888
 
-# Configuring entrypoint for the docker container
+# Configuring entrypoint for the docker container.
 ENTRYPOINT [ "poetry", "run" ]
 
 CMD [ "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser" ]
