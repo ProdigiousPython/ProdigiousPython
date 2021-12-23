@@ -44,4 +44,6 @@ RUN ls -l
 EXPOSE 8888
 
 # Configuring entrypoint for the docker container
-ENTRYPOINT [ "poetry", "run", "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser"]
+ENTRYPOINT [ "poetry", "run" ]
+
+CMD [ "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser" ]
