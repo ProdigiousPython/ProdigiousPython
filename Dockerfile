@@ -1,35 +1,22 @@
 FROM python:3.10.0
 
-# Switch to non-root user.
-RUN useradd -ms /bin/bash pythonist
-USER pythonist
 
-# Switch Workdir.
-WORKDIR /home/pythonist/pythonworkshop
+# create user with a home directory
+ARG NB_USER
+ARG NB_UID
+ENV USER ${NB_USER}
+ENV HOME /home/${NB_USER}
 
-# Copying installation specific files as they would be cached when no changes are done on them which would save time to build the image.
-COPY pyproject.toml poetry.lock /home/pythonist/pythonworkshop/
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+WORKDIR ${HOME}
 
-# Upgrading PIP.
-RUN python -m pip install -U pip
+COPY requirements.txt ${HOME}
 
-# Installing Poetry.
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+# install the notebook package
+RUN pip install --no-cache --upgrade pip && \
+    pip install --no-cache -r requirements
 
-# Force poetry addition of path.
-ENV PATH = "${PATH}:/home/pythonist/.local/bin"
-
-# Configuring poetry to not create a virtualenv as Docker itself meant for Isolation.
-RUN poetry config virtualenvs.create false
-
-# Installing packages using Poetry.
-RUN poetry install
-
-# Copy the repo to the workdir.
-COPY . /home/pythonist/pythonworkshop/
-
-# Exposing port 8888.
-EXPOSE 8888
-
-# Configuring entrypoint for the docker container
-ENTRYPOINT [ "poetry", "run", "jupyter-lab", "--ip", "0.0.0.0", "--port", "8888", "--no-browser"]
+USER ${USER}
