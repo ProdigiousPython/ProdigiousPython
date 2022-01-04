@@ -1,7 +1,7 @@
 services:
-    pythonworkshop:
+    prodigiouspython:
         ports: 
           - 8888:8888
         volumes: 
-          - ./:/home/pythonist/pythonworkshop
-        image: "naveen8/pythonworkshop:latest"
+          - ./:/home/pythonist/prodigiouspython
+        image: "naveen8/prodigiouspython:latest"
