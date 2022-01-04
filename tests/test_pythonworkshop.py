@@ -1,4 +1,4 @@
-from pythonworkshop import __version__
+from prodigiouspython import __version__
 
 
 def test_version():

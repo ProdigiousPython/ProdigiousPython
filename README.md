@@ -1,14 +1,16 @@
-# Python Workshop
+# Prodigious Python
 
-🚀 [Homepage](https://prodigiouspython.github.io/PythonWorkshop/)
+![Prodigious Python cover](https://github.com/ProdigiousPython/AssetStore/blob/main/Prodigious%20Python%20Cover.png?raw=true)
+
+🚀 [Homepage](https://prodigiouspython.github.io/prodigiouspython/)
 
 📖 [PDF](https://drive.google.com/file/d/1DF1IhLzjnLSzSlNO3PE1hcuv_Cgx6bAS/view?usp=sharing)
 
-Welcome to Python Workshop 🐍
+Welcome to Prodigious Python 🐍
 
-Idea of Python Workshop is to be different from the traditional books. 
+Idea of Prodigious Python is to be different from the traditional books. 
 
-We wanted Python Workshop to be:
+We wanted Prodigious Python to be:
 
 * Fun 🎉
 * Executable 🤖
@@ -19,7 +21,7 @@ We wanted Python Workshop to be:
 First things first, We need to clone our repo
 
 ```shell
-git clone https://github.com/ProdigiousPython/PythonWorkshop.git
+git clone https://github.com/ProdigiousPython/ProdigiousPython.git
 ```
 
 We use [Poetry](https://python-poetry.org/) for the dependency mangement.

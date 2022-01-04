@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Collection Types &#8212; Prodigious Python 🐍</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. IDEs/Editors for Python" href="6_IDEs_for_Python.html" />
+    <link rel="prev" title="4. Data types" href="4_Datatypes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-208617608-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Prodigious Python 🐍</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Prodigious Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1. Introduction to Python 🐍
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Getting_Started_With_Python_Language.html">
+   1. Getting Started with Python 🐍
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Creating_Variables_and_Assigning_Values.html">
+   2. Creating variables and assigning values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Keywords_and_Variable_naming.html">
+   3. Python Keywords and allowed Variable names
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Datatypes.html">
+   4. Data types
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Collection Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_IDEs_for_Python.html">
+   6. IDEs/Editors for Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_User_Input.html">
+   7. User Input
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_Builtins.html">
+   8. Builtins
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_Modules.html">
+   9. Module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_String_representations_of_objects.html">
+   10. String representations of objects: str() vs repr()
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_Installing_Packages.html">
+   11. Installing packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_Help_Utility.html">
+   12. Help Utility
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2. Indendation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  3. Comments and Docstrings
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_3/1_Comments_and_docstrings.html">
+   14. Comments and Docstrings
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  4. Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/1_Functions.html">
+   15. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/2_Positional_Arguments.html">
+   16. Positional Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/3_Unnamed_Positional_Arguments.html">
+   17. Unnamed Positional Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/4_Keyword_only_arguments.html">
+   18. Keyword-only arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/5_Keyword_arguments.html">
+   19. Keyword arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/6_Default_Arguments.html">
+   20. Default Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/7_TLDR_about_Functions_arguments.html">
+   21. TLDR regarding function arguments 💡
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/8_Lambda_functions.html">
+   22. Lambda Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  5. Operators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/1_Mathematical_Operators.html">
+   23. Mathematical Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/2_Boolean_Operators.html">
+   24. Boolean Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/3_Comparison_Operators.html">
+   25. Comparison operators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  6. Conditionals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_6/1_Conditionals.html">
+   26. Conditionals
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  7. Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_7/1_Loops.html">
+   27. Loops
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/1_Classes.html">
+   28. Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/2_Class_Attributes.html">
+   29. Class Attributes
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/prodigiouspython/Chapter_1/5_Collection_Types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProdigiousPython/ProdigiousPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProdigiousPython/ProdigiousPython/issues/new?title=Issue%20on%20page%20%2Fprodigiouspython/Chapter_1/5_Collection_Types.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/main?urlpath=lab/tree/prodigiouspython/Chapter_1/5_Collection_Types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tuple">
+   5.1. Tuple
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list">
+   5.2. List
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#we-have-a-few-methods-of-list-that-we-can-give-it-a-try-now">
+     5.2.1. We have a few methods of list that we can give it a try now 😎
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set">
+   5.3. Set
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary">
+   5.4. Dictionary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="collection-types">
+<h1><span class="section-number">5. </span>Collection Types<a class="headerlink" href="#collection-types" title="Permalink to this headline">¶</a></h1>
+<p>We have many collection types in Python, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code> objects hold only value, but coming to collection types, we can have various objects stored in the collections.</p>
+<p>The Collection Types we have in Python are:</p>
+<ul class="simple">
+<li><p>Tuple</p></li>
+<li><p>List</p></li>
+<li><p>Set</p></li>
+<li><p>Dictionary</p></li>
+</ul>
+<div class="section" id="tuple">
+<h2><span class="section-number">5.1. </span>Tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
+<p>A Tuple is a ordered collection of objects and it is of fixed length and immutable, so the values in the tuple can not be changed nor added or removed.</p>
+<p>Tuples are generally used for small collections which we are sure about them from right before such as IP addresses and port numbers. Tuples are represented with parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code></p>
+<p>Example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ip_address_port</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A tuple with a single member needs to have a trailing comma, else the type of the variable would be the datatype of the member itself.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proper way to create a single member tuple.</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;tuple&#39;&gt;
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Improper way trying to create a single member tuple.</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="s2">&quot;one&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list">
+<h2><span class="section-number">5.2. </span>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>List collection types are similar to tuples, the only difference would be that new objects can be created, removed or object’s data can be modified 😉.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">int_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">string_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="s2">&quot;defghi&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A list can be empty:</span>
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>objects in the list are not restricted to be of a particular datatype. let’s see an example 👇.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>list can contain lists as objects too. These are called nested lists.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nested_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The objects present in the list can be accessed by the index it is placed. The index starts from 0 👻.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Iron man&quot;</span><span class="p">,</span> <span class="s2">&quot;Thor&quot;</span><span class="p">,</span> <span class="s2">&quot;Wonder Woman&quot;</span><span class="p">,</span> <span class="s2">&quot;Wolverine&quot;</span><span class="p">,</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iron man
+Thor
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, we have 5 strings in the list, but in the below example, let’s give a try to get the 100th index element which is not present in the <code class="docutils literal notranslate"><span class="pre">my_list</span></code> 🙄.</p>
+<p>As there is no 100th element, we would be seeing an <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> exception.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;👻 Ouch! we got into IndexError exception: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>👻 Ouch! we got into IndexError exception: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<p>The question I have is, how do I get the 2nd element from the last 🤔? Should I find the length of the list and access the &lt;length - 2&gt;? Yup, it works 😉.</p>
+<p>But we have one good way to do it by negative index, example: <code class="docutils literal notranslate"><span class="pre">-2</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the 2nd element from the last.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wolverine
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="we-have-a-few-methods-of-list-that-we-can-give-it-a-try-now">
+<h3><span class="section-number">5.2.1. </span>We have a few methods of list that we can give it a try now 😎<a class="headerlink" href="#we-have-a-few-methods-of-list-that-we-can-give-it-a-try-now" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">append</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Append a new item to the list.</span>
+<span class="c1"># We use append method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Zoro&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iron man&#39;, &#39;Thor&#39;, &#39;Wonder Woman&#39;, &#39;Wolverine&#39;, &#39;Naruto&#39;, &#39;Zoro&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">remove</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the item present in the list.</span>
+<span class="c1"># We use remove method of the list.</span>
+<span class="c1"># If there&#39;s no object that we are trying to remove in the list, then ValueError would be raised.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Zoro&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught ValueError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iron man&#39;, &#39;Thor&#39;, &#39;Wonder Woman&#39;, &#39;Wolverine&#39;, &#39;Naruto&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">insert</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Insert a object at a particular index.</span>
+<span class="c1"># We use insert method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Super Man&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Iron man&#39;, &#39;Super Man&#39;, &#39;Thor&#39;, &#39;Wonder Woman&#39;, &#39;Wolverine&#39;, &#39;Naruto&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">reverse</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reverse the objects in the list.</span>
+<span class="c1"># we use reverse method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># revert to the actual order</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1"># We have one more method too for this 🙃</span>
+<span class="c1"># The indexing of the list would be in the form of list[start: end: step]</span>
+<span class="c1"># We will use step as -1 to get the elements in reverse order 😉</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Naruto&#39;, &#39;Wolverine&#39;, &#39;Wonder Woman&#39;, &#39;Thor&#39;, &#39;Super Man&#39;, &#39;Iron man&#39;]
+[&#39;Naruto&#39;, &#39;Wolverine&#39;, &#39;Wonder Woman&#39;, &#39;Thor&#39;, &#39;Super Man&#39;, &#39;Iron man&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">index</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index of an object in the list.</span>
+<span class="c1"># we use index method of the list.</span>
+<span class="c1"># raises a ValueError, if no given object is found in the list.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Naruto&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught ValueError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pop</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pop is used to remove and return the element present at the last in the list(index=-1) by default.</span>
+<span class="c1"># When index argument is passed, it would remove and return the element at that index.</span>
+<span class="c1"># raises IndexError when no object is present at the given Index.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">last_element</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="p">)</span>  <span class="c1"># can be passed index argument value, if required to pop at a specific index.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught IndexError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Naruto
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="set">
+<h2><span class="section-number">5.3. </span>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
+<p>A set is collection of unique items, the items does not follow insertion order.</p>
+<p>Defining an set is pretty similar to a list or tuple, it is enclosed in <code class="docutils literal notranslate"><span class="pre">{}</span></code></p>
+<p>PS 🔔: If we need to have a empty set, <code class="docutils literal notranslate"><span class="pre">{}</span></code> won’t create a set, it creates a empty dictionary instead. So we need to create a empty set by using <code class="docutils literal notranslate"><span class="pre">set()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Dragon ball&quot;</span><span class="p">,</span> <span class="s2">&quot;One Piece&quot;</span><span class="p">,</span> <span class="s2">&quot;Death Note&quot;</span><span class="p">,</span> <span class="s2">&quot;Full Metal Alchemist&quot;</span><span class="p">,</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;One Piece&#39;, &#39;Naruto&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">add</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Tokyo Ghoul&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;One Piece&#39;, &#39;Tokyo Ghoul&#39;, &#39;Naruto&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">remove</span></code></p>
+<p>remove method of set can be used to remove a particular object from the set, if the object is not present, KeyError would be raised.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">anime</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Tokyo Ghoul&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Caught KeyError as there&#39;s given anime series present in the anime set: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;One Piece&#39;, &#39;Naruto&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionary">
+<h2><span class="section-number">5.4. </span>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h2>
+<p>As in few other languages, we have hashmaps, Dictionaries in python are similar. It has unique Key - Value pairs.</p>
+<p>The Key and Value can be of any object. Each Key-Value pair is separated by a <code class="docutils literal notranslate"><span class="pre">,</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime_protagonist</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Dragon Ball&quot;</span><span class="p">:</span> <span class="s2">&quot;Goku&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;One Piece&quot;</span><span class="p">:</span> <span class="s2">&quot;Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Death Note&quot;</span><span class="p">:</span> <span class="s2">&quot;Yagami Light&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Full Metal Alchemist&quot;</span><span class="p">:</span> <span class="s2">&quot;Edward Elric&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Naruto&quot;</span><span class="p">:</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime_protagonist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon Ball&#39;: &#39;Goku&#39;, &#39;One Piece&#39;: &#39;Luffy&#39;, &#39;Death Note&#39;: &#39;Yagami Light&#39;, &#39;Full Metal Alchemist&#39;: &#39;Edward Elric&#39;, &#39;Naruto&#39;: &#39;Naruto&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can access the values of the dictionary by <code class="docutils literal notranslate"><span class="pre">&lt;dictionary&gt;[&lt;key&gt;]</span></code>.
+If there’s no <code class="docutils literal notranslate"><span class="pre">&lt;key&gt;</span></code> in the dictionary, we would be seeing an KeyError 🔑❌</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">anime_protagonist</span><span class="p">[</span><span class="s2">&quot;Dragon Ball&quot;</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;👻 Ouch, KeyError has been raised as no given key is found in the dictionary: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Goku
+</pre></div>
+</div>
+</div>
+</div>
+<p>Iterate over keys, values and both in the dictionary 🐇</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Keys===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_key</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_key</span><span class="p">)</span>
+
+<span class="c1"># Values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Values===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_value</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_value</span><span class="p">)</span>
+
+<span class="c1"># Key-Values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Key-Values===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_key</span><span class="p">,</span> <span class="n">my_value</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">my_key</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">my_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>===Keys===
+Dragon Ball
+One Piece
+Death Note
+Full Metal Alchemist
+Naruto
+===Values===
+Goku
+Luffy
+Yagami Light
+Edward Elric
+Naruto
+===Key-Values===
+Dragon Ball : Goku
+One Piece : Luffy
+Death Note : Yagami Light
+Full Metal Alchemist : Edward Elric
+Naruto : Naruto
+</pre></div>
+</div>
+</div>
+</div>
+<p>PS 🔔: Are dictionaries ordered collection🤔?</p>
+<p>From Python 3.7 dictionaries follow insertion order 😎</p>
+<p>In python versions older than 3.7, the insertion of items is not ordered🙄. No problem 🙃, we still have OrderedDict(present in collections module) <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">collections</span> <span class="pre">import</span> <span class="pre">OrderedDict</span></code> which does the same 😉</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="4_Datatypes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Data types</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="6_IDEs_for_Python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>IDEs/Editors for Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Prodigious Python<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
