@@ -468,7 +468,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14368</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6282</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
 
 <span class="ne">AttributeError</span>: type object &#39;SuperMarket&#39; has no attribute &#39;item_price&#39;
@@ -639,7 +639,29 @@
 </div>
 </div>
 </div>
-<p>Well, We got to see that when the object’s class attribute value is changed, it doesn’t change the Class’s class attribute value 😬. Well, what’s the reason for this behaviour 🤔?</p>
+<p><strong>Well, We got to see that when the object’s class attribute value is changed, it doesn’t change the Class’s class attribute value 😬. Well, what’s the reason for this behaviour 🤔?</strong></p>
+<p>To identify what paved the way for the above behaviour, let’s create another object of the class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span> <span class="o">=</span> <span class="n">SuperMarket</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Creating a new object.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s look at the instance attributes of <code class="docutils literal notranslate"><span class="pre">obj2</span></code> by using the special/magic method <code class="docutils literal notranslate"><span class="pre">__dict__</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span><span class="o">.</span><span class="vm">__dict__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;item_price&#39;: 100}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that <code class="docutils literal notranslate"><span class="pre">obj2</span></code> has only item <code class="docutils literal notranslate"><span class="pre">item_price</span></code>. let’s look at <code class="docutils literal notranslate"><span class="pre">obj</span></code> also on which we tried to change the value of class attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span>
@@ -652,6 +674,9 @@
 </div>
 </div>
 </div>
+<p>There’s an extra field <code class="docutils literal notranslate"><span class="pre">discount</span></code> for <code class="docutils literal notranslate"><span class="pre">obj</span></code>, it’s because we tried to change the class attribute’s value which actually shadows/creates a new attribute with the same name as <strong>instance attribute</strong></p>
+<p>🤔 How to revert the value of <code class="docutils literal notranslate"><span class="pre">discount</span></code> to be the class attribute’s value, which in our case should be 10.</p>
+<p>Easy Peasy! we just need to delete the attribute of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> using <code class="docutils literal notranslate"><span class="pre">del</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__dict__</span>  <span class="c1"># Equivalent to SuperMarket.__dict__</span>
