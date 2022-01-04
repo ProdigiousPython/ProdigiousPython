@@ -2,7 +2,7 @@
 
 ![Prodigious Python cover](https://github.com/ProdigiousPython/AssetStore/blob/main/Prodigious%20Python%20Cover.png?raw=true)
 
-🚀 [Homepage](https://prodigiouspython.github.io/prodigiouspython/)
+🚀 [Homepage](https://prodigiouspython.github.io/ProdigiousPython)
 
 📖 [PDF](https://drive.google.com/file/d/1DF1IhLzjnLSzSlNO3PE1hcuv_Cgx6bAS/view?usp=sharing)
 
