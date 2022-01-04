@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>28. Class &#8212; Prodigious Python 🐍</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="29. Class Attributes" href="2_Class_Attributes.html" />
+    <link rel="prev" title="27. Loops" href="../Chapter_7/1_Loops.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-208617608-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Prodigious Python 🐍</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Prodigious Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  1. Introduction to Python 🐍
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/1_Getting_Started_With_Python_Language.html">
+   1. Getting Started with Python 🐍
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/2_Creating_Variables_and_Assigning_Values.html">
+   2. Creating variables and assigning values
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/3_Keywords_and_Variable_naming.html">
+   3. Python Keywords and allowed Variable names
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/4_Datatypes.html">
+   4. Data types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/5_Collection_Types.html">
+   5. Collection Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/6_IDEs_for_Python.html">
+   6. IDEs/Editors for Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/7_User_Input.html">
+   7. User Input
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/8_Builtins.html">
+   8. Builtins
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/9_Modules.html">
+   9. Module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/10_String_representations_of_objects.html">
+   10. String representations of objects: str() vs repr()
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/11_Installing_Packages.html">
+   11. Installing packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_1/12_Help_Utility.html">
+   12. Help Utility
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  2. Indendation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_2/1_Indentation.html">
+   13. Indentation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  3. Comments and Docstrings
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_3/1_Comments_and_docstrings.html">
+   14. Comments and Docstrings
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  4. Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/1_Functions.html">
+   15. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/2_Positional_Arguments.html">
+   16. Positional Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/3_Unnamed_Positional_Arguments.html">
+   17. Unnamed Positional Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/4_Keyword_only_arguments.html">
+   18. Keyword-only arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/5_Keyword_arguments.html">
+   19. Keyword arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/6_Default_Arguments.html">
+   20. Default Arguments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/7_TLDR_about_Functions_arguments.html">
+   21. TLDR regarding function arguments 💡
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_4/8_Lambda_functions.html">
+   22. Lambda Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  5. Operators
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/1_Mathematical_Operators.html">
+   23. Mathematical Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/2_Boolean_Operators.html">
+   24. Boolean Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/3_Comparison_Operators.html">
+   25. Comparison operators
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  6. Conditionals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_6/1_Conditionals.html">
+   26. Conditionals
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  7. Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_7/1_Loops.html">
+   27. Loops
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  8. Classes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   28. Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_Class_Attributes.html">
+   29. Class Attributes
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/prodigiouspython/Chapter_8/1_Classes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ProdigiousPython/ProdigiousPython"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ProdigiousPython/ProdigiousPython/issues/new?title=Issue%20on%20page%20%2Fprodigiouspython/Chapter_8/1_Classes.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/main?urlpath=lab/tree/prodigiouspython/Chapter_8/1_Classes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-the-heck-is-class">
+   28.1. What the heck is class 🤔?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#init">
+     28.1.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __init__
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instance-attributes">
+     28.1.2. Instance attributes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     28.1.3. Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="class">
+<h1><span class="section-number">28. </span>Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h1>
+<p>As Python 🐍 is a Object Oriented Programming Language, we get the fruits like Inheritance, Encapsulation, Polymorphism and Data Abstraction. If you are already familiar with other OOP languages like C++, Java you might have already heard of these scaring jargons, if not, don’t worry, let’s get to know about them in simple funny terms.</p>
+<div class="section" id="what-the-heck-is-class">
+<h2><span class="section-number">28.1. </span>What the heck is class 🤔?<a class="headerlink" href="#what-the-heck-is-class" title="Permalink to this headline">¶</a></h2>
+<p>A class is a blueprint which describes the data and various methods which help to manipulate or use the data specific to it.</p>
+<p>A class is created using the Keyword <code class="docutils literal notranslate"><span class="pre">class</span></code>.</p>
+<p>Let’s start by creating a simplest possible class 😎</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yipee! We did it 😬. Let’s confirm it 👇</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IAmASimpleClass is class: </span><span class="si">{</span><span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">IAmASimpleClass</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IAmASimpleClass is class: True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><code class="docutils literal notranslate"><span class="pre">isclass</span></code> function of <code class="docutils literal notranslate"><span class="pre">inspect</span></code> module is used to check whether the object/argument is class or not, If class, returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<p>As in our <code class="docutils literal notranslate"><span class="pre">IAmASimpleClass</span></code> we haven’t written any code inside it, we might think there is neither data nor methods associated with it, but that’s not the case. There are methods associated with our class 🔍. let’s check it.</p>
+<p>We will be using <code class="docutils literal notranslate"><span class="pre">dir</span></code> function to get to know all the attributes associated with our class</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">IAmASimpleClass</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yup, we see few things are present. But from where did we get those? I am sure, there’s no magic here. It’s time to be a detective 🕵</p>
+<p>We all must have already heard or read that <strong>In Python everything is an Object</strong>. Well, the culprit in the above example is the class <code class="docutils literal notranslate"><span class="pre">object</span></code> ⚔️. All the above attributes or methods in the output are inherited from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>. In Python3, by default every class inherits <code class="docutils literal notranslate"><span class="pre">object</span></code> class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>  <span class="c1"># Python3 takes care of inheriting object.</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">(</span>
+    <span class="nb">object</span>
+<span class="p">):</span>  <span class="c1"># We can explicitly inherit object, although not required.</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Both the above classes are pretty much equal. Feel free to use any of those, If you are as lazy as me, I would recommend you to use the first method(New-Style classes) and let Python take care of inheriting <code class="docutils literal notranslate"><span class="pre">object</span></code> for us.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Second method of inheriting object is generally used if we want to use code which is agnostic to both Python3 and Python2. But let’s not get confused with Python2 way of creating classes “classic-way” and “new-style” as Python2 already passed EOL and dead.</p>
+</div>
+<p>Yup, we got our answer, All the attributes or methods which we saw in our output are from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>. 😊</p>
+<p>As we have reached our first milestone of creating a simple class, let’s get to know a bit more about class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperHero</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span>
+    <span class="p">):</span>  <span class="c1"># One of the special/magic/dunder method.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Instance attributes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power_level</span> <span class="o">=</span> <span class="n">power_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">special_power</span> <span class="o">=</span> <span class="n">special_power</span>
+
+    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Method.</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hey! I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, my special power is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">special_power</span><span class="si">}</span><span class="s2"> and have a crazy power level of </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">power_level</span><span class="si">}</span><span class="s2"> 🔥&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s go bit by bit about our <code class="docutils literal notranslate"><span class="pre">SuperHero</span></code> class.</p>
+<p>As we said class is a blueprint which describes the data and various methods which help to manipulate or use the data specific to it. let’s point out what are the data and methods here.</p>
+<div class="section" id="init">
+<h3><span class="section-number">28.1.1. </span><code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<p>The first line inside our class <code class="docutils literal notranslate"><span class="pre">SuperHero</span></code>, we see a function(actually a method) called <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. This is one of the special/magic/dunder methods present in Python classes. Whenever we try to create a new instance of class, <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method gets called.</p>
+<p>But, what is the role of parameters in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> signature as?</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>While creating objects for our class, we pass the parameters as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">super_hero</span> <span class="o">=</span> <span class="n">SuperHero</span><span class="p">(</span><span class="s2">&quot;Iron Man&quot;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="s2">&quot;Jarvis&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>🤔 we see that, in <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method, we have 4 parameters <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">power_level</span></code>, <code class="docutils literal notranslate"><span class="pre">special_power</span></code>, but during initialization of the object, we just passed 3 arguments, and it worked without raising any exceptions 😳. The reason is the <code class="docutils literal notranslate"><span class="pre">__new__</span></code> method of <code class="docutils literal notranslate"><span class="pre">object</span></code>(universal base class) is called before <code class="docutils literal notranslate"><span class="pre">__init__</span></code> implicitly which actually creates the object and passes the object for <code class="docutils literal notranslate"><span class="pre">self</span></code> argument. No hurry, we would see it in action soon 😊.</p>
+</div>
+<p>What exactly is <code class="docutils literal notranslate"><span class="pre">self</span></code>? The self argument in the methods is the representation of the instance or object created out of that class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The word <code class="docutils literal notranslate"><span class="pre">self</span></code> is just a convention among the Python community, there’s no hard rule here, we can replace <code class="docutils literal notranslate"><span class="pre">self</span></code> with any word, just that it shouldn’t be a Python Keyword 😬.</p>
+</div>
+</div>
+<div class="section" id="instance-attributes">
+<h3><span class="section-number">28.1.2. </span>Instance attributes<a class="headerlink" href="#instance-attributes" title="Permalink to this headline">¶</a></h3>
+<p>We see few assignments in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method as:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Instance attributes.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">power_level</span> <span class="o">=</span> <span class="n">power_level</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">special_power</span> <span class="o">=</span> <span class="n">special_power</span>
+</pre></div>
+</div>
+<p>As we learnt that <code class="docutils literal notranslate"><span class="pre">self</span></code> represents the object created out of the class, we are assigning the arguments <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">power_level</span></code>, <code class="docutils literal notranslate"><span class="pre">special_power</span></code> to <code class="docutils literal notranslate"><span class="pre">self.name</span></code>, <code class="docutils literal notranslate"><span class="pre">self.power_level</span></code>, <code class="docutils literal notranslate"><span class="pre">self.special_power</span></code> respectively. In this way, we create attributes which belong to the object.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Instance attributes can be named any, we don’t need to always name instance attributes same as arguments names.</p>
+</div>
+<p>That’s great 🎊! We learnt about how to create an instance of class and instance attributes.</p>
+</div>
+<div class="section" id="methods">
+<h3><span class="section-number">28.1.3. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<p>Methods are basically functions that are bound to classes and interact with class or instance attributes 😬. In simple words <strong>methods are just functions but are members of a class</strong>.</p>
+<p>In our <code class="docutils literal notranslate"><span class="pre">SuperHero</span></code> class, we have a method called <code class="docutils literal notranslate"><span class="pre">introduce</span></code>. let’s call it 🔛.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">super_hero</span><span class="o">.</span><span class="n">introduce</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hey! I am Iron Man, my special power is Jarvis and have a crazy power level of 1000000 🔥&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Well, our <code class="docutils literal notranslate"><span class="pre">introduce</span></code> method introduced Iron man very well, But we already knew our beloved Super Hero Iron man in first place ❤️</p>
+<p><img alt="Iron man says hello" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_6-10/Chapter_8/Ironman.jpg?raw=true" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>class</strong> vs <strong>class object</strong> through an example:</p>
+<p><strong>class</strong> is a blueprint of the House 📜.</p>
+<p><strong>class object</strong> is the actual House 🏠.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Chapter_7/1_Loops.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">27. </span>Loops</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_Class_Attributes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">29. </span>Class Attributes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Prodigious Python<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
