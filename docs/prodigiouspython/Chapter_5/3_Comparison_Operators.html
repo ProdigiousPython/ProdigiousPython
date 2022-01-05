@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -512,7 +512,592 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Comparison operators</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-operator">
+   25.1.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     ==
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   25.2.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     !=
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   25.3.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &gt;
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   25.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &gt;=
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   25.5.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &lt;
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   25.6.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     &lt;=
+    </span>
+   </code>
+   comparison operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-operator">
+   25.7.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     is
+    </span>
+   </code>
+   operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#is-not-operator">
+   25.8.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     is
+    </span>
+    <span class="pre">
+     not
+    </span>
+   </code>
+   operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note">
+   25.9. Note
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="comparison-operators">
+<h1><span class="section-number">25. </span>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">¶</a></h1>
+<p>The comparison operators help to compare two objects. The comparison operators we have in Python are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>Checks if the values of two operands are equal, if equal results <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td><p>Checks if the values of two operands are not equal, if not equal results <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>If the value of left operand is greater than right operand, then the result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>If the value of left operand is greater than or equal to right operand, then the result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>If the value of right operand is greater than left operand, then the result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>If the value of right operand is greater than or equal to left operand, then the result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>If you are already familiar with any other programming language, then you might have already mingled with the above comparison operators. Apart from the above comparison operators, we have two more in Python:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">is</span></code></p></td>
+<td><p>Checks if both the operands are same object, if yes, result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></p></td>
+<td><p>Checks if both the operands are not same object, if yes, result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Time for a few examples on the above mentioned operators.</p>
+<div class="section" id="comparison-operator">
+<h2><span class="section-number">25.1. </span><code class="docutils literal notranslate"><span class="pre">==</span></code> comparison operator<a class="headerlink" href="#comparison-operator" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">==</span></code> operator checks if both the values of the operands are equal or not, if they are equal, it results in <code class="docutils literal notranslate"><span class="pre">True</span></code> else <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+
+<span class="c1"># integers</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># float</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">==</span> <span class="mf">0.30</span><span class="p">)</span>
+
+<span class="c1"># str</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍&quot;</span> <span class="o">==</span> <span class="s2">&quot;🐍&quot;</span><span class="p">)</span>
+
+<span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+
+<span class="c1"># list</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+True
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># False</span>
+
+<span class="c1"># integers</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># float</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">==</span> <span class="mf">8.49</span><span class="p">)</span>
+
+<span class="c1"># str</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍&quot;</span> <span class="o">==</span> <span class="s2">&quot;😬&quot;</span><span class="p">)</span>
+
+<span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+
+<span class="c1"># list</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;👻&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+False
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">25.2. </span><code class="docutils literal notranslate"><span class="pre">!=</span></code> comparison operator<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">!=</span></code> is not equal to operator, which works exactly opposite to the equal operator <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
+<p>If the values of the operands are not equal, then the result would be <code class="docutils literal notranslate"><span class="pre">True</span></code> else <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍&quot;</span> <span class="o">!=</span> <span class="s2">&quot;🐵&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="s2">&quot;🍕&quot;</span><span class="p">,</span> <span class="s2">&quot;🎂&quot;</span><span class="p">,</span> <span class="s2">&quot;🍿&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="s2">&quot;🍺&quot;</span><span class="p">,</span> <span class="s2">&quot;🍻&quot;</span><span class="p">,</span> <span class="s2">&quot;🍷&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">25.3. </span><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> comparison operator<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> Operator checks if the left operand value is greater than that of the right operand, if greater results in <code class="docutils literal notranslate"><span class="pre">True</span></code> else <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># int</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comparison of float values works the same way 🍿.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>We might think “How the heck does string comparisons work 🤔?” Well, the comparison of strings work lexicographically, which mean each character in the string is compared and based on the ASCII value of the character comparison takes place..</p>
+<p><code class="docutils literal notranslate"><span class="pre">Example:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">b</span></code> has higher ASCII value than <code class="docutils literal notranslate"><span class="pre">a</span></code>, that’s the reason we saw the result as <code class="docutils literal notranslate"><span class="pre">True</span></code> in the above comparison.</p>
+<p>One more 😬:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;Hey&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that the result is <code class="docutils literal notranslate"><span class="pre">False</span></code> as first two characters <code class="docutils literal notranslate"><span class="pre">He</span></code> are same, then comes the third character in each of the string which is <code class="docutils literal notranslate"><span class="pre">l</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, But as per <a class="reference external" href="https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html">ASCII </a> the value of <code class="docutils literal notranslate"><span class="pre">l</span></code> is 108 and <code class="docutils literal notranslate"><span class="pre">y</span></code> is 121, so <code class="docutils literal notranslate"><span class="pre">y</span></code> is greater and hence we see the comparison resulting <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>The comparison on the lists works similar to that of strings, just that each object in the lists compared 😊. If the object present in the list is iterable, then the objects inside the iterable are compared by iterating over them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We need to make sure during comparison that same type of objects are compared, else it would be raising a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> saying not supported 🙈.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">25.4. </span><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> comparison operator<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>This is a slice of pizza 🍕 as we already know about <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> operator. <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> works pretty similar to <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> just that it returns <code class="docutils literal notranslate"><span class="pre">True</span></code> even if both the object’s value is equal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍&quot;</span> <span class="o">&gt;=</span> <span class="s2">&quot;🐍&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+
+<span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings Pythonist!&quot;</span> <span class="o">&gt;=</span> <span class="s2">&quot;Hey Pythonist!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">25.5. </span><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> comparison operator<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The thing which runs in our mind right now is “Hey! I already know, I can figure it out from the above explanations”, No issues, let’s do it quick 🚀</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> operator checks if the value of the right operand is greater than the left operand, if yes, then result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code> 😊.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># int</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># str</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;Hey&quot;</span><span class="p">)</span>
+
+<span class="c1"># list</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">25.6. </span><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> comparison operator<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> operator checks if the value of the right operand is greater or equal to the left operand, if yes, then result is <code class="docutils literal notranslate"><span class="pre">True</span></code>, else <code class="docutils literal notranslate"><span class="pre">False</span></code> 😊.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍&quot;</span> <span class="o">&lt;=</span> <span class="s2">&quot;🐍&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">])</span>
+
+<span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hey Pythonist!&quot;</span> <span class="o">&lt;=</span> <span class="s2">&quot;Greetings Pythonist!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="is-operator">
+<h2><span class="section-number">25.7. </span><code class="docutils literal notranslate"><span class="pre">is</span></code> operator<a class="headerlink" href="#is-operator" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we reached the destination to know about <code class="docutils literal notranslate"><span class="pre">is</span></code> operator. <code class="docutils literal notranslate"><span class="pre">is</span></code> operator is specific to Python, first let us see an example, then we would get into explanation 😬</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>  <span class="c1"># Creating a list and assigning it to a.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>  <span class="c1"># assigning the a to b.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value of a is </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> and b is </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value of a is [1, &#39;a&#39;, None, False] and b is [1, &#39;a&#39;, None, False]
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hurray 💥! We see <code class="docutils literal notranslate"><span class="pre">True</span></code> for both <code class="docutils literal notranslate"><span class="pre">a==b</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code>, Wait what 🙄! Then what is the difference between <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> operator?</p>
+<p>Now, let’s see the above example code again, but slowly 😅… instead of creating a new object and assigning it to b as <code class="docutils literal notranslate"><span class="pre">b=</span> <span class="pre">[1,</span> <span class="pre">&quot;a&quot;,</span> <span class="pre">None,</span> <span class="pre">False]</span></code>, we have just assigned a to b. In this way, we are making <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> pointing to the same object.</p>
+<p>You might be having trust issues with me 🤥, let’s check if <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are really the same objects programmatically 😬.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>How do we find if the objects are same? The Built-in function <code class="docutils literal notranslate"><span class="pre">id</span></code> helps here, <code class="docutils literal notranslate"><span class="pre">id(&lt;obj&gt;)</span></code> returns the address of the object, and so if the address is same, so does the objects.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">id_of_a</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">id_of_b</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">id_of_a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">id_of_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;id of a is equal to id of b: </span><span class="si">{</span><span class="n">id_of_a</span><span class="o">==</span><span class="n">id_of_b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140171834862400
+140171834862400
+id of a is equal to id of b: True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yup, that’s how the <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code> returned <code class="docutils literal notranslate"><span class="pre">True</span></code> and we already know <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code> would return <code class="docutils literal notranslate"><span class="pre">True</span></code> as they are having same values.</p>
+<p><em>One more example:</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># New object assigned to a.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># New object assigned to b.</span>
+<span class="n">id_of_a</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">id_of_b</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;id of a is </span><span class="si">{</span><span class="n">id_of_a</span><span class="si">}</span><span class="s2"> and b is </span><span class="si">{</span><span class="n">id_of_b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140171834873344 and b is 140171835600256
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example we have assigned new lists to <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> of same values, and hence we see the result of <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code> as <code class="docutils literal notranslate"><span class="pre">True</span></code>, but <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code> returning <code class="docutils literal notranslate"><span class="pre">False</span></code> as id’s of a and b are different as they are different objects.</p>
+<p><strong>TLDR:</strong> <code class="docutils literal notranslate"><span class="pre">is</span></code> operator is to check for same objects, <code class="docutils literal notranslate"><span class="pre">==</span></code> is to check for the values of the objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> are true constants in Python, In the complete execution of Python code, whenever and wherever we get to meet these objects, we are actually mingling with the same friends 😊. Hence, we could use <code class="docutils literal notranslate"><span class="pre">is</span></code> operator when we compare <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</div>
+<p><em>Example:</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="is-not-operator">
+<h2><span class="section-number">25.8. </span><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> operator<a class="headerlink" href="#is-not-operator" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> is the twin brother of <code class="docutils literal notranslate"><span class="pre">is</span></code> operator, just that it shows attitude towards <code class="docutils literal notranslate"><span class="pre">is</span></code> operator 😈 JK! As we know <code class="docutils literal notranslate"><span class="pre">is</span></code> is to find if the operands are same object, <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the operands are not same object and <code class="docutils literal notranslate"><span class="pre">False</span></code> if they are same object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">id_of_x</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">id_of_y</span> <span class="o">=</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;id of x is </span><span class="si">{</span><span class="n">id_of_x</span><span class="si">}</span><span class="s2"> and y is </span><span class="si">{</span><span class="n">id_of_y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140171834854016 and y is 140171835132672
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="note">
+<h2><span class="section-number">25.9. </span>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Python does behave a little weird when integers are to be checked if they are same objects in the range of 256.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for 256.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># for 257.</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">257</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">257</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span> <span class="ow">is</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above we can see the difference, for <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">is</span> <span class="pre">b</span></code> where a and b are 256, we see the result as <code class="docutils literal notranslate"><span class="pre">True</span></code>. But for <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">is</span> <span class="pre">d</span></code> where c and d are 257, we see that the result if <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The reason for this is Python caches the integer objects from 0 to 256, so whenever we assign an integer between 0 and 256, Python uses the same integer object it has created everytime 😊. No worries, we can use <code class="docutils literal notranslate"><span class="pre">==</span></code> for integers which works pretty fine as we would be most concerned about the value of the integer 😊.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -856,8 +1441,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140154854206464
-140154854206464
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140171834862400
+140171834862400
 id of a is equal to id of b: True
 </pre></div>
 </div>
@@ -878,7 +1463,7 @@ id of a is equal to id of b: True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140154863000064 and b is 140154853881984
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140171834873344 and b is 140171835600256
 True
 False
 </pre></div>
@@ -922,7 +1507,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140154862999104 and y is 140154853876288
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140171834854016 and y is 140171835132672
 True
 </pre></div>
 </div>
@@ -1005,15 +1590,20 @@ False
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 

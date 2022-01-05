@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -446,7 +446,115 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>IDEs/Editors for Python</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pycharm">
+   6.1. PyCharm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spyder">
+   6.2. Spyder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visual-studio-code">
+   6.3. Visual Studio Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#atom">
+   6.4. Atom
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter">
+   6.5. Jupyter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-colab">
+   6.6. Google Colab
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ides-editors-for-python">
+<h1><span class="section-number">6. </span>IDEs/Editors for Python<a class="headerlink" href="#ides-editors-for-python" title="Permalink to this headline">¶</a></h1>
+<p>We have a lot of IDEs/Editors available for Python. Although we get <strong>IDLE</strong> abbreviated as <strong>I</strong>ntegrated <strong>D</strong>evelopment and <strong>L</strong>earning <strong>E</strong>nvironment</p>
+<p>IDLE gets installed automatically on Windows along with Python installation. On Mac or *nix operating systems we need install it manually</p>
+<p>A few great IDEs/Editors for Python</p>
+<div class="section" id="pycharm">
+<h2><span class="section-number">6.1. </span>PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://www.jetbrains.com/pycharm/" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/PyCharm_logo.png?raw=true" width=100 length=100></img></a></p>
+</div>
+<div class="section" id="spyder">
+<h2><span class="section-number">6.2. </span>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://www.spyder-ide.org/" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/Spyder_logo.png?raw=true" width=100 length=100></img></a></p>
+</div>
+<div class="section" id="visual-studio-code">
+<h2><span class="section-number">6.3. </span>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://code.visualstudio.com/" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/VisualStudio_logo.png?raw=true" width=100 length=100></img></a></p>
+</div>
+<div class="section" id="atom">
+<h2><span class="section-number">6.4. </span>Atom<a class="headerlink" href="#atom" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://atom.io/" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/Atom_logo.png?raw=true" width=100 length=100></img></a></p>
+</div>
+<div class="section" id="jupyter">
+<h2><span class="section-number">6.5. </span>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
+<p><a href="https://jupyter.org/" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/Jupyter_logo.png?raw=true" width=100 length=100></img></a></p>
+</div>
+<div class="section" id="google-colab">
+<h2><span class="section-number">6.6. </span>Google Colab<a class="headerlink" href="#google-colab" title="Permalink to this headline">¶</a></h2>
+<p>This is my personal favourite when I need huge memory and GPU. We get those for free here 😎</p>
+<p><a href="https://colab.research.google.com" target="_blank"><img src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_1/resources/GoogleColab_logo.png?raw=true" width=100 length=100></img></a></p>
+<p>PS 😉: I always say to prefer using basic text editor like notepad/gedit when learning a new language and use a good IDE if your Boss wants you to do the work quick 😜</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -528,15 +636,20 @@
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 
