@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -421,9 +421,29 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Positional Arguments</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-only-arguments">
+   16.1. Position only arguments
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="positional-arguments">
@@ -459,7 +479,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6047</span><span class="o">/</span><span class="mf">746715703.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15754</span><span class="o">/</span><span class="mf">746715703.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: add() missing 1 required positional argument: &#39;operand_2&#39;
@@ -528,7 +548,168 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6047</span><span class="o">/</span><span class="mf">1994685720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15754</span><span class="o">/</span><span class="mf">1994685720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name_of_the_user</span><span class="o">=</span><span class="s2">&quot;Pythonist&quot;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: greet() got some positional-only arguments passed as keyword arguments: &#39;greet_word&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try to call our <code class="docutils literal notranslate"><span class="pre">greet</span></code> with <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> as positional only argument, meaning not passing it by keyword name. We can hope that there won’t be any exception raised. 😁</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calling greet function with name_of_the_user as Positional keyword.</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calling greet function with name_of_the_user with keyword name.</span>
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name_of_the_user</span><span class="o">=</span><span class="s2">&quot;Pythoneer😍&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist!
+Hello Pythoneer😍!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="positional-arguments">
+<h1><span class="section-number">16. </span>Positional Arguments<a class="headerlink" href="#positional-arguments" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">operand_1</span><span class="p">,</span> <span class="n">operand_2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of </span><span class="si">{</span><span class="n">operand_1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">operand_2</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">operand_1</span> <span class="o">+</span> <span class="n">operand_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yipeee! we have created a new function called add which is expected to add two integers values, Just kidding 😜, thanks to the dynamic typing of the Python, we can even add float values, concat strings and many more using our <code class="docutils literal notranslate"><span class="pre">add</span></code> function, but for now, let’s stick with the addition of integers 😎</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The sum of 1 and 3 is 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yup, we did got our result ⭐️. what if I forget passing a value? we would see a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> exception raised 👻</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15754</span><span class="o">/</span><span class="mf">746715703.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: add() missing 1 required positional argument: &#39;operand_2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The name <strong>Positional arguments</strong> itself says the arguments should be according to the function signature. But here’s a deal, we can change the order of arguments being passed, just that we should pass them with the respective keyword 🙂</p>
+<p><code class="docutils literal notranslate"><span class="pre">Example</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">difference</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The difference of </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The difference of 8 from 5 is -3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Positions are swapped, but passing the objects as keywords.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The difference of 8 from 5 is -3
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see in the above example that even if the positions are changed, but as we have are passing them through keywords, the result remains the same. ⭐️</p>
+<div class="section" id="position-only-arguments">
+<h2><span class="section-number">16.1. </span>Position only arguments<a class="headerlink" href="#position-only-arguments" title="Permalink to this headline">¶</a></h2>
+<p>We do have the power ✊ to make the user call the function’s position only arguments the way we want, Thanks to <a class="reference external" href="https://www.python.org/dev/peps/pep-0570/">PEP-570</a> for Python &gt;= 3.8</p>
+<p>The syntax defined by the PEP-570 regarding Position only arguments is as:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">positional_only_parameters</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">positional_or_keyword_parameters</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_parameters</span><span class="p">):</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">name_of_the_user</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greet_word</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name_of_the_user</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example, we do have two arguments <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> and <code class="docutils literal notranslate"><span class="pre">name_of_the_user</span></code> we used <strong><code class="docutils literal notranslate"><span class="pre">/</span></code></strong> to say that <strong>Hey Python! Consider <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> as Positional only Argument</strong></p>
+<p>When we try to call our function <code class="docutils literal notranslate"><span class="pre">greet</span></code> with greet_word as keyword name, Boom 💣, we get a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> exception.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name_of_the_user</span><span class="o">=</span><span class="s2">&quot;Pythonist&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15754</span><span class="o">/</span><span class="mf">1994685720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name_of_the_user</span><span class="o">=</span><span class="s2">&quot;Pythonist&quot;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: greet() got some positional-only arguments passed as keyword arguments: &#39;greet_word&#39;
@@ -601,15 +782,20 @@ Hello Pythoneer😍!
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 
