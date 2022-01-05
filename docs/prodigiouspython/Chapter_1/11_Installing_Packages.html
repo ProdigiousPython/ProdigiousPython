@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -421,7 +421,90 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Installing packages</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tidbits">
+   11.1. Tidbits 🔔
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="installing-packages">
+<h1><span class="section-number">11. </span>Installing packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h1>
+<p>Python has one of the largest programming community who build 3rd party packages and support community help ❤️.</p>
+<p>That’s pretty good, Now, how do we install the packages 🤔? We could use Python’s package manager <strong>PIP</strong>.</p>
+<p>Python’s official 3rd party package repository is <a class="reference external" href="https://pypi.org/">Python Package Index (PyPI)</a> and its index url is <a class="reference external" href="https://pypi.org/simple">https://pypi.org/simple</a></p>
+<p>Here’s how to use PIP in shell/terminal:</p>
+<p>To search for a package:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip search <span class="o">[</span>package name<span class="o">]</span>
+</pre></div>
+</div>
+<p>To install a package:
+Install</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]</span>
+</pre></div>
+</div>
+<p>Install a specific version</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]==[</span>version<span class="o">]</span>
+</pre></div>
+</div>
+<p>Install greater than a specific version</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]</span>&gt;<span class="o">=[</span>verion<span class="o">]</span>
+</pre></div>
+</div>
+<p>To uninstall a package</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip uninstall <span class="o">[</span>package name<span class="o">]</span>
+</pre></div>
+</div>
+<div class="section" id="tidbits">
+<h2><span class="section-number">11.1. </span>Tidbits 🔔<a class="headerlink" href="#tidbits" title="Permalink to this headline">¶</a></h2>
+<p>There are modern ways of managing the dependencies using <a class="reference external" href="https://python-poetry.org/">Poetry</a>, <a class="reference external" href="https://flit.readthedocs.io/en/latest/index.html">Flit</a> etc.. We will get to those soon…😊</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -503,15 +586,20 @@ Install</p>
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 

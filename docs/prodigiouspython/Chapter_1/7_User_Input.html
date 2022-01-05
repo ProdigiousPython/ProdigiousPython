@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,12 +403,83 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>User Input</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="user-input">
+<h1><span class="section-number">7. </span>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">input</span></code> is a builtin function in Python, which prompts for the user to enter as standard input unto newline(<code class="docutils literal notranslate"><span class="pre">\n</span></code>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">input</span></code> function always returns a string datatype, we need to typecast to respective datatype required.</p>
+<p>Python 2.x’s <code class="docutils literal notranslate"><span class="pre">input</span></code> is different from Python 3.x’s <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p>
+<p>Python 2.x’s <code class="docutils literal notranslate"><span class="pre">input</span></code> evaluates the string as a python command, like <code class="docutils literal notranslate"><span class="pre">eval(input())</span></code>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">user_entered</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Hey Pythonist! Please enter anything: </span><span class="se">\n</span><span class="s2">&gt;&gt;&gt;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The input entered is </span><span class="si">{</span><span class="n">user_entered</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello Python!
+The input entered is Hello Python!
+</pre></div>
+</div>
+<p>Let’s try typecasting to integers we got from the user.</p>
+<p>If the input is not a valid integer value, typecasting to integer raises <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">variable_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter variable 1 to be added: </span><span class="se">\n</span><span class="s2">&gt;&gt;&gt;&quot;</span><span class="p">)</span>  <span class="c1"># string</span>
+    <span class="n">variable_2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter variable 2 to be added </span><span class="se">\n</span><span class="s2">&gt;&gt;&gt;&quot;</span><span class="p">)</span>  <span class="c1"># string</span>
+    <span class="n">integer_1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">variable_1</span><span class="p">)</span>  <span class="c1"># Typecasting to integer</span>
+    <span class="n">integer_2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">variable_2</span><span class="p">)</span>  <span class="c1"># Typecasting to integer</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sum of </span><span class="si">{</span><span class="n">variable_1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">variable_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">integer_1</span><span class="o">+</span><span class="n">integer_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;👻 unable to typecast to integer: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">output</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;I am a string 😈</span>
+<span class="go">&gt;&gt;&gt;I am also a string 😈</span>
+<span class="go">👻 unable to typecast to integer: invalid literal for int() with base 10: &#39;I am a string 😈&#39;</span>
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -491,15 +562,20 @@ The input entered is Hello Python!
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 

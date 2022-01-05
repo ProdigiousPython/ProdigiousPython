@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -464,7 +464,333 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Boolean Operators</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#truth-value-testing">
+   24.1. Truth Value Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-operation-and-results">
+   24.2. Boolean Operation and results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#or-operation-on-objects">
+   24.3.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     or
+    </span>
+   </code>
+   operation on objects.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#and-operation-on-objects">
+   24.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     and
+    </span>
+   </code>
+   operation on objects.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#not-operation-on-objects">
+   24.5.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     not
+    </span>
+   </code>
+   operation on objects.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tldr-about-boolean-operators">
+   24.6. TLDR about Boolean Operators😬
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="boolean-operators">
+<h1><span class="section-number">24. </span>Boolean Operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">¶</a></h1>
+<p>My first programming language was C language, Where I got to meet our boolean operator friends which are <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> for <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code> for <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">!</span></code> for <code class="docutils literal notranslate"><span class="pre">not</span></code>. I was like why symbols, can we just use <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span></code>?</p>
+<p>Then I got myself introduced to the <code class="docutils literal notranslate"><span class="pre">Python</span></code>. The readability of code in Python is top-notch compared to other languages, which holds good even for boolean operators <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code> 😎.</p>
+<p><img alt="Incredibles AND OR NOT are same" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_6-10/Chapter_6/incredibles_and_or_not.jpg?raw=true" /></p>
+<p>Yup! In Python, boolean operators <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span></code> are themselves instead of symbols.</p>
+<p>Let’s get to know more about Boolean operators in Python!</p>
+<p>💡 Before diving into Boolean operators, it’s a little necessary to drift into Truth Value Testing in Python.</p>
+<div class="section" id="truth-value-testing">
+<h2><span class="section-number">24.1. </span>Truth Value Testing<a class="headerlink" href="#truth-value-testing" title="Permalink to this headline">¶</a></h2>
+<p>Every object in Python can be tested for truth value.</p>
+<p>By default, an object is considered true unless its class defines either a <code class="docutils literal notranslate"><span class="pre">__bool__()</span></code> method that returns False or a <code class="docutils literal notranslate"><span class="pre">__len__()</span></code> method that returns zero, when called with the object. No worries, we would learn about <code class="docutils literal notranslate"><span class="pre">__bool__</span></code> and <code class="docutils literal notranslate"><span class="pre">__len__</span></code> Once we get into the chapters about classes.</p>
+<p>Here are the built-ins defined <code class="docutils literal notranslate"><span class="pre">False</span></code>for Truth value testing.</p>
+<ul class="simple">
+<li><p>constants defined to be false: None and False.</p></li>
+<li><p>zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1)</p></li>
+<li><p>empty sequences and collections: “”, (), [], {}, set(), range(0)</p></li>
+</ul>
+<p>To find the Truth Value of objects, we can do as <code class="docutils literal notranslate"><span class="pre">bool(&lt;obj&gt;)</span></code>. All the above mentioned objects returns <code class="docutils literal notranslate"><span class="pre">False</span></code> when tried <code class="docutils literal notranslate"><span class="pre">bool(&lt;obj&gt;)</span></code>. Let’s see examples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On None.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On False.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Integer 0.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Float 0.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Complex 0j.</span>
+
+<span class="n">empty_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="n">empty_string</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty tuple.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">([])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty list.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">({})</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty dictionary.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="nb">set</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty set.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On range(0).</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hurray! We see the Truth values of all the above mentioned objects are returning <code class="docutils literal notranslate"><span class="pre">False</span></code> ❌ as expected.</p>
+<p>In Python, we have 3 boolean operators namely <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span></code>. let’s see about the result obtained based on the operands:</p>
+<p>Boolean operators always result object based on the Truth values of the Operands.</p>
+</div>
+<div class="section" id="boolean-operation-and-results">
+<h2><span class="section-number">24.2. </span>Boolean Operation and results<a class="headerlink" href="#boolean-operation-and-results" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>x <code class="docutils literal notranslate"><span class="pre">or</span></code> y</p></td>
+<td><p>if x’s truth value is false, then y, else x</p></td>
+</tr>
+<tr class="row-odd"><td><p>x <code class="docutils literal notranslate"><span class="pre">and</span></code> y</p></td>
+<td><p>if x’s truth value is false, then x, else y</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">not</span></code> x</p></td>
+<td><p>if x is false, then True, else False</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>let’s try the above table</em> 😊</p>
+</div>
+<div class="section" id="or-operation-on-objects">
+<h2><span class="section-number">24.3. </span><code class="docutils literal notranslate"><span class="pre">or</span></code> operation on objects.<a class="headerlink" href="#or-operation-on-objects" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code>, if x’s truth value is false, then y, else x, which means <code class="docutils literal notranslate"><span class="pre">or</span></code> evaluates to first operand if either one of the operands is truthy, Otherwise it evaluates only to the second operand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean objects</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numerals</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s know about how we got the above result.</p>
+<p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">or</span> <span class="pre">0</span></code> resulted in 1 and <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">or</span> <span class="pre">1</span></code> resulted 1 again. Let’s remember what we have said about and in the table: <strong>if x’s truth value is false, then y, else x</strong>. Yup, it works.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">or</span> <span class="pre">0</span></code>, the truth value of 1 is True, so according to the above statement, it results in the first operand which is 1.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">or</span> <span class="pre">1</span></code>, the truth value of 0 is False, so according to the above statement, it results in the second operand itself which is 1.</p>
+</div>
+<div class="section" id="and-operation-on-objects">
+<h2><span class="section-number">24.4. </span><code class="docutils literal notranslate"><span class="pre">and</span></code> operation on objects.<a class="headerlink" href="#and-operation-on-objects" title="Permalink to this headline">¶</a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code>, if x’s truth value is false, then x, else y, which means <code class="docutils literal notranslate"><span class="pre">and</span></code> evaluates to second operand if and only if both the operands are truthy, Otherwise it evaluates only to the first operand.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean objects</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+False
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numerals</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s know about how we got the above result.</p>
+<p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">and</span> <span class="pre">0</span></code> resulted in 0 and <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">and</span> <span class="pre">1</span></code> resulted 0 again. Let’s remember what we have said about <code class="docutils literal notranslate"><span class="pre">and</span></code> in the table: <strong>if x’s truth value is false, then x, else y</strong>. Yup, it works.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">and</span> <span class="pre">0</span></code>, the truth value of <code class="docutils literal notranslate"><span class="pre">1</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, so according to the above statement, it results in the second operand which is <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">and</span> <span class="pre">1</span></code>, the truth value of <code class="docutils literal notranslate"><span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, so according to the above statement, it results in the first operand itself which is <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p><em>One more example, but both the operand’s truth values are <code class="docutils literal notranslate"><span class="pre">True</span></code>:</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>The statement holds good here too 😊.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">and</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">and</span> <span class="pre">2</span></code>, both the operand’s truth values are <code class="docutils literal notranslate"><span class="pre">True</span></code>, so as per the statement <strong>if x’s truth value is false, then x, else y</strong>, in both cases second operand is the result.</p>
+</div>
+<div class="section" id="not-operation-on-objects">
+<h2><span class="section-number">24.5. </span><code class="docutils literal notranslate"><span class="pre">not</span></code> operation on objects.<a class="headerlink" href="#not-operation-on-objects" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">not</span></code> operation is pretty easy, it just returns opposite of Truth value of object. If the truth value of object is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">&lt;obj&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code> and vice versa 🙃.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On boolean.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># On integers.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># On list.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">[])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+True
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tldr-about-boolean-operators">
+<h2><span class="section-number">24.6. </span>TLDR about Boolean Operators😬<a class="headerlink" href="#tldr-about-boolean-operators" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">or</span></code> can be understood as:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">or_</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">and</span></code> can be understood as:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">and_</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -746,15 +1072,20 @@ True
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 

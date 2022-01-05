@@ -41,7 +41,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -352,7 +352,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -520,7 +520,527 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Loops</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while">
+   27.1.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for">
+   27.2.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-loops">
+   27.3. Nested loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#break-and-continue">
+   27.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     break
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     continue
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#break">
+     27.4.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       break
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continue">
+     27.4.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       continue
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hidden-treasures-in-looping">
+   27.5. Hidden treasures in looping 💰
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#else-block-after-loops">
+     27.5.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+     block after loops
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#break-and-continue-effect-in-loops-having-finally-blocks">
+     27.5.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       break
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       continue
+      </span>
+     </code>
+     effect in loops having
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       finally
+      </span>
+     </code>
+     blocks
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="loops">
+<h1><span class="section-number">27. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h1>
+<p>I just had an heated argument 🔥 with my girlfriend. I need to write 5 times <strong>I love you ❤️</strong> as punishment. Let’s start writing 🙁</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I love you ❤️
+I love you ❤️
+I love you ❤️
+I love you ❤️
+I love you ❤️
+</pre></div>
+</div>
+</div>
+</div>
+<p>That was pretty easy, it just took me couples of seconds. But what if she asks for 100 times, or 1000 times, I am doomed 😱</p>
+<p>Here comes our saviours <strong>Loops</strong>. Let’s do the same, but using a loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I love you ❤️
+I love you ❤️
+I love you ❤️
+I love you ❤️
+I love you ❤️
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yup! we did it much easier, how crazy ever my girlfriend is and gives me punishment to write any number of times, I can just change the condition of while loop as <code class="docutils literal notranslate"><span class="pre">count</span> <span class="pre">&lt;</span> <span class="pre">&lt;number&gt;</span></code>.</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>404: My Girlfriend neither found nor exists.😬</p>
+</div>
+<p>Basically loops are used to execute a block of code repeatedly, until a break condition is satisfied. Break condition is not required unless we want to run an infinite loop 🙄.</p>
+<p>We have two ways to build loops in Python:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
+</ul>
+<p>To exit the loops explicitly, we can use <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword exits the right loop which it is indented in.</p>
+<div class="section" id="while">
+<h2><span class="section-number">27.1. </span><code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop also works based on the Truth values of the condition/object, if the truth value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the loop continues to execute, else breaks the loop. The syntax of <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">condtion</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Yipeee! We have already use <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in our first example. Let’s see more examples.</p>
+<p>let’s find even numbers until 20.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even.&quot;</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 is even.
+2 is even.
+4 is even.
+6 is even.
+8 is even.
+10 is even.
+12 is even.
+14 is even.
+16 is even.
+18 is even.
+20 is even.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We dit it 😎! let’s get to the explanation phase:</p>
+<p>We have created a integer object <code class="docutils literal notranslate"><span class="pre">number</span></code> with value 0. We created a while loop with the condition as <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code>, so until the <code class="docutils literal notranslate"><span class="pre">number</span></code> is greater than 20, the while loop continues to execute. we have a if condition <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">number</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0:</span></code> that checks if the number is even, if the number is even, then prints saying the number is even, else skips.</p>
+<p><code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">+=</span> <span class="pre">1</span></code>, don’t forget this unless you want to get into infinite loop 😬. For each iteration in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, <code class="docutils literal notranslate"><span class="pre">number</span></code> increments by 1, once the number is incremented to 21, the while loop breaks and doesn’t execute anymore as it is resulting Falsy for the condition <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code>.</p>
+</div>
+<div class="section" id="for">
+<h2><span class="section-number">27.2. </span><code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<p>We have another loop called <code class="docutils literal notranslate"><span class="pre">for</span></code>, which is used for iterating over the iterator or sequences like <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> etc..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;🐍&quot;</span><span class="p">,</span> <span class="s2">&quot;🚀&quot;</span><span class="p">,</span> <span class="s2">&quot;😊&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🐍
+🚀
+😊
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can even iterate over strings</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">&quot;Python&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P
+y
+t
+h
+o
+n
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to iterate over numbers, we can use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function which generates the values in the given range.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><code class="docutils literal notranslate"><span class="pre">range</span></code> function can be called as <code class="docutils literal notranslate"><span class="pre">range(stop)</span></code> or <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code>. For <code class="docutils literal notranslate"><span class="pre">range(stop)</span></code>, the iteration starts from 0 until stop(exclusive). For <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code>, start can be any value and iterates until stop(exclusive) with step given, default step is 1.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+7
+9
+11
+13
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nested-loops">
+<h2><span class="section-number">27.3. </span>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">¶</a></h2>
+<p>Just now my lecturer gave me an assignment to find factorial for a few numbers 2, 6, 7, 8, 9, 10. Might be my lecturer doesn’t knew how easily we could use nested-loops to find the factorial of each number given.</p>
+<p>First things first, what are nested-loops? The name itself is self explanatory 😎, loop containing a loop is called nested loop. Yup, we got to know about it. let’s start solving the assignment ⚡️.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">assignment_numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">assignment_numbers</span><span class="p">:</span>  <span class="c1"># First loop.</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">number</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>  <span class="c1"># Nested Loop.</span>
+        <span class="n">factorial</span> <span class="o">*=</span> <span class="n">num</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Factorial of </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">factorial</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Factorial of 2 is 2
+Factorial of 6 is 720
+Factorial of 7 is 5040
+Factorial of 8 is 40320
+Factorial of 9 is 362880
+Factorial of 10 is 3628800
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yup! We did it 😊! We used first <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each number which are given as in our assignment, in the nested for loop, we are ranging from 0 to the number(exclusive) and multiplying each number <code class="docutils literal notranslate"><span class="pre">num</span></code> in the nested for loop. Once the nested for loop is exhausted, we are printing the result for the factorial of the number. In this way nested loops work. Same applies to the <code class="docutils literal notranslate"><span class="pre">while</span></code> loops.</p>
+</div>
+<div class="section" id="break-and-continue">
+<h2><span class="section-number">27.4. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> are used to explicitly control the flow of loops by residing in the loop.</p>
+<p>If all the objects in the iteration are completed or while condition turns falsy, the loop gets exited, but if we want to exit the loop explicitly or before completion of all objects in the loop, <code class="docutils literal notranslate"><span class="pre">break</span></code> comes in handy. we just need to have a break statement as <code class="docutils literal notranslate"><span class="pre">break</span></code> and the nearest enclosing loop in which this <code class="docutils literal notranslate"><span class="pre">break</span></code> is present exits.</p>
+<p><code class="docutils literal notranslate"><span class="pre">continue</span></code> in a loop stop s the execution of the next code in the current iteration and starts the next iteration of the enclosing loop.</p>
+<p>🙈 Sometimes sentences make the explanation harder to understand. In this case, it’s better to understand using examples.</p>
+<div class="section" id="break">
+<h3><span class="section-number">27.4.1. </span><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
+<p>I want to know if a particular number is present in a list or not.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">345</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">number_to_be_searched_for</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are checking on the number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">number_to_be_searched_for</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We found the number 🏁&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We are checking on the number: 10
+We are checking on the number: 23
+We are checking on the number: 13
+We found the number 🏁
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The way of searching for the number in the above code is called Linear Search. As we can see it is pretty easy to implement, but note that it isn’t efficient for huge amount of data.</p>
+</div>
+<p>Let’s get to know what has happened here 🤔? we have a list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, and we needed to search for a number 13 if it is present in the my_list or not.</p>
+<p>We have started iterating over the <code class="docutils literal notranslate"><span class="pre">my_list</span></code> list, once we find the number 13 in our list, we are breaking the loop. In this way, we are ensuring that it doesn’t iterate over next items unnecessarily as we already achieved what we want 😊.</p>
+<p>How do we know if we exited the loop? As we can see that only 3 print statements saying <strong>We are checking on the number:</strong> can be found. If we don’t have a break, we would be having three more print statements as well:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Without break</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are checking on the number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">number_to_be_searched_for</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We found the number 🏁&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We are checking on the number: 10
+We are checking on the number: 23
+We are checking on the number: 13
+We found the number 🏁
+We are checking on the number: 345
+We are checking on the number: 0
+We are checking on the number: 8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="continue">
+<h3><span class="section-number">27.4.2. </span><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements skips execution of the code present after it and continues to execute the next iteration of the loop.</p>
+<p>I am now in a shopping mall, picked a lot of items and now reached the billing counter, just got to remember that I just have 100 bucks with me 😱. I started looking at the cumulative total one by one being billed at the counter. I am good unless the bill crosses 100 bucks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">items_costs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">cumulative_cost</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Before starting the billing.</span>
+
+<span class="k">for</span> <span class="n">cost</span> <span class="ow">in</span> <span class="n">items_costs</span><span class="p">:</span>
+    <span class="n">cumulative_cost</span> <span class="o">+=</span> <span class="n">cost</span>
+    <span class="k">if</span> <span class="n">cumulative_cost</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;⚠️ Oops! I have breached my budget, cumulative cost is </span><span class="si">{</span><span class="n">cumulative_cost</span><span class="si">}</span><span class="s2"> on addition of item of cost: </span><span class="si">{</span><span class="n">cost</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⚠️ Oops! I have breached my budget, cumulative cost is 121 on addition of item of cost: 38
+⚠️ Oops! I have breached my budget, cumulative cost is 129 on addition of item of cost: 8
+⚠️ Oops! I have breached my budget, cumulative cost is 143 on addition of item of cost: 14
+⚠️ Oops! I have breached my budget, cumulative cost is 152 on addition of item of cost: 9
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example I needed to drop few items ☹️ as I crossed 100 bucks. Let’s see how did the code work.</p>
+<p>We had a tuple called <code class="docutils literal notranslate"><span class="pre">items_cost</span></code> which has cost of each item, we started looping each item’s cost and adding the cost to <code class="docutils literal notranslate"><span class="pre">cumulative_cost</span></code> and we checked if the <code class="docutils literal notranslate"><span class="pre">cumulative_cost</span></code> is less than or equal to 100 bucks, if true, we are in safe zone, so we are using <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement, so that the code present next doesn’t get executed. But eventually, we are crossing 100 bucks, and so the code in the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition doesn’t get executed as <code class="docutils literal notranslate"><span class="pre">cumulative_cost</span> <span class="pre">&lt;=</span> <span class="pre">100</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, hence, we see that there’s a warning print statement being executed.</p>
+</div>
+</div>
+<div class="section" id="hidden-treasures-in-looping">
+<h2><span class="section-number">27.5. </span>Hidden treasures in looping 💰<a class="headerlink" href="#hidden-treasures-in-looping" title="Permalink to this headline">¶</a></h2>
+<p>There are a few things that few people miss out to know about while learning loops in Python, I was one of them 😅. Let’s see what did we miss:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> block after loops</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> effect in loops having <code class="docutils literal notranslate"><span class="pre">finally</span></code> blocks</p></li>
+</ul>
+<div class="section" id="else-block-after-loops">
+<h3><span class="section-number">27.5.1. </span><code class="docutils literal notranslate"><span class="pre">else</span></code> block after loops<a class="headerlink" href="#else-block-after-loops" title="Permalink to this headline">¶</a></h3>
+<p>The first question I had when I got to see code having <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">loop</span></code> <strong>What the heck is else doing here?</strong>, but later I got to know that else can be used after the loop. Well, what does it do? We just got to know about the use of <code class="docutils literal notranslate"><span class="pre">break</span></code> in the loops, right? If the loop explicitly exits by the keyword <code class="docutils literal notranslate"><span class="pre">break</span></code>, the <code class="docutils literal notranslate"><span class="pre">else</span></code> block <strong>doesn’t</strong> gets executed, else <code class="docutils literal notranslate"><span class="pre">else</span></code> block gets executed. let’s see an example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_else</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> found in my_list&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> not found in my_list&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 234 is present in the list, so the break statement gets executed, so else block gets skipped.</span>
+<span class="n">loop_else</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>value 234 found in my_list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 783 is not present in the list, so the break statement never gets executed, so else block gets executed.</span>
+<span class="n">loop_else</span><span class="p">(</span><span class="mi">783</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>value 783 not found in my_list
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="break-and-continue-effect-in-loops-having-finally-blocks">
+<h3><span class="section-number">27.5.2. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> effect in loops having <code class="docutils literal notranslate"><span class="pre">finally</span></code> blocks<a class="headerlink" href="#break-and-continue-effect-in-loops-having-finally-blocks" title="Permalink to this headline">¶</a></h3>
+<p>If the loop consists of <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">except</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> or <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> block. If either <code class="docutils literal notranslate"><span class="pre">break</span></code> or <code class="docutils literal notranslate"><span class="pre">continue</span></code> is executed, the interpreter reaches the <code class="docutils literal notranslate"><span class="pre">finally</span></code> block to execute the code present in it before breaking or continuing the loop.</p>
+<p><code class="docutils literal notranslate"><span class="pre">break</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in finally block&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in finally block
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">continue</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in finally block&quot;</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c1"># Using break here to prevent an infinite loop.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in finally block
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prodigiouspython/Chapter_7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -940,15 +1460,20 @@ We are checking on the number: 8
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Prodigious Python<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Prodigious Python<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <p>
+<a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
+<a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
+</p>
+
+      </div>
+  </p>
+</footer>
 </main>
 
 
