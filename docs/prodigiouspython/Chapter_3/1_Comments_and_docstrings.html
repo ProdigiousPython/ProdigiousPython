@@ -482,19 +482,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Comments and Docstrings</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Comments and Docstrings</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#single-line">
    14.1. Single Line
@@ -563,7 +564,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -748,196 +751,8 @@ double_the_value(value: int)
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="comments-and-docstrings">
-<h1><span class="section-number">14. </span>Comments and Docstrings<a class="headerlink" href="#comments-and-docstrings" title="Permalink to this headline">¶</a></h1>
-<p>Comments are used to explain the code. The interpreter doesn’t execute the comments. There are 3 types of comments in Python:</p>
-<ul class="simple">
-<li><p>Single Line</p></li>
-<li><p>In-Line</p></li>
-<li><p>Multi Line</p></li>
-</ul>
-<div class="section" id="single-line">
-<h2><span class="section-number">14.1. </span>Single Line<a class="headerlink" href="#single-line" title="Permalink to this headline">¶</a></h2>
-<p>Single line comments are written in a single line. Single line comments start with <code class="docutils literal notranslate"><span class="pre">#</span></code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here&#39;s a single line comment</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="in-line">
-<h2><span class="section-number">14.2. </span>In-Line<a class="headerlink" href="#in-line" title="Permalink to this headline">¶</a></h2>
-<p>In-Line comments are written beside the code.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>  <span class="c1"># Here&#39;s a In-Line comment</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="multi-line">
-<h2><span class="section-number">14.3. </span>Multi Line<a class="headerlink" href="#multi-line" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes we need to write a huge explanation using comments, in those cases we do use multi-line comments. multiline comments are enclosed in <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">'''</span></code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Here&#39;s a </span>
-<span class="sd">multiline comment.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="docstrings">
-<h2><span class="section-number">14.4. </span>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h2>
-<p>Docstrings are specific type of comments that are stored as a attribute to the module, class, method or function.</p>
-<p>Docstrings are written similar to the multi-line comments using <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">'''</span></code>, the only difference would be they are written exactly at the start(first statement) of the module, class, method or function.</p>
-<p>Docstrings can be programmatically accessed using the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or through the built-in function <code class="docutils literal notranslate"><span class="pre">help</span></code>. Let’s give a try 😎.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double_the_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Doubles the integer value passed to the function and returns it.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="using-help">
-<h3><span class="section-number">14.4.1. </span>Using help<a class="headerlink" href="#using-help" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">help</span></code> function provides the docstrings as well as the information about the module, class, method or function.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">double_the_value</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function double_the_value in module __main__:
-
-double_the_value(value: int)
-    Doubles the integer value passed to the function and returns it.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="using-doc">
-<h3><span class="section-number">14.4.2. </span>Using <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#using-doc" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">double_the_value</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Doubles the integer value passed to the function and returns it.
-</pre></div>
-</div>
-</div>
-</div>
-<p>Can we use the single line comments instead of multi-line docstrings 🤔? Let’s try this as well.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_single_line_comment_as_docstring</span><span class="p">():</span>
-    <span class="c1"># This is a single-line comment</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test_single_line_comment_as_docstring</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can see that <code class="docutils literal notranslate"><span class="pre">None</span></code> is printed, which explains that we can’t use single-line comments as docstrings 🙂</p>
-</div>
-</div>
-<div class="section" id="docstrings-for-documentation-of-code">
-<h2><span class="section-number">14.5. </span>Docstrings for documentation of code.<a class="headerlink" href="#docstrings-for-documentation-of-code" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">PEP-257</a> defines two types of docstrings.</p>
-<ul class="simple">
-<li><p>One-Line docstring</p></li>
-<li><p>Multi-Line docstring</p></li>
-</ul>
-<div class="section" id="one-line-docstring">
-<h3><span class="section-number">14.5.1. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#one-line-docstrings">One-Line docstring</a><a class="headerlink" href="#one-line-docstring" title="Permalink to this headline">¶</a></h3>
-<p>One-line docstrings are suited for short and simple Modules, classes, methods or functions.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">one_line_docstring</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;This is a one-line docstring&quot;&quot;&quot;</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="multi-line-docstring">
-<h3><span class="section-number">14.5.2. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">Multi-Line docstring</a><a class="headerlink" href="#multi-line-docstring" title="Permalink to this headline">¶</a></h3>
-<p>Multi-line docstrings are suited for long, complex Modules, classes, methods or functions</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multi_line_docstring</span><span class="p">(</span><span class="n">arg1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">arg2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This is a multi-line docstring.</span>
-
-<span class="sd">    Arguments:</span>
-<span class="sd">      arg1 (int): Argument 1 is an integer.</span>
-<span class="sd">      arg2 (str): Argument 2 is a string.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="styles-of-docstrings">
-<h2><span class="section-number">14.6. </span>Styles of docstrings<a class="headerlink" href="#styles-of-docstrings" title="Permalink to this headline">¶</a></h2>
-<p>There are multiple styles of writing docstrings such as <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>, <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google Python Style Guide</a>, <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Numpy style</a>.</p>
-<p>We could use any of the above docstrings style as long as we stay consistent.</p>
-<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> is a tool that generated beautiful HTML based documentation 📜 from the docstrings we provide in our code. reStructuredText is the default style, for other styles like Google Python style, numpy we could use plugins like <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">Napoleon</a>.</p>
-<p>Sphinx also provides various templates we can choose from to create the HTML documentation out of it. 😎♥️</p>
-<div class="section" id="a-meme-on-documentation">
-<h3><span class="section-number">14.6.1. </span>A meme on Documentation 😂<a class="headerlink" href="#a-meme-on-documentation" title="Permalink to this headline">¶</a></h3>
-<p><img alt="Documentation" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_3/resources/documentation.png?raw=true" /></p>
-<p>It’s always good and professional to have our code documented 🙂.</p>
-</div>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_3"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Chapter_2/1_Indentation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -954,7 +769,7 @@ double_the_value(value: int)
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

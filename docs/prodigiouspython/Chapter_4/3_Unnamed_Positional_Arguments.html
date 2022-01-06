@@ -421,19 +421,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Unnamed Positional Arguments</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Unnamed Positional Arguments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-unnamed-positional-arguments-to-find-our-expenses">
    17.1. Using Unnamed Positional Arguments to find our expenses
@@ -441,7 +442,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -604,174 +607,8 @@ The contents of the args are: (&#39;abc&#39;,)
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="unnamed-positional-arguments">
-<h1><span class="section-number">17. </span>Unnamed Positional Arguments<a class="headerlink" href="#unnamed-positional-arguments" title="Permalink to this headline">¶</a></h1>
-<p>let’s think we need to count the number of bucks I spent from the past 3 days. I could write a function as below:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_my_expenses_for_last_3_days</span><span class="p">(</span><span class="n">day_1</span><span class="p">,</span> <span class="n">day_2</span><span class="p">,</span> <span class="n">day_3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total expenses for last 3 days is : </span><span class="si">{</span><span class="n">day_1</span> <span class="o">+</span> <span class="n">day_2</span> <span class="o">+</span> <span class="n">day_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses_for_last_3_days</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total expenses for last 3 days is : 115
-</pre></div>
-</div>
-</div>
-</div>
-<p>The day passed down and now I want to find my expenses of my last 4 days, but I am too lazy to write new function like:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_my_expenses_for_last_4_days</span><span class="p">(</span><span class="n">day_1</span><span class="p">,</span> <span class="n">day_2</span><span class="p">,</span> <span class="n">day_3</span><span class="p">,</span> <span class="n">day_4</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total expenses for last 4 days is : </span><span class="si">{</span><span class="n">day_1</span> <span class="o">+</span> <span class="n">day_2</span> <span class="o">+</span> <span class="n">day_3</span> <span class="o">+</span> <span class="n">day_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><img alt="Lazy me" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_4/resources/lazy.jpg?raw=true" /></p>
-<p>And I much more lazier to modify the function each day. No worries, we have Unnamed Positional arguments as our Saviour in this case.</p>
-<p>Sometimes we might not know the number of arguments we need to send to a function. Using Unnamed Positional Arguments we can pass any number of arguments to the function. The function receives all the arguments placed in the tuple.</p>
-<div class="section" id="using-unnamed-positional-arguments-to-find-our-expenses">
-<h2><span class="section-number">17.1. </span>Using Unnamed Positional Arguments to find our expenses<a class="headerlink" href="#using-unnamed-positional-arguments-to-find-our-expenses" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_my_expenses</span><span class="p">(</span><span class="o">*</span><span class="n">expenses</span><span class="p">):</span>
-    <span class="c1"># We could use sum function like sum(expenses). But, for now let&#39;s go the raw way.</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">expense</span> <span class="ow">in</span> <span class="n">expenses</span><span class="p">:</span>
-        <span class="n">total</span> <span class="o">+=</span> <span class="n">expense</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total expenses for last </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">expenses</span><span class="p">)</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">3</span> <span class="pre">days:</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total expenses for last 3 is 4667
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">5</span> <span class="pre">days:</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total expenses for last 5 is 4684
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">8</span> <span class="pre">days:</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total expenses for last 8 is 4927
-</pre></div>
-</div>
-</div>
-</div>
-<p>Hence we can see that for any number of days of expenses our function <code class="docutils literal notranslate"><span class="pre">count_my_expenses</span></code> works great 🤖 🍾.</p>
-<p>We can even pass the already present objects in a iterable to our function, just that we need to unpack the iterable using the <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_expenses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">123</span><span class="p">]</span>
-<span class="n">count_my_expenses</span><span class="p">(</span><span class="o">*</span><span class="n">my_expenses</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total expenses for last 8 is 4927
-</pre></div>
-</div>
-</div>
-</div>
-<p>let’s check what is the datatype of the the Unnamed positional arguments passed tp the function</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The datatype of args is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The contents of the args are: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># Calling the function.</span>
-<span class="n">example</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The datatype of args is &lt;class &#39;tuple&#39;&gt;
-The contents of the args are: (&#39;abc&#39;,)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Yup! The datatype of Unnamed Positional arguments is <code class="docutils literal notranslate"><span class="pre">Tuple</span></code>, and the objects passed as args are placed in the tuple object. 🙂</p>
-<p>🔔 By the way, this is not our first time using Unnamed Positional arguments. We have already used <code class="docutils literal notranslate"><span class="pre">print</span></code> function many times and it accepts Unnamed Positional arguments to be printed.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist!&quot;</span><span class="p">,</span> <span class="s2">&quot;⭐️&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist! ⭐️
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_4"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="2_Positional_Arguments.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -788,7 +625,7 @@ The contents of the args are: (&#39;abc&#39;,)
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

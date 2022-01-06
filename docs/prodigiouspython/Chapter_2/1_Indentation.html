@@ -421,19 +421,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Indentation</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Indentation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-meme-on-indentation">
    13.1. A meme on indentation 😜
@@ -441,7 +442,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -509,79 +512,8 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="indentation">
-<h1><span class="section-number">13. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h1>
-<p>I have seen memes of people fighting about opening braces, whether they should be starting in the same line or in next line in the programming languages like C, Java etc… 👻</p>
-<p><img alt="Types of using curly braces" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/type_of_using_curly_braces.jpg?raw=true" /></p>
-<p><strong>Python Developers be like:</strong> Hold my Beer 🍺</p>
-<p><img alt="Python developers: we don't do that here" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/curly_braces_we_dont_do_that_here.jpg?raw=true" /></p>
-<p>In Python, we don’t use curly braces for grouping the statements. Instead, we use Indentation.</p>
-<p>Each group of statements are indented using spaces or tabs.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Example</span><span class="p">:</span>
-    <span class="c1"># Every method belonging to a class must be indented equally.</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;indentation example&quot;</span>
-
-    <span class="k">def</span> <span class="nf">check_for_odd_or_even</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="c1"># Everything that belongs to this method are indented as well.</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even.&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is odd.&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># We can see that the say_hello_multiple_times is not indented inside the Example class.</span>
-<span class="c1"># Hence, say_hello_multiple_times function doesn&#39;t belong to Example class.</span>
-<span class="k">def</span> <span class="nf">say_hello_multiple_times</span><span class="p">(</span><span class="n">count</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
-        <span class="c1"># Loops or conditions are also needed to be intended.</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP-8</a> recommends to use <strong>4 Spaces instead of Tabs</strong>. Although using of Tabs do work, but ensure <strong>not</strong> to mix both tabs and spaces, as you might get <code class="docutils literal notranslate"><span class="pre">TabError</span></code> for such indentations.</p>
-<div class="section" id="a-meme-on-indentation">
-<h2><span class="section-number">13.1. </span>A meme on indentation 😜<a class="headerlink" href="#a-meme-on-indentation" title="Permalink to this headline">¶</a></h2>
-<p>If using a normal text editor like notepad where it doesn’t show the warnings or errors, sometimes we might get errors due to wrong indentation or mix usage of both tabs and spaces, we get an error and it would be tricky to resolve it as it is invisible.</p>
-<p><img alt="Get Error for extra space" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/funny_get_errors_for_extra_space.jpg?raw=true" /></p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_2"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Chapter_1/12_Help_Utility.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -598,7 +530,7 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

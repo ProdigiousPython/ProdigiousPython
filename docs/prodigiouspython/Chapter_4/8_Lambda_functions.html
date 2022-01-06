@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Lambda Functions</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lambda Functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -549,145 +552,8 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="lambda-functions">
-<h1><span class="section-number">22. </span>Lambda Functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">¶</a></h1>
-<p>Lambda functions are inline functions which have only 1 statement. They are created by using the keyword <code class="docutils literal notranslate"><span class="pre">lambda</span></code> They do not have any name, so they are also known as Anonymous functions. Although they don’t have a name, they can be bound to a variable.</p>
-<p>A simple lambda function to greets us 👋:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s2">&quot;Hello Pythonist!&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist!
-</pre></div>
-</div>
-</div>
-</div>
-<p>The above lambda function can be rewritten as a regular function as:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s2">&quot;Hello Pythonist!&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist!
-</pre></div>
-</div>
-</div>
-</div>
-<p>Conceptually, lambda functions are similar to regular functions which are defined using <code class="docutils literal notranslate"><span class="pre">def</span></code>, just that lambda function accepts only 1 statement.</p>
-<p>Let’s try calling lambda function without assigning the function to any variable.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="k">lambda</span><span class="p">:</span> <span class="s2">&quot;Hello Pythonist! ♥️&quot;</span><span class="p">)())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist! ♥️
-</pre></div>
-</div>
-</div>
-</div>
-<p>In the above example, we are creating the lambda expression enclosed in parenthesis and calling the function by using <code class="docutils literal notranslate"><span class="pre">()</span></code> at the end. As there is no name for the lambda function we just called, this is the reason why Lambda expressions/functions are also called as Anonymous functions.</p>
-<p>We can pass parameters as well to the lambda function</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
-</pre></div>
-</div>
-</div>
-</div>
-<p>Till now, everything about <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">functions</span></code> and <code class="docutils literal notranslate"><span class="pre">regular</span> <span class="pre">functions</span></code> do look the same, Is there any difference? Yup, here it is, Lambda functions do have the Lexical closures similar to loops in regular functions. What the heck is Lexical closure 🤔? At the end of the lexical scope, the value is still remembered unlike  in the programming languages C, Golang etc.. Let’s try it out with an example 🙂</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_sum</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="k">return</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">value</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adder_3</span> <span class="o">=</span> <span class="n">do_sum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">adder_10</span> <span class="o">=</span> <span class="n">do_sum</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">adder_3</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">adder_10</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
-15
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here we can see that <code class="docutils literal notranslate"><span class="pre">adder_3</span></code> and <code class="docutils literal notranslate"><span class="pre">adder_10</span></code> are persisting the values that <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code> that we passed during calling the <code class="docutils literal notranslate"><span class="pre">do_sum</span></code> function which returned the lambda function which holds our 3 and 10.</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_4"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="7_TLDR_about_Functions_arguments.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -704,7 +570,7 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

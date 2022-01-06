@@ -407,19 +407,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Prodigious Python</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Prodigious Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    Prodigious Python
@@ -432,7 +433,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -500,82 +503,11 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="prodigious-python">
-<h1>Prodigious Python<a class="headerlink" href="#prodigious-python" title="Permalink to this headline">¶</a></h1>
-<p><img alt="Prodigious Python cover" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Prodigious%20Python%20Cover.png?raw=true" /></p>
-<p>🚀 <a class="reference external" href="https://prodigiouspython.github.io/ProdigiousPython">Homepage</a></p>
-<p>📖 <a class="reference external" href="https://drive.google.com/file/d/1DF1IhLzjnLSzSlNO3PE1hcuv_Cgx6bAS/view?usp=sharing">PDF</a></p>
-<p>Welcome to Prodigious Python 🐍</p>
-<p>Idea of Prodigious Python is to be different from the traditional books.</p>
-<p>We wanted Prodigious Python to be:</p>
-<ul class="simple">
-<li><p>Fun 🎉</p></li>
-<li><p>Executable 🤖</p></li>
-<li><p>Publishable via static web pages and PDF ⚙️</p></li>
-</ul>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="development-setup">
-<h1>Development setup<a class="headerlink" href="#development-setup" title="Permalink to this headline">¶</a></h1>
-<p>First things first, We need to clone our repo</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ProdigiousPython/ProdigiousPython.git
-</pre></div>
-</div>
-<p>We use <a class="reference external" href="https://python-poetry.org/">Poetry</a> for the dependency mangement.</p>
-<p>Let’s install the packages required using the below command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry install
-</pre></div>
-</div>
-<p>To run the jupyter-lab:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jupyter-lab
-</pre></div>
-</div>
-<p>To convert the notebooks to html</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build .
-</pre></div>
-</div>
-<p>To convert the notebooks to pdf</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build --builder<span class="o">=</span>pdfhtml .
-</pre></div>
-</div>
-<p>The generated files would be present in <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder.</p>
-<p><strong>Made with ❤️</strong></p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./."
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

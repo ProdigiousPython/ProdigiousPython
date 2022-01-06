@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Module</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -520,116 +523,8 @@ Well, we see the below <code class="docutils literal notranslate"><span class="p
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="module">
-<h1><span class="section-number">9. </span>Module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h1>
-<p>A module is a importable python file and can be created by creating a file with extension as <code class="docutils literal notranslate"><span class="pre">.py</span></code></p>
-<p>We can import the objects present in the module.</p>
-<p>In the below 👇 example, we are importing <code class="docutils literal notranslate"><span class="pre">hello</span></code> function from <code class="docutils literal notranslate"><span class="pre">greet</span></code> module (<a class="reference external" href="http://greet.py">greet.py</a>)</p>
-<p><code class="docutils literal notranslate"><span class="pre">greet.py</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Module to greet the user&quot;&quot;&quot;</span>
-
-<span class="kn">import</span> <span class="nn">getpass</span>
-
-
-<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Greets the user.&quot;&quot;&quot;</span>
-    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">. Have a great day :)&quot;</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">hello</span><span class="p">()</span>
-
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">greet</span> <span class="kn">import</span> <span class="n">hello</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Naveen. Have a great day :)
-</pre></div>
-</div>
-</div>
-</div>
-<p>let’s have a look at the <a class="reference external" href="http://greet.py">greet.py</a> module.
-Well, we see the below <code class="docutils literal notranslate"><span class="pre">if</span></code> condition.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">hello</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>But why do we we need to have it🤔? We can just call the <code class="docutils literal notranslate"><span class="pre">hello</span></code> function at the end as</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Let’s see the below👇 code to know why we use the first approach rather than the second.🙃</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">greet</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>🔍 The above code doesn’t greet you 😢</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ./greet.py
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Naveen. Have a great day :)
-</pre></div>
-</div>
-</div>
-</div>
-<p>But, this above code greets you😎.</p>
-<p>The reason for this is, in the first snippet, we are importing a module called <code class="docutils literal notranslate"><span class="pre">greet</span></code>, so the actual code we are executing is in this REPL or Ipython shell.</p>
-<p>Coming to second snippet, we are executing the <code class="docutils literal notranslate"><span class="pre">greet.py</span></code> directly.</p>
-<p>Value of <code class="docutils literal notranslate"><span class="pre">__name__</span></code> would be “__main__” if we are executing a Python module directly. If we import a module(using the module indirectly) then value of <code class="docutils literal notranslate"><span class="pre">__name__</span></code> would be the relative path of the imported module. In the first example the <code class="docutils literal notranslate"><span class="pre">__name__</span></code> in the greet module would be “greet”. As the “greet” is not equal to “__main__”, that’s the reason, we never went to the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition when we imported greet module. 🙂</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_1"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="8_Builtins.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -646,7 +541,7 @@ Well, we see the below <code class="docutils literal notranslate"><span class="p
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
