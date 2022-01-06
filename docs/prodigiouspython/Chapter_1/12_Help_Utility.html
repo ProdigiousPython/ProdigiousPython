@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Help Utility</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Help Utility</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -496,92 +499,8 @@ getcwd()
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="help-utility">
-<h1><span class="section-number">12. </span>Help Utility<a class="headerlink" href="#help-utility" title="Permalink to this headline">¶</a></h1>
-<p>Python has a builtin help utility which helps to know about the keywords, builtin functions, modules.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>You can pass keyword, bulitin function or Module to help function to know about the same.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Help utility on the builtin module &#39;sys&#39;</span>
-<span class="n">help</span><span class="p">(</span><span class="n">os</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><em><code class="docutils literal notranslate"><span class="pre">snipped</span> <span class="pre">output:</span></code></em></p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>
-Help on module os:
-
-NAME
-    os - OS routines for NT or Posix depending on what system we&#39;re on.
-
-MODULE REFERENCE
-    https://docs.python.org/3.9/library/os
-    
-    The following documentation is automatically generated from the Python
-    source files.  It may be incomplete, incorrect or include features that
-    are considered implementation detail and may vary between Python
-    implementations.  When in doubt, consult the module reference at the
-    location listed above.
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Help utility on getcwd function of sys module</span>
-<span class="n">help</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function getcwd in module posix:
-
-getcwd()
-    Return a unicode string representing the current working directory.
-</pre></div>
-</div>
-</div>
-</div>
-<p>🔔 Help function returns the docstrings associated with the respective Modules, Keywords or functions.</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_1"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="11_Installing_Packages.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -598,7 +517,7 @@ getcwd()
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

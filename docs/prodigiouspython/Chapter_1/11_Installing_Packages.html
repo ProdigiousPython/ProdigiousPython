@@ -421,19 +421,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Installing packages</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Installing packages</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tidbits">
    11.1. Tidbits 🔔
@@ -441,7 +442,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -501,71 +504,8 @@ Install</p>
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="installing-packages">
-<h1><span class="section-number">11. </span>Installing packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h1>
-<p>Python has one of the largest programming community who build 3rd party packages and support community help ❤️.</p>
-<p>That’s pretty good, Now, how do we install the packages 🤔? We could use Python’s package manager <strong>PIP</strong>.</p>
-<p>Python’s official 3rd party package repository is <a class="reference external" href="https://pypi.org/">Python Package Index (PyPI)</a> and its index url is <a class="reference external" href="https://pypi.org/simple">https://pypi.org/simple</a></p>
-<p>Here’s how to use PIP in shell/terminal:</p>
-<p>To search for a package:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip search <span class="o">[</span>package name<span class="o">]</span>
-</pre></div>
-</div>
-<p>To install a package:
-Install</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]</span>
-</pre></div>
-</div>
-<p>Install a specific version</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]==[</span>version<span class="o">]</span>
-</pre></div>
-</div>
-<p>Install greater than a specific version</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    pip install <span class="o">[</span>package name<span class="o">]</span>&gt;<span class="o">=[</span>verion<span class="o">]</span>
-</pre></div>
-</div>
-<p>To uninstall a package</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip uninstall <span class="o">[</span>package name<span class="o">]</span>
-</pre></div>
-</div>
-<div class="section" id="tidbits">
-<h2><span class="section-number">11.1. </span>Tidbits 🔔<a class="headerlink" href="#tidbits" title="Permalink to this headline">¶</a></h2>
-<p>There are modern ways of managing the dependencies using <a class="reference external" href="https://python-poetry.org/">Poetry</a>, <a class="reference external" href="https://flit.readthedocs.io/en/latest/index.html">Flit</a> etc.. We will get to those soon…😊</p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_1"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="10_String_representations_of_objects.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -582,7 +522,7 @@ Install</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

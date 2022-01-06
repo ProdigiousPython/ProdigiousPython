@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Builtins</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Builtins</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -624,220 +627,8 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="builtins">
-<h1><span class="section-number">8. </span>Builtins<a class="headerlink" href="#builtins" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can see what all builtins does Python provide.</p>
-<p>For our sake, we are traversing the complete list and printing the number and builtin attribute.</p>
-<p>The function we are using to traverse in <code class="docutils literal notranslate"><span class="pre">dir(builtins)</span></code> and get index and builtin attribute is <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> which is also a bulitin 😉</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">builtin_attribute</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">builtin_attribute</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0) ArithmeticError
-1) AssertionError
-2) AttributeError
-3) BaseException
-4) BlockingIOError
-5) BrokenPipeError
-6) BufferError
-7) BytesWarning
-8) ChildProcessError
-9) ConnectionAbortedError
-10) ConnectionError
-11) ConnectionRefusedError
-12) ConnectionResetError
-13) DeprecationWarning
-14) EOFError
-15) Ellipsis
-16) EnvironmentError
-17) Exception
-18) False
-19) FileExistsError
-20) FileNotFoundError
-21) FloatingPointError
-22) FutureWarning
-23) GeneratorExit
-24) IOError
-25) ImportError
-26) ImportWarning
-27) IndentationError
-28) IndexError
-29) InterruptedError
-30) IsADirectoryError
-31) KeyError
-32) KeyboardInterrupt
-33) LookupError
-34) MemoryError
-35) ModuleNotFoundError
-36) NameError
-37) None
-38) NotADirectoryError
-39) NotImplemented
-40) NotImplementedError
-41) OSError
-42) OverflowError
-43) PendingDeprecationWarning
-44) PermissionError
-45) ProcessLookupError
-46) RecursionError
-47) ReferenceError
-48) ResourceWarning
-49) RuntimeError
-50) RuntimeWarning
-51) StopAsyncIteration
-52) StopIteration
-53) SyntaxError
-54) SyntaxWarning
-55) SystemError
-56) SystemExit
-57) TabError
-58) TimeoutError
-59) True
-60) TypeError
-61) UnboundLocalError
-62) UnicodeDecodeError
-63) UnicodeEncodeError
-64) UnicodeError
-65) UnicodeTranslateError
-66) UnicodeWarning
-67) UserWarning
-68) ValueError
-69) Warning
-70) ZeroDivisionError
-71) __IPYTHON__
-72) __build_class__
-73) __debug__
-74) __doc__
-75) __import__
-76) __loader__
-77) __name__
-78) __package__
-79) __spec__
-80) abs
-81) all
-82) any
-83) ascii
-84) bin
-85) bool
-86) breakpoint
-87) bytearray
-88) bytes
-89) callable
-90) chr
-91) classmethod
-92) compile
-93) complex
-94) copyright
-95) credits
-96) delattr
-97) dict
-98) dir
-99) display
-100) divmod
-101) enumerate
-102) eval
-103) exec
-104) execfile
-105) filter
-106) float
-107) format
-108) frozenset
-109) get_ipython
-110) getattr
-111) globals
-112) hasattr
-113) hash
-114) help
-115) hex
-116) id
-117) input
-118) int
-119) isinstance
-120) issubclass
-121) iter
-122) len
-123) license
-124) list
-125) locals
-126) map
-127) max
-128) memoryview
-129) min
-130) next
-131) object
-132) oct
-133) open
-134) ord
-135) pow
-136) print
-137) property
-138) range
-139) repr
-140) reversed
-141) round
-142) runfile
-143) set
-144) setattr
-145) slice
-146) sorted
-147) staticmethod
-148) str
-149) sum
-150) super
-151) tuple
-152) type
-153) vars
-154) zip
-</pre></div>
-</div>
-</div>
-</div>
-<p>There’s a difference between <strong>Keywords</strong> and <strong>Builtins</strong> 🤔. We can’t assign a new object to the Keywords, if we try to do, we would be seeing an exception raised 🔴. But coming to builtins, we can assign any object to the builtin names, and Python won’t have any issues, but it’s not a good practice to do so 😇</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_1"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="7_User_Input.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -854,7 +645,7 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Keyword-only arguments</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Keyword-only arguments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -447,7 +450,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15790</span><span class="o">/</span><span class="mf">496164863.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6395</span><span class="o">/</span><span class="mf">496164863.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: greet() takes 0 positional arguments but 2 were given
@@ -492,88 +495,8 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="keyword-only-arguments">
-<h1><span class="section-number">18. </span>Keyword-only arguments<a class="headerlink" href="#keyword-only-arguments" title="Permalink to this headline">¶</a></h1>
-<p>Few times being explicit is better which increases the readability of code. If a function signature has Keyword-only arguments, then while calling the function, we need to pass our objects by their keyword names. <a class="reference external" href="https://www.python.org/dev/peps/pep-3102/">PEP-3102</a> defines the Keyword-only arguments.</p>
-<p>Well, how to define the keyword only arguments 🤔? In the previous lesson about Positional Arguments we have seen that Positional-only Arguments whose function signature is created by using <code class="docutils literal notranslate"><span class="pre">/</span></code>. Similarly for Keyword-only Argument, we use <code class="docutils literal notranslate"><span class="pre">*</span></code> in the signature.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keyword_only_argument_signature</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
-    <span class="o">...</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">Example:</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">greet_word</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greet_word</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now if we want to try calling our new function <code class="docutils literal notranslate"><span class="pre">greet</span></code> as <code class="docutils literal notranslate"><span class="pre">greet(&quot;Hello&quot;,</span> <span class="pre">&quot;Pythonist♥️&quot;)</span></code>, we should be seeing a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15790</span><span class="o">/</span><span class="mf">496164863.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: greet() takes 0 positional arguments but 2 were given
-</pre></div>
-</div>
-</div>
-</div>
-<p>The only way we can call our <code class="docutils literal notranslate"><span class="pre">greet</span></code> function is by passing our both <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> values with keyword names.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Pythonist ♥️!
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_4"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="3_Unnamed_Positional_Arguments.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -590,7 +513,7 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
