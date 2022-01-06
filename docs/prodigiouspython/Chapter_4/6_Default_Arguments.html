@@ -426,19 +426,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Default Arguments</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Default Arguments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#note-on-default-arguments-with-respect-to-mutable-objects">
    20.1. Note on default arguments with respect to mutable objects
@@ -451,7 +452,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -598,158 +601,8 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="default-arguments">
-<h1><span class="section-number">20. </span>Default Arguments<a class="headerlink" href="#default-arguments" title="Permalink to this headline">¶</a></h1>
-<p>Default arguments are the ones when calling the function, no object is given in its place, its default value would be considered 🔔.</p>
-<p>Default arguments are assigned in the function signature as</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">arg</span><span class="o">=&lt;</span><span class="n">obj</span><span class="o">&gt;</span><span class="p">):</span>
-</pre></div>
-</div>
-<p>Let’s get through an example</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pythonist!&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greet_word</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hey&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hey Pythonist!!
-</pre></div>
-</div>
-</div>
-</div>
-<p>We see that the output for the above example is <code class="docutils literal notranslate"><span class="pre">Hey</span> <span class="pre">Pythonist!</span></code>, we have passed just <code class="docutils literal notranslate"><span class="pre">Hey</span></code> for <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> argument, as we have passed object for <code class="docutils literal notranslate"><span class="pre">greet_word</span></code>, it took “Hey” as its value, but coming to <code class="docutils literal notranslate"><span class="pre">name</span></code> argument, we haven’t passed any value to it, so it took default object for <code class="docutils literal notranslate"><span class="pre">name</span></code> as <code class="docutils literal notranslate"><span class="pre">Pythonist!</span></code></p>
-<div class="section" id="note-on-default-arguments-with-respect-to-mutable-objects">
-<h2><span class="section-number">20.1. </span>Note on default arguments with respect to mutable objects<a class="headerlink" href="#note-on-default-arguments-with-respect-to-mutable-objects" title="Permalink to this headline">¶</a></h2>
-<p>In the previous example, we have made default argument values to be string objects, and we already know that string objects are immutable objects and it works really fine as we expected.</p>
-<p>But what would be result if we use mutable objects like lists, dictionary 🤔?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_mutable_objects_as_default_argument</span><span class="p">(</span><span class="n">my_list</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;🍰&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_mutable_objects_as_default_argument</span><span class="p">()</span>  <span class="c1"># Calling the function for the first time.</span>
-<span class="n">test_mutable_objects_as_default_argument</span><span class="p">()</span>  <span class="c1"># Calling the function for the second time.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;🍰&#39;]
-[&#39;🍰&#39;, &#39;🍰&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Ouch, as we are not passing any argument during calling our <code class="docutils literal notranslate"><span class="pre">test_mutable_objects_as_default_argument</span></code> function, both the times we expected the result should be the same. But, we do see that during second time calling of the function, there is one extra 🍰 present in the output.</p>
-<p>I would be happy for getting an extra cake in my plate 😋, but not in the above output. Well, the problem is that, <code class="docutils literal notranslate"><span class="pre">my_list</span></code> in the <code class="docutils literal notranslate"><span class="pre">test_mutable_objects_as_default_argument</span></code> is being stored as the function attribute and being persisted and mutated everytime function is called.</p>
-<p>We could see the default values of our function using the <code class="docutils literal notranslate"><span class="pre">__defaults__</span></code> method.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_mutable_objects_as_default_argument</span><span class="o">.</span><span class="vm">__defaults__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([&#39;🍰&#39;, &#39;🍰&#39;],)
-</pre></div>
-</div>
-</div>
-</div>
-<p>We see there are cake objects being stored in the defaults of the function, No worries, we do have a fix for that.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Solution:</span></code>
-Use <code class="docutils literal notranslate"><span class="pre">None</span></code> object as default argument.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_again_as_default_argument_using_none</span><span class="p">(</span><span class="n">my_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">my_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;🍰&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_again_as_default_argument_using_none</span><span class="p">()</span>  <span class="c1"># Calling the function for the first time.</span>
-<span class="n">test_again_as_default_argument_using_none</span><span class="p">()</span>  <span class="c1"># Calling the function for the second time.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;🍰&#39;]
-[&#39;🍰&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Hurray 🍾! We learned how to deal with default arguments for mutable objects.</p>
-<p>If we pass a list containing an objects, our cake 🍰 would be appended and printed.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_again_as_default_argument_using_none</span><span class="p">([</span><span class="s2">&quot;🍹&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;🍹&#39;, &#39;🍰&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="tidbits">
-<h2><span class="section-number">20.2. </span>Tidbits 💡<a class="headerlink" href="#tidbits" title="Permalink to this headline">¶</a></h2>
-<p>We can’t assign default arguments to Unnamed positional arguments (VarArgs) and Keyword arguments as there are optional in first place with default values as empty tuple <code class="docutils literal notranslate"><span class="pre">()</span></code> for Unnamed positional arguments and empty dictionary <code class="docutils literal notranslate"><span class="pre">{}</span></code> for Keyword arguments. If we try assigning default argument to Unnamed positional arguments r Keyword arguments, we would see <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> spawned 👻.</p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_4"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="5_Keyword_arguments.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -766,7 +619,7 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

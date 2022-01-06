@@ -408,14 +408,17 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>String representations of objects: str() vs repr()</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>String representations of objects: str() vs repr()</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -441,8 +444,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 1, 5, 11, 17, 38, 373831)
-The str of now is: 2022-01-05 11:17:38.373831
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 1, 6, 17, 29, 40, 539927)
+The str of now is: 2022-01-06 17:29:40.539927
 </pre></div>
 </div>
 </div>
@@ -461,8 +464,8 @@ The str of now is: 2022-01-05 11:17:38.373831
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8f6870f8b0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8f6870f8b0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f49a0436820&gt;
+The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f49a0436820&gt;
 </pre></div>
 </div>
 </div>
@@ -492,7 +495,7 @@ The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8f687
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f8f686ba280
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f49a03e0b80
 The str of human_obj is: I am IronMan of age 48
 </pre></div>
 </div>
@@ -523,119 +526,8 @@ The str of human_obj is: I am IronMan of age 48
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="string-representations-of-objects-str-vs-repr">
-<h1><span class="section-number">10. </span>String representations of objects: str() vs repr()<a class="headerlink" href="#string-representations-of-objects-str-vs-repr" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">str()</span></code> and <code class="docutils literal notranslate"><span class="pre">repr()</span></code> are builtin functions used to represent the object in the form of string.</p>
-<p>Suppose we have an object <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">str(x)</span></code> would be calling the dunder (double underscore) <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method of <code class="docutils literal notranslate"><span class="pre">x</span></code> as <code class="docutils literal notranslate"><span class="pre">x.__str__()</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">repr(x)</span></code> would be calling the dunder (double underscore) <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> method of <code class="docutils literal notranslate"><span class="pre">x</span></code> as <code class="docutils literal notranslate"><span class="pre">x.__repr__()</span></code></p>
-<p>😑 Well, what all are these new terms <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> 🤔?</p>
-<p>As we know that Python is object oriented language, and so supports inheritance. In Python, all the classes would inherit from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>. <code class="docutils literal notranslate"><span class="pre">object</span></code> class has the methods <code class="docutils literal notranslate"><span class="pre">__str__</span></code>, <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> and a lot more (which can be deepdived in some other notebook 😉). Hence every class would be having <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> implicitly 😊</p>
-<p>Python’s official documentations states that <code class="docutils literal notranslate"><span class="pre">__str__</span></code> should be used to represent a object which is human readable(informal), whereas <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> is used for official representation of an object.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of now is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of now is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 1, 5, 11, 17, 38, 373831)
-The str of now is: 2022-01-05 11:17:38.373831
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProgrammingLanguage</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
-
-
-<span class="n">language_obj</span> <span class="o">=</span> <span class="n">ProgrammingLanguage</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of language_obj is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">language_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of language_obj is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">language_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8f6870f8b0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8f6870f8b0&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<p>In the above example we see that default repr output. The address of the object might be different for everyone.</p>
-<p>Now let’s try to override the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> methods and see how the representations work</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-
-    <span class="c1"># overriding __str__ method</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> of age </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span>
-
-    <span class="c1"># overriding __repr__ method</span>
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Human(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, age=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">) object at </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span>
-
-
-<span class="n">human_obj</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;IronMan&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of human_obj is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">human_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of human_obj is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">human_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f8f686ba280
-The str of human_obj is: I am IronMan of age 48
-</pre></div>
-</div>
-</div>
-</div>
-<p>We see that the result representations of the <code class="docutils literal notranslate"><span class="pre">human_obj</span></code> have been changed as we have overridden the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> methods 😊</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_1"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="9_Modules.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -652,7 +544,7 @@ The str of human_obj is: I am IronMan of age 48
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

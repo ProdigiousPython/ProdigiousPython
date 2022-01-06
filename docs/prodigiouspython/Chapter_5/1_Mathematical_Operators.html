@@ -519,19 +519,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Mathematical Operators</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mathematical Operators</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#addition">
    23.1. Addition
@@ -637,7 +638,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -975,7 +978,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15882</span><span class="o">/</span><span class="mf">2359714666.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6486</span><span class="o">/</span><span class="mf">2359714666.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mf">5.5</span><span class="p">)</span>  <span class="c1"># Raises TypeError.</span>
 
 <span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;float&#39;
@@ -1115,489 +1118,8 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="mathematical-operators">
-<h1><span class="section-number">23. </span>Mathematical Operators<a class="headerlink" href="#mathematical-operators" title="Permalink to this headline">¶</a></h1>
-<p>We do have a big set of mathematical operators in Python. let’s have a look 😎</p>
-<p>Let’s start with Addition, which is the only one I am good at 😜 JD!</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Operator</p></th>
-<th class="head"><p>Operator Symbol</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Addition</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Subtraction</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>Multiplication</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Division</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>Floor Division</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">//</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Modulus</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>Exponentiation/Power</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
-</tr>
-</tbody>
-</table>
-<p>Hurray! I am recapping my primary school 👦:P</p>
-<p><img alt="Success Kid" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_5/resources/success_kid.png?raw=true" /></p>
-<div class="section" id="addition">
-<h2><span class="section-number">23.1. </span>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h2>
-<p>Addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code> is used to add two or more <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">complex</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> etc..</p>
-<p>🙄 If you are wondering does addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code> does a lot of stuff mentioned above? Yep, it does, isn’t that cool 😎? That’s the flexibility provided by our beloved Python 🐍.</p>
-<p>Let’s go through each example 😊</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s create a few attributes of different datatypes.</span>
-
-<span class="c1"># Integers.</span>
-<span class="n">integer_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">integer_b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span>
-
-<span class="c1"># Floats.</span>
-<span class="n">float_a</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.4</span>
-<span class="n">float_b</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.2</span>
-
-<span class="c1"># complex.</span>
-<span class="n">complex_a</span><span class="p">:</span> <span class="nb">complex</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="n">j</span>
-<span class="n">complex_b</span><span class="p">:</span> <span class="nb">complex</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="mi">1</span><span class="n">j</span>
-
-<span class="c1"># list.</span>
-<span class="n">list_a</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">list_b</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-
-<span class="c1"># tuple.</span>
-<span class="n">tuple_a</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">tuple_b</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-
-<span class="c1"># str.</span>
-<span class="n">str_a</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hey &quot;</span>
-<span class="n">str_b</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Pythonist 🐍&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Wohooo! We successfully created many attributes of different datatypes. Let’s start using the Addition <code class="docutils literal notranslate"><span class="pre">+</span></code> operator on them</p>
-<div class="section" id="integers">
-<h3><span class="section-number">23.1.1. </span>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">+</span> <span class="n">integer_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="floats">
-<h3><span class="section-number">23.1.2. </span>Floats<a class="headerlink" href="#floats" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">+</span> <span class="n">float_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.6
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="complex">
-<h3><span class="section-number">23.1.3. </span>Complex<a class="headerlink" href="#complex" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">+</span> <span class="n">complex_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(11+8j)
-</pre></div>
-</div>
-</div>
-</div>
-<p>There’s no restriction on the operands type here, we can even add integers with floats, integers with complex, float with complex</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer with float.</span>
-<span class="n">int_with_float</span> <span class="o">=</span> <span class="n">integer_a</span> <span class="o">+</span> <span class="n">float_a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span>
-
-<span class="c1"># Integer with complex.</span>
-<span class="n">int_with_complex</span> <span class="o">=</span> <span class="n">integer_a</span> <span class="o">+</span> <span class="n">complex_a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_with_complex</span><span class="p">)</span>
-
-<span class="c1"># Float with complex</span>
-<span class="n">float_with_complex</span> <span class="o">=</span> <span class="n">float_a</span> <span class="o">+</span> <span class="n">complex_a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_with_complex</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.4
-(4+9j)
-(3.4+9j)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let’s check the datatype of the above results <code class="docutils literal notranslate"><span class="pre">int_with_float</span></code>, <code class="docutils literal notranslate"><span class="pre">int_with_complex</span></code>, ‘<code class="docutils literal notranslate"><span class="pre">float_with_complex</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_complex</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">float_with_complex</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type(int_with_float)=&lt;class &#39;float&#39;&gt;
-type(int_with_complex)=&lt;class &#39;complex&#39;&gt;
-type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="note">
-<h4><span class="section-number">23.1.3.1. </span>💡 Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h4>
-<p>In the above print function we have used <code class="docutils literal notranslate"><span class="pre">=</span></code> in the f-strings, which prints the output as <code class="docutils literal notranslate"><span class="pre">&lt;expression&gt;=&lt;expression_result&gt;</span></code>.</p>
-<p>In simple terms using <code class="docutils literal notranslate"><span class="pre">=</span></code> in the f-strings make the above print function equivalent to:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(int_with_float)=</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type(int_with_float)=&lt;class &#39;float&#39;&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<p>💡 We see that the results datatype is changed in the above cases with respect to addition of integer with complex and float with complex. Thanks to Python again, it does take care of result datatype dynamically.</p>
-<p>The final result would be of datatype equal to the highest precedence of the operands shown as below.</p>
-<p><code class="docutils literal notranslate"><span class="pre">complex</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">float</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-<p>complex numbers are superset of float, float are superset to integers.</p>
-</div>
-</div>
-<div class="section" id="lists">
-<h3><span class="section-number">23.1.4. </span>lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_a</span> <span class="o">+</span> <span class="n">list_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Addition operator on two lists generate a new list appending the objects present in the second list to first list.</p>
-</div>
-<div class="section" id="tuples">
-<h3><span class="section-number">23.1.5. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tuple_a</span> <span class="o">+</span> <span class="n">tuple_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, 4, 5, 6)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="strings">
-<h3><span class="section-number">23.1.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">+</span> <span class="n">str_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hey Pythonist 🐍
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We do have a string method called <code class="docutils literal notranslate"><span class="pre">join</span></code> for efficient concatenation of strings. We would go through it in the coming chapters related to strings 😬.</p>
-</div>
-</div>
-</div>
-<div class="section" id="subtraction">
-<h2><span class="section-number">23.2. </span>Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">23.2.1. </span>Integers<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">-</span> <span class="n">integer_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">23.2.2. </span>Floats<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">-</span> <span class="n">float_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.8000000000000003
-</pre></div>
-</div>
-</div>
-</div>
-<p>We might wonder seeing the above result <code class="docutils literal notranslate"><span class="pre">-3.8000000000000003</span></code> instead of <code class="docutils literal notranslate"><span class="pre">-3.8</span></code> and doubt ourselves whether we forgot how to do subtraction 🙄. No worries, We are still good at math (basic math atleast 😅).</p>
-<p>The extra <code class="docutils literal notranslate"><span class="pre">3</span></code> at the end of the result is due to <a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html#floating-point-arithmetic-issues-and-limitations">Floating Point Arithmetic Issues and Limitations</a></p>
-</div>
-<div class="section" id="id3">
-<h3><span class="section-number">23.2.3. </span>Complex<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">-</span> <span class="n">complex_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-7+10j)
-</pre></div>
-</div>
-</div>
-</div>
-<p>In the similar way subtraction can be done with a mix of integers, floats and complex values 👏.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Subtraction operation doesn’t work with lists, tuples and dictionary. These datastructures have built-in methods associated to remove objects from them.</p>
-</div>
-</div>
-</div>
-<div class="section" id="multiplication">
-<h2><span class="section-number">23.3. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">*</span> <span class="n">integer_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">*</span> <span class="n">float_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">*</span> <span class="n">complex_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
-7.279999999999999
-(27+79j)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Apart from the above numerical multiplication, we can even use multiplication for strings, list</p>
-<div class="section" id="id4">
-<h3><span class="section-number">23.3.1. </span>Strings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hey Hey Hey Hey Hey 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>But multiplication of strings can be only done with a integer. Non-Integer multiplication of strings lead to <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> 🙈.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mf">5.5</span><span class="p">)</span>  <span class="c1"># Raises TypeError.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15882</span><span class="o">/</span><span class="mf">2359714666.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mf">5.5</span><span class="p">)</span>  <span class="c1"># Raises TypeError.</span>
-
-<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;float&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="list-tuple">
-<h3><span class="section-number">23.3.2. </span>List/Tuple<a class="headerlink" href="#list-tuple" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># tuple</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tuple_a</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 1, 2, 3]
-(1, 2, 3, 1, 2, 3, 1, 2, 3)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Multiplication of integer on list or tuples works similar, appending the same list/tuple objects in the same order equal to integer times multiplied.</p>
-</div>
-</div>
-<div class="section" id="division">
-<h2><span class="section-number">23.4. </span>Division<a class="headerlink" href="#division" title="Permalink to this headline">¶</a></h2>
-<p>Division operator only works for numerical attributes like integer, float and complex.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">/</span> <span class="n">integer_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">/</span> <span class="n">float_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">/</span> <span class="n">complex_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3333333333333333
-0.2692307692307692
-(0.10975609756097561+1.0121951219512195j)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="floor-division">
-<h2><span class="section-number">23.5. </span>Floor division<a class="headerlink" href="#floor-division" title="Permalink to this headline">¶</a></h2>
-<p>In the division section we have seen the results in fractions. Floor division operator <code class="docutils literal notranslate"><span class="pre">//</span></code> works similar, just that it neglects the fractional part. In Math terms, the result of Floor division is always the quotient.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">//</span> <span class="n">integer_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">//</span> <span class="n">float_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span>
-    <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="p">)</span>  <span class="c1"># When divided result should be 2.5, but for floor division the result would be just 2.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-0.0
-2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Python’s default behaviour doesn’t support Floor divison on complex numbers.</p>
-</div>
-</div>
-<div class="section" id="modulus">
-<h2><span class="section-number">23.6. </span>Modulus<a class="headerlink" href="#modulus" title="Permalink to this headline">¶</a></h2>
-<p>As we have already seen that Floor division results in Quotient of the a division, the modulus operator returns the remainder of the division. The Modulus operator is denoted by the symbol <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">%</span> <span class="n">integer_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">%</span> <span class="n">float_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-1.4
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exponentiation-power">
-<h2><span class="section-number">23.7. </span>Exponentiation/Power<a class="headerlink" href="#exponentiation-power" title="Permalink to this headline">¶</a></h2>
-<p>The Exponentiation/Power operator is denoted as <code class="docutils literal notranslate"><span class="pre">**</span></code>. Power operator on two operands <code class="docutils literal notranslate"><span class="pre">x**y</span></code> is said as the value of x raised to the power y.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">**</span> <span class="n">integer_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">**</span> <span class="n">float_b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">**</span> <span class="n">complex_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
-5.752621307139592
-(-1611671639.8022103-929304789.2091311j)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Wohooo! That’s too much of knowledge we acquired 😬. The only way we can master anything is through build and bombard, feel free to test out various scenarios 😊.</p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_5"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Chapter_4/8_Lambda_functions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1614,7 +1136,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

@@ -430,19 +430,20 @@
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>Class Attributes</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> Contents </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class Attributes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#altering-the-class-attributes">
    29.1. 🔔 Altering the class Attributes
@@ -460,7 +461,9 @@
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -498,7 +501,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15991</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6617</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
 
 <span class="ne">AttributeError</span>: type object &#39;SuperMarket&#39; has no attribute &#39;item_price&#39;
@@ -709,22 +712,25 @@
 <p>Easy Peasy! we just need to delete the attribute of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> using <code class="docutils literal notranslate"><span class="pre">del</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__dict__</span>  <span class="c1"># Equivalent to SuperMarket.__dict__</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s look at the value of <code class="docutils literal notranslate"><span class="pre">obj.discount</span></code> which was earlier 20.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mappingproxy({&#39;__module__&#39;: &#39;__main__&#39;,
-              &#39;discount&#39;: 10,
-              &#39;__init__&#39;: &lt;function __main__.SuperMarket.__init__(self, item_price)&gt;,
-              &#39;get_bill&#39;: &lt;function __main__.SuperMarket.get_bill(self)&gt;,
-              &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__doc__&#39;: None})
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
 </pre></div>
 </div>
 </div>
 </div>
+<p>Hurray! we are back to square one. By deleting the <strong>shadowed</strong> discount instance attribute, we are back with the <strong>Class Attribute</strong> <code class="docutils literal notranslate"><span class="pre">discount</span></code> whose value is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Modifying the Class’s class attribute changes the attribute in all the objects created. But, changing the class attribute bound to the instance/object shadows the class attribute by creating an instance attribute of same name which is bound only to the objectclass.</p>
@@ -732,6 +738,85 @@
 </div>
 <div class="section" id="accessing-class-attributes-within-the-class">
 <h2><span class="section-number">29.2. </span>Accessing class attributes within the class.<a class="headerlink" href="#accessing-class-attributes-within-the-class" title="Permalink to this headline">¶</a></h2>
+<p>Well, we got to learn about class attributes, but are they accessible within the class 🤔?</p>
+<p>Definitely, they are accessible within the class. Let’s write a new class for the demonstration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+    <span class="n">no_of_objects_created</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Number of objects created of Counter class are: </span><span class="si">{</span><span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have created a class called <code class="docutils literal notranslate"><span class="pre">Counter</span></code>, its only purpose here is to count the number of objects created out of it. <code class="docutils literal notranslate"><span class="pre">no_of_objects_created</span></code> is the class attribute here. Initially it’s value is 0, for every object created of <code class="docutils literal notranslate"><span class="pre">Counter</span></code> class, <code class="docutils literal notranslate"><span class="pre">no_of_objects_created</span></code> gets increased by 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter_1</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">counter_2</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of objects created of Counter class are: 1
+Number of objects created of Counter class are: 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>🏆 We did it, we created a class <code class="docutils literal notranslate"><span class="pre">Counter</span></code> which counts number of objects created.</p>
+<p>In the above example to access the class attribute we used <code class="docutils literal notranslate"><span class="pre">Counter.no_of_objects_created</span></code> which is <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code>, There’s another way to access it using <code class="docutils literal notranslate"><span class="pre">self</span></code>. Let’s give it a try:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewCounter</span><span class="p">:</span>
+    <span class="n">no_of_objects_created</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">no_of_objects_created</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Number of objects created of Counter class are: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">no_of_objects_created</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_counter_1</span> <span class="o">=</span> <span class="n">NewCounter</span><span class="p">()</span>
+<span class="n">new_counter_2</span> <span class="o">=</span> <span class="n">NewCounter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of objects created of Counter class are: 1
+Number of objects created of Counter class are: 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>😰 Did it work? <strong>No</strong>❌, We see that the output is always <strong>1</strong>, The culprit here is again <strong>Shadowing of class attributes as instance attributes</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>So should we always use <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">self.&lt;class_attribute&gt;</span></code> 🤔? We can use either way while <strong>reading</strong> the class attribute. But, If we want to alter the class attribute, we should be using <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> to cascade the change to all the objects.</p>
+<p>There’s no advantage of using class attributes if there are chances of altering only at instance using self, so hard rule is use <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> for accessing the class within the class.</p>
+</div>
 </div>
 <div class="section" id="use-cases-of-class-attributes">
 <h2><span class="section-number">29.3. </span>Use cases of Class Attributes<a class="headerlink" href="#use-cases-of-class-attributes" title="Permalink to this headline">¶</a></h2>
@@ -760,311 +845,8 @@
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="class-attributes">
-<h1><span class="section-number">29. </span>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">¶</a></h1>
-<p>In our earlier lesson, we got to learn about instance attributes. Here let’s learn about class Attributes 😎</p>
-<p>Class Attributes are cousins of Instance Attributes 😬. Just kidding.</p>
-<p>As Instance attributes are bound to instances/objects, Class attributes are bound to the Class itself.</p>
-<p><img alt="Class vs Instance attributes" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_6-10/Chapter_8/Class_Instance_Attributes.png?raw=true" /></p>
-<p><strong>Code speaks louder than words 🥁</strong>. Let’s get into an example 🙂:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperMarket</span><span class="p">:</span>
-    <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Here&#39;s the class attribute.</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item_price</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span> <span class="o">=</span> <span class="n">item_price</span>
-
-    <span class="k">def</span> <span class="nf">get_bill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span> <span class="o">-</span> <span class="p">((</span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We have created a class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code> and it contains a variable called <code class="docutils literal notranslate"><span class="pre">discount</span></code>, well this is the Class Attribute that we are going to explore.</p>
-<p>As we learned that Class Attributes are bound to class whereas Instance Attributes are bound to instance, lets explore it first.</p>
-<p><strong>Checking if Instance attribute is bound to Class?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_15991</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
-
-<span class="ne">AttributeError</span>: type object &#39;SuperMarket&#39; has no attribute &#39;item_price&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">item_price</span></code> is Instance Attribute, We can clearly see that there’s an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> raised when trying to access instance attribute using the Class rather than the instance.</p>
-<p><strong>Checking if Class Attribute is bound to Class?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<p>🎊 Hurray! We are able to access <code class="docutils literal notranslate"><span class="pre">discount</span></code> using the Class itself.</p>
-<p>Hence, Class Attributes are bound to Class whereas Instance Attributes are bound to Instances.</p>
-<p>Well, there’s no reason for you to trust me 😬, So let’s look at the attributes present for the class.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="vm">__dict__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mappingproxy({&#39;__module__&#39;: &#39;__main__&#39;,
-              &#39;discount&#39;: 0,
-              &#39;__init__&#39;: &lt;function __main__.SuperMarket.__init__(self, item_price)&gt;,
-              &#39;get_bill&#39;: &lt;function __main__.SuperMarket.get_bill(self)&gt;,
-              &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__doc__&#39;: None})
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can see that <code class="docutils literal notranslate"><span class="pre">SuperMarket.__dict__</span></code> returned an object which shows the attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code>. Hence, <code class="docutils literal notranslate"><span class="pre">discount</span></code> is a class attribute as it is bound to its class 😊.</p>
-<div class="section" id="altering-the-class-attributes">
-<h2><span class="section-number">29.1. </span>🔔 Altering the class Attributes<a class="headerlink" href="#altering-the-class-attributes" title="Permalink to this headline">¶</a></h2>
-<p>First of all, let’s check what is the value of discount?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let’s create an object of <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">SuperMarket</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Creation of object of the class SuperMarket.</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can still see the value of <code class="docutils literal notranslate"><span class="pre">discount</span></code> of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> to be 0 😊.</p>
-<p>Let’s change the <code class="docutils literal notranslate"><span class="pre">discount</span></code> class attribute through the class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We have changed the value of the class attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code> to 10.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can see that changing the class attribute values changes the values of the attributes of the object as well.</p>
-<p><strong>But, what if we change the class attribute via the object? Does it changes the actual Class Attribute? 🤔”</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p>At present, we have both <code class="docutils literal notranslate"><span class="pre">SuperMarket.discount</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.discount</span></code> values to be 10.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Changing the object&#39;s discount value to 20.</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>  <span class="c1"># Checking if the object&#39;s discount changed to 20?</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>  <span class="c1"># Checking for the class Attribute &#39;discount&#39; bound to the class.</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Well, We got to see that when the object’s class attribute value is changed, it doesn’t change the Class’s class attribute value 😬. Well, what’s the reason for this behaviour 🤔?</strong></p>
-<p>To identify what paved the way for the above behaviour, let’s create another object of the class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span> <span class="o">=</span> <span class="n">SuperMarket</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Creating a new object.</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now let’s look at the instance attributes of <code class="docutils literal notranslate"><span class="pre">obj2</span></code> by using the special/magic method <code class="docutils literal notranslate"><span class="pre">__dict__</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span><span class="o">.</span><span class="vm">__dict__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;item_price&#39;: 100}
-</pre></div>
-</div>
-</div>
-</div>
-<p>We see that <code class="docutils literal notranslate"><span class="pre">obj2</span></code> has only item <code class="docutils literal notranslate"><span class="pre">item_price</span></code>. let’s look at <code class="docutils literal notranslate"><span class="pre">obj</span></code> also on which we tried to change the value of class attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;item_price&#39;: 100, &#39;discount&#39;: 20}
-</pre></div>
-</div>
-</div>
-</div>
-<p>There’s an extra field <code class="docutils literal notranslate"><span class="pre">discount</span></code> for <code class="docutils literal notranslate"><span class="pre">obj</span></code>, it’s because we tried to change the class attribute’s value which actually shadows/creates a new attribute with the same name as <strong>instance attribute</strong></p>
-<p>🤔 How to revert the value of <code class="docutils literal notranslate"><span class="pre">discount</span></code> to be the class attribute’s value, which in our case should be 10.</p>
-<p>Easy Peasy! we just need to delete the attribute of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> using <code class="docutils literal notranslate"><span class="pre">del</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__dict__</span>  <span class="c1"># Equivalent to SuperMarket.__dict__</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mappingproxy({&#39;__module__&#39;: &#39;__main__&#39;,
-              &#39;discount&#39;: 10,
-              &#39;__init__&#39;: &lt;function __main__.SuperMarket.__init__(self, item_price)&gt;,
-              &#39;get_bill&#39;: &lt;function __main__.SuperMarket.get_bill(self)&gt;,
-              &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;SuperMarket&#39; objects&gt;,
-              &#39;__doc__&#39;: None})
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Modifying the Class’s class attribute changes the attribute in all the objects created. But, changing the class attribute bound to the instance/object shadows the class attribute by creating an instance attribute of same name which is bound only to the objectclass.</p>
-</div>
-</div>
-<div class="section" id="accessing-class-attributes-within-the-class">
-<h2><span class="section-number">29.2. </span>Accessing class attributes within the class.<a class="headerlink" href="#accessing-class-attributes-within-the-class" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="use-cases-of-class-attributes">
-<h2><span class="section-number">29.3. </span>Use cases of Class Attributes<a class="headerlink" href="#use-cases-of-class-attributes" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./prodigiouspython/Chapter_8"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="1_Classes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1074,7 +856,7 @@
         </div>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
