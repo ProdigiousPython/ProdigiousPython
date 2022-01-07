@@ -419,11 +419,6 @@
    29.2. Accessing class attributes within the class.
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-cases-of-class-attributes">
-   29.3. Use cases of Class Attributes
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -452,11 +447,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#accessing-class-attributes-within-the-class">
    29.2. Accessing class attributes within the class.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-cases-of-class-attributes">
-   29.3. Use cases of Class Attributes
   </a>
  </li>
 </ul>
@@ -501,7 +491,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_8404</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4234</span><span class="o">/</span><span class="mf">3157468629.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
 
 <span class="ne">AttributeError</span>: type object &#39;SuperMarket&#39; has no attribute &#39;item_price&#39;
@@ -817,9 +807,6 @@ Number of objects created of Counter class are: 1
 <p>So should we always use <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">self.&lt;class_attribute&gt;</span></code> 🤔? We can use either way while <strong>reading</strong> the class attribute. But, If we want to <strong>alter</strong> the class attribute, we should be using <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> to cascade the change to all the objects.</p>
 <p>There’s no advantage of using class attributes if there are chances of altering only for a particular instance using <code class="docutils literal notranslate"><span class="pre">self</span></code>, so hard rule is use <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code> for accessing the class within the class 😤.</p>
 </div>
-</div>
-<div class="section" id="use-cases-of-class-attributes">
-<h2><span class="section-number">29.3. </span>Use cases of Class Attributes<a class="headerlink" href="#use-cases-of-class-attributes" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
