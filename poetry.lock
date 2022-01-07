@@ -1520,6 +1520,18 @@ testing = ["pytest (>=6.0.1,<6.1.0)", "pytest-regressions (>=2.0.1,<2.1.0)"]
 themes = ["sphinx-rtd-theme", "pydata-sphinx-theme (>=0.4.0,<0.5.0)", "sphinx-book-theme (>=0.0.36,<0.1.0)", "myst-parser (>=0.12.9,<0.13.0)"]
 
 [[package]]
+name = "sphinx-sitemap"
+version = "2.2.0"
+description = "Sitemap generator for Sphinx"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+six = "*"
+sphinx = ">=1.2"
+
+[[package]]
 name = "sphinx-thebe"
 version = "0.0.10"
 description = "Integrate interactive code blocks into your documentation with Thebe and Binder."
@@ -1847,7 +1859,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "26dab62e206a7d8bb8d765920eaca17e0448f9de6c4184f7558359fe9a620fda"
+content-hash = "397089887ae7016597bc7fa1527b0d36b7bd9edaabd780f408cd84c8e23682b4"
 
 [metadata.files]
 alabaster = [
@@ -2577,6 +2589,9 @@ sphinx-multitoc-numbering = [
 sphinx-panels = [
     {file = "sphinx-panels-0.6.0.tar.gz", hash = "sha256:d36dcd26358117e11888f7143db4ac2301ebe90873ac00627bf1fe526bf0f058"},
     {file = "sphinx_panels-0.6.0-py3-none-any.whl", hash = "sha256:bd64afaf85c07f8096d21c8247fc6fd757e339d1be97832c8832d6ae5ed2e61d"},
+]
+sphinx-sitemap = [
+    {file = "sphinx-sitemap-2.2.0.tar.gz", hash = "sha256:65adda39233cb17c0da10ba1cebaa2df73e271cdb6f8efd5cec8eef3b3cf7737"},
 ]
 sphinx-thebe = [
     {file = "sphinx-thebe-0.0.10.tar.gz", hash = "sha256:b51ed38e0974c891319aed1554212598597ae12226c7916f2215becc382ae8d7"},
