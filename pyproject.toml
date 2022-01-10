@@ -10,7 +10,7 @@ python = "^3.9"
 ipython = "^7.31.0"
 jupyterlab = "^3.2.2"
 jupyter-book = "^0.12.1"
-pyppeteer = "^0.2.6"
+pyppeteer = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
