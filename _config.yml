@@ -41,3 +41,9 @@ html:
     <a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
     <a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
     </p>
+
+sphinx:
+  config:
+    html_baseurl: 'https://prodigiouspython.github.io/ProdigiousPython/'
+  extra_extensions:
+    - sphinx_sitemap
