@@ -1196,7 +1196,7 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pyppeteer"
-version = "1.0.0"
+version = "1.0.2"
 description = "Headless chrome/chromium automation library (unofficial port of puppeteer)"
 category = "main"
 optional = false
@@ -1860,7 +1860,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7f6b272e4dbb8d77ea769073eefb14e5273e7ffa74e47fcad270484ce6b937fb"
+content-hash = "4809e679130e029743ae4424e68a3de4e653fafe570712f061485c9a4481df5f"
 
 [metadata.files]
 alabaster = [
@@ -2417,8 +2417,8 @@ pyparsing = [
     {file = "pyparsing-3.0.6.tar.gz", hash = "sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"},
 ]
 pyppeteer = [
-    {file = "pyppeteer-1.0.0-py3-none-any.whl", hash = "sha256:c2369bfd5a938a5cd60f663514177d4314b4acf7b909440f0a2c5c610b86ee6e"},
-    {file = "pyppeteer-1.0.0.tar.gz", hash = "sha256:6bcad4202bc691f85f52bdfaf34cb21f49813c56af6796fb34056e303b35bc87"},
+    {file = "pyppeteer-1.0.2-py3-none-any.whl", hash = "sha256:11a734d8f02c6b128035aba8faf32748f2016310a6a1cbc6aa5b1e2580742e8f"},
+    {file = "pyppeteer-1.0.2.tar.gz", hash = "sha256:ddb0d15cb644720160d49abb1ad0d97e87a55581febf1b7531be9e983aad7742"},
 ]
 pyrsistent = [
     {file = "pyrsistent-0.18.0-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:f4c8cabb46ff8e5d61f56a037974228e978f26bfefce4f61a4b1ac0ba7a2ab72"},
