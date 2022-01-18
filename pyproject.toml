@@ -7,15 +7,16 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-ipython = "^7.31.0"
-jupyterlab = "^3.2.2"
+ipython = "^8.0.0"
+jupyterlab = "^3.2.8"
 jupyter-book = "^0.12.1"
-pyppeteer = "^0.2.6"
+pyppeteer = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
 black = {extras = ["jupyter"], version = "^21.11b1"}
 black-nb = "^0.6"
+sphinx-sitemap = "^2.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
