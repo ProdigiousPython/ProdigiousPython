@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.9"
 ipython = "^8.0.1"
 jupyterlab = "^3.2.8"
-jupyter-book = "^0.12.1"
+jupyter-book = "^0.12.2"
 pyppeteer = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
