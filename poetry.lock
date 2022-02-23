@@ -170,7 +170,7 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "black-nb"
-version = "0.6"
+version = "0.7"
 description = "Apply black to all code cells in a Jupyter notebook."
 category = "dev"
 optional = false
@@ -1912,7 +1912,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "00bc31c77e568d276e5126a9860e504a6eddc285d0b79700c95a283c681beeaf"
+content-hash = "5e08fb5e8f0bb672dde8d434858fce485f3f35b561918145131940b1dd99daca"
 
 [metadata.files]
 alabaster = [
@@ -1987,7 +1987,7 @@ black = [
     {file = "black-21.12b0.tar.gz", hash = "sha256:77b80f693a569e2e527958459634f18df9b0ba2625ba4e0c2d5da5be42e6f2b3"},
 ]
 black-nb = [
-    {file = "black-nb-0.6.tar.gz", hash = "sha256:68522d8e573ca470e5ac56df46cf8ce8cdb88a5797f2ba8328a7bc4b4be003b4"},
+    {file = "black-nb-0.7.tar.gz", hash = "sha256:8742a4f7c728302c91954325168d779f9444f8e3c31b19598ee8e98fc4bf4782"},
 ]
 bleach = [
     {file = "bleach-4.1.0-py2.py3-none-any.whl", hash = "sha256:4d2651ab93271d1129ac9cbc679f524565cc8a1b791909c4a51eac4446a15994"},

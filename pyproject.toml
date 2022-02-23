@@ -15,7 +15,7 @@ pyppeteer = "^1.0.2"
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
 black = {extras = ["jupyter"], version = "^21.11b1"}
-black-nb = "^0.6"
+black-nb = "^0.7"
 sphinx-sitemap = "^2.2.0"
 
 [build-system]
