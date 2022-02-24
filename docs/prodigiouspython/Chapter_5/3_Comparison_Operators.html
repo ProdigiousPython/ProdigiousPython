@@ -37,17 +37,19 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://prodigiouspython.github.io/ProdigiousPython/prodigiouspython/Chapter_5/3_Comparison_Operators.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -971,8 +973,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140327121139968
-140327121139968
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140077340035200
+140077340035200
 id of a is equal to id of b: True
 </pre></div>
 </div>
@@ -993,7 +995,7 @@ id of a is equal to id of b: True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140327121151104 and b is 140327121138048
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140077340042688 and b is 140077340261184
 True
 False
 </pre></div>
@@ -1037,7 +1039,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140327121484608 and y is 140327121150656
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140077339963840 and y is 140077340036352
 True
 </pre></div>
 </div>
