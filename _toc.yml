@@ -57,4 +57,5 @@ parts:
     chapters:
     - file: prodigiouspython/Chapter_8/1_Classes
     - file: prodigiouspython/Chapter_8/2_Class_Attributes
+    - file: prodigiouspython/Chapter_8/3_Class_Static_Methods
     
