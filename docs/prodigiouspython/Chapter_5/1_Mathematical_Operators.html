@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>23. Mathematical Operators &#8212; Prodigious Python 🐍</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -73,7 +72,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -82,9 +95,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -102,14 +116,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Prodigious Python
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Prodigious Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   1. Introduction to Python 🐍
  </span>
@@ -317,107 +332,209 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/prodigiouspython/Chapter_5/1_Mathematical_Operators.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ProdigiousPython/ProdigiousPython"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ProdigiousPython/ProdigiousPython/issues/new?title=Issue%20on%20page%20%2Fprodigiouspython/Chapter_5/1_Mathematical_Operators.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/main?urlpath=lab/tree/prodigiouspython/Chapter_5/1_Mathematical_Operators.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/main?urlpath=lab/tree/prodigiouspython/Chapter_5/1_Mathematical_Operators.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/ProdigiousPython/ProdigiousPython"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/ProdigiousPython/ProdigiousPython/issues/new?title=Issue%20on%20page%20%2Fprodigiouspython/Chapter_5/1_Mathematical_Operators.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/prodigiouspython/Chapter_5/1_Mathematical_Operators.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#addition">
    23.1. Addition
@@ -523,12 +640,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Mathematical Operators</h1>
@@ -650,11 +766,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="mathematical-operators">
-<h1><span class="section-number">23. </span>Mathematical Operators<a class="headerlink" href="#mathematical-operators" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="mathematical-operators">
+<h1><span class="section-number">23. </span>Mathematical Operators<a class="headerlink" href="#mathematical-operators" title="Permalink to this headline">#</a></h1>
 <p>We do have a big set of mathematical operators in Python. let’s have a look 😎</p>
 <p>Let’s start with Addition, which is the only one I am good at 😜 JD!</p>
 <table class="colwidths-auto table">
@@ -689,8 +806,8 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 <p>Hurray! I am recapping my primary school 👦:P</p>
 <p><img alt="Success Kid" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_5/resources/success_kid.png?raw=true" /></p>
-<div class="section" id="addition">
-<h2><span class="section-number">23.1. </span>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h2>
+<section id="addition">
+<h2><span class="section-number">23.1. </span>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">#</a></h2>
 <p>Addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code> is used to add two or more <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">complex</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> etc..</p>
 <p>🙄 If you are wondering does addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code> does a lot of stuff mentioned above? Yep, it does, isn’t that cool 😎? That’s the flexibility provided by our beloved Python 🐍.</p>
 <p>Let’s go through each example 😊</p>
@@ -726,8 +843,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Wohooo! We successfully created many attributes of different datatypes. Let’s start using the Addition <code class="docutils literal notranslate"><span class="pre">+</span></code> operator on them</p>
-<div class="section" id="integers">
-<h3><span class="section-number">23.1.1. </span>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">¶</a></h3>
+<section id="integers">
+<h3><span class="section-number">23.1.1. </span>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">+</span> <span class="n">integer_b</span><span class="p">)</span>
@@ -740,9 +857,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="floats">
-<h3><span class="section-number">23.1.2. </span>Floats<a class="headerlink" href="#floats" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="floats">
+<h3><span class="section-number">23.1.2. </span>Floats<a class="headerlink" href="#floats" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">+</span> <span class="n">float_b</span><span class="p">)</span>
@@ -755,9 +872,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="complex">
-<h3><span class="section-number">23.1.3. </span>Complex<a class="headerlink" href="#complex" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="complex">
+<h3><span class="section-number">23.1.3. </span>Complex<a class="headerlink" href="#complex" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">+</span> <span class="n">complex_b</span><span class="p">)</span>
@@ -812,8 +929,8 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-<div class="section" id="note">
-<h4><span class="section-number">23.1.3.1. </span>💡 Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h4>
+<section id="note">
+<h4><span class="section-number">23.1.3.1. </span>💡 Note<a class="headerlink" href="#note" title="Permalink to this headline">#</a></h4>
 <p>In the above print function we have used <code class="docutils literal notranslate"><span class="pre">=</span></code> in the f-strings, which prints the output as <code class="docutils literal notranslate"><span class="pre">&lt;expression&gt;=&lt;expression_result&gt;</span></code>.</p>
 <p>In simple terms using <code class="docutils literal notranslate"><span class="pre">=</span></code> in the f-strings make the above print function equivalent to:</p>
 <div class="cell docutils container">
@@ -832,10 +949,10 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <p>The final result would be of datatype equal to the highest precedence of the operands shown as below.</p>
 <p><code class="docutils literal notranslate"><span class="pre">complex</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">float</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">int</span></code></p>
 <p>complex numbers are superset of float, float are superset to integers.</p>
-</div>
-</div>
-<div class="section" id="lists">
-<h3><span class="section-number">23.1.4. </span>lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="lists">
+<h3><span class="section-number">23.1.4. </span>lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_a</span> <span class="o">+</span> <span class="n">list_b</span><span class="p">)</span>
@@ -849,9 +966,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 <p>Addition operator on two lists generate a new list appending the objects present in the second list to first list.</p>
-</div>
-<div class="section" id="tuples">
-<h3><span class="section-number">23.1.5. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tuples">
+<h3><span class="section-number">23.1.5. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tuple_a</span> <span class="o">+</span> <span class="n">tuple_b</span><span class="p">)</span>
@@ -864,9 +981,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="strings">
-<h3><span class="section-number">23.1.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="strings">
+<h3><span class="section-number">23.1.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">+</span> <span class="n">str_b</span><span class="p">)</span>
@@ -883,12 +1000,12 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <p class="admonition-title">Note</p>
 <p>We do have a string method called <code class="docutils literal notranslate"><span class="pre">join</span></code> for efficient concatenation of strings. We would go through it in the coming chapters related to strings 😬.</p>
 </div>
-</div>
-</div>
-<div class="section" id="subtraction">
-<h2><span class="section-number">23.2. </span>Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">23.2.1. </span>Integers<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="subtraction">
+<h2><span class="section-number">23.2. </span>Subtraction<a class="headerlink" href="#subtraction" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">23.2.1. </span>Integers<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">-</span> <span class="n">integer_b</span><span class="p">)</span>
@@ -901,9 +1018,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">23.2.2. </span>Floats<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3><span class="section-number">23.2.2. </span>Floats<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">-</span> <span class="n">float_b</span><span class="p">)</span>
@@ -918,9 +1035,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 <p>We might wonder seeing the above result <code class="docutils literal notranslate"><span class="pre">-3.8000000000000003</span></code> instead of <code class="docutils literal notranslate"><span class="pre">-3.8</span></code> and doubt ourselves whether we forgot how to do subtraction 🙄. No worries, We are still good at math (basic math atleast 😅).</p>
 <p>The extra <code class="docutils literal notranslate"><span class="pre">3</span></code> at the end of the result is due to <a class="reference external" href="https://docs.python.org/3/tutorial/floatingpoint.html#floating-point-arithmetic-issues-and-limitations">Floating Point Arithmetic Issues and Limitations</a></p>
-</div>
-<div class="section" id="id3">
-<h3><span class="section-number">23.2.3. </span>Complex<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id3">
+<h3><span class="section-number">23.2.3. </span>Complex<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">-</span> <span class="n">complex_b</span><span class="p">)</span>
@@ -938,10 +1055,10 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <p class="admonition-title">Note</p>
 <p>Subtraction operation doesn’t work with lists, tuples and dictionary. These datastructures have built-in methods associated to remove objects from them.</p>
 </div>
-</div>
-</div>
-<div class="section" id="multiplication">
-<h2><span class="section-number">23.3. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="multiplication">
+<h2><span class="section-number">23.3. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">*</span> <span class="n">integer_b</span><span class="p">)</span>
@@ -959,8 +1076,8 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 <p>Apart from the above numerical multiplication, we can even use multiplication for strings, list</p>
-<div class="section" id="id4">
-<h3><span class="section-number">23.3.1. </span>Strings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h3><span class="section-number">23.3.1. </span>Strings<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
@@ -994,9 +1111,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="list-tuple">
-<h3><span class="section-number">23.3.2. </span>List/Tuple<a class="headerlink" href="#list-tuple" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="list-tuple">
+<h3><span class="section-number">23.3.2. </span>List/Tuple<a class="headerlink" href="#list-tuple" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list</span>
@@ -1015,10 +1132,10 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 <p>Multiplication of integer on list or tuples works similar, appending the same list/tuple objects in the same order equal to integer times multiplied.</p>
-</div>
-</div>
-<div class="section" id="division">
-<h2><span class="section-number">23.4. </span>Division<a class="headerlink" href="#division" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="division">
+<h2><span class="section-number">23.4. </span>Division<a class="headerlink" href="#division" title="Permalink to this headline">#</a></h2>
 <p>Division operator only works for numerical attributes like integer, float and complex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1036,9 +1153,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="floor-division">
-<h2><span class="section-number">23.5. </span>Floor division<a class="headerlink" href="#floor-division" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="floor-division">
+<h2><span class="section-number">23.5. </span>Floor division<a class="headerlink" href="#floor-division" title="Permalink to this headline">#</a></h2>
 <p>In the division section we have seen the results in fractions. Floor division operator <code class="docutils literal notranslate"><span class="pre">//</span></code> works similar, just that it neglects the fractional part. In Math terms, the result of Floor division is always the quotient.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1062,9 +1179,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <p class="admonition-title">Note</p>
 <p>Python’s default behaviour doesn’t support Floor divison on complex numbers.</p>
 </div>
-</div>
-<div class="section" id="modulus">
-<h2><span class="section-number">23.6. </span>Modulus<a class="headerlink" href="#modulus" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="modulus">
+<h2><span class="section-number">23.6. </span>Modulus<a class="headerlink" href="#modulus" title="Permalink to this headline">#</a></h2>
 <p>As we have already seen that Floor division results in Quotient of the a division, the modulus operator returns the remainder of the division. The Modulus operator is denoted by the symbol <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1080,9 +1197,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exponentiation-power">
-<h2><span class="section-number">23.7. </span>Exponentiation/Power<a class="headerlink" href="#exponentiation-power" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="exponentiation-power">
+<h2><span class="section-number">23.7. </span>Exponentiation/Power<a class="headerlink" href="#exponentiation-power" title="Permalink to this headline">#</a></h2>
 <p>The Exponentiation/Power operator is denoted as <code class="docutils literal notranslate"><span class="pre">**</span></code>. Power operator on two operands <code class="docutils literal notranslate"><span class="pre">x**y</span></code> is said as the value of x raised to the power y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1101,8 +1218,8 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 </div>
 </div>
 <p>Wohooo! That’s too much of knowledge we acquired 😬. The only way we can master anything is through build and bombard, feel free to test out various scenarios 😊.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1126,9 +1243,11 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_4/8_Lambda_functions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1144,31 +1263,35 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Prodigious Python<br/>
-    
-        &copy; Copyright 2021.<br/>
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Prodigious Python<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <p>
 <a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
 <a href="https://www.linkedin.com/in/naveenkumarreddy8/" target="_blank"><img src="https://img.shields.io/badge/Follow-LinkedIn-0077B5?style=flat-square&logo=appveyor.svg" alt="Follow LinkedIn"></a>
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
