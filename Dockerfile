@@ -1,4 +1,4 @@
-FROM python:3.10.0
+FROM python:latest
 
 # Create user with a home directory.
 ARG NB_USER=pythonist
