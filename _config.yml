@@ -35,7 +35,7 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
-  google_analytics_id: UA-208617608-1
+  google_analytics_id: G-1KZH2STPPK
   extra_footer: |
     <p>
     <a href="https://www.buymeacoffee.com/Naveen8" target="_blank"><img src="https://img.shields.io/badge/Support-Buy%20me%20a%20%E2%98%95-orange?style=flat-square&logo=appveyor.svg" alt="Buy Me A Coffee"></a>
