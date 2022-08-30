@@ -61,15 +61,13 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-208617608-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-1KZH2STPPK');
+                </script>
 
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
@@ -558,8 +556,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 7, 30, 11, 58, 29, 577358)
-The str of now is: 2022-07-30 11:58:29.577358
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 8, 30, 11, 33, 7, 599037)
+The str of now is: 2022-08-30 11:33:07.599037
 </pre></div>
 </div>
 </div>
@@ -578,8 +576,8 @@ The str of now is: 2022-07-30 11:58:29.577358
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fbc184621d0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fbc184621d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f5fec0584f0&gt;
+The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f5fec0584f0&gt;
 </pre></div>
 </div>
 </div>
@@ -609,7 +607,7 @@ The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fbc184
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7fbc18463b80
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f5fec0595a0
 The str of human_obj is: I am IronMan of age 48
 </pre></div>
 </div>
