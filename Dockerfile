@@ -20,7 +20,7 @@ COPY pyproject.toml poetry.lock ${HOME}/
 RUN python -m pip install -U pip
 
 # Installing Poetry.
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
 # Force poetry addition of path.
 ENV PATH = "${PATH}:/home/${NB_USER}/.local/bin"
