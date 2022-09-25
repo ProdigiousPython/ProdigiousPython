@@ -6,7 +6,7 @@ authors = ["Prodigious Python"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 ipython = "^8.5.0"
 jupyterlab = "^3.4.7"
 jupyter-book = "^0.13.1"
