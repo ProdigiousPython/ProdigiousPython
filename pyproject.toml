@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-ipython = "^8.6.0"
+ipython = "^8.7.0"
 jupyterlab = "^3.5.0"
 jupyter-book = "^0.13.1"
 pyppeteer = "^1.0.2"
