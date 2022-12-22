@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -734,9 +733,9 @@ title="Print to PDF"
 <p>Docstrings can be programmatically accessed using the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or through the built-in function <code class="docutils literal notranslate"><span class="pre">help</span></code>. Let’s give a try 😎.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double_the_value</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Doubles the integer value passed to the function and returns it.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def double_the_value(value: int):
+    &quot;&quot;&quot;Doubles the integer value passed to the function and returns it.&quot;&quot;&quot;
+    return value * 2
 </pre></div>
 </div>
 </div>
@@ -746,7 +745,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">help</span></code> function provides the docstrings as well as the information about the module, class, method or function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">double_the_value</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(double_the_value)
 </pre></div>
 </div>
 </div>
@@ -764,7 +763,7 @@ double_the_value(value: int)
 <h3><span class="section-number">14.4.2. </span>Using <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#using-doc" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">double_the_value</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(double_the_value.__doc__)
 </pre></div>
 </div>
 </div>
@@ -777,16 +776,16 @@ double_the_value(value: int)
 <p>Can we use the single line comments instead of multi-line docstrings 🤔? Let’s try this as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_single_line_comment_as_docstring</span><span class="p">():</span>
-    <span class="c1"># This is a single-line comment</span>
-    <span class="k">pass</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def test_single_line_comment_as_docstring():
+    # This is a single-line comment
+    pass
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test_single_line_comment_as_docstring</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(test_single_line_comment_as_docstring.__doc__)
 </pre></div>
 </div>
 </div>
@@ -811,9 +810,9 @@ double_the_value(value: int)
 <p>One-line docstrings are suited for short and simple Modules, classes, methods or functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">one_line_docstring</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;This is a one-line docstring&quot;&quot;&quot;</span>
-    <span class="k">pass</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def one_line_docstring():
+    &quot;&quot;&quot;This is a one-line docstring&quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
 </div>
@@ -824,15 +823,15 @@ double_the_value(value: int)
 <p>Multi-line docstrings are suited for long, complex Modules, classes, methods or functions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multi_line_docstring</span><span class="p">(</span><span class="n">arg1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">arg2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This is a multi-line docstring.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def multi_line_docstring(arg1: int, arg2: str) -&gt; None:
+    &quot;&quot;&quot;
+    This is a multi-line docstring.
 
-<span class="sd">    Arguments:</span>
-<span class="sd">      arg1 (int): Argument 1 is an integer.</span>
-<span class="sd">      arg2 (str): Argument 2 is a string.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
+    Arguments:
+      arg1 (int): Argument 1 is an integer.
+      arg2 (str): Argument 2 is a string.
+    &quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
 </div>

@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -593,15 +592,15 @@ title="Print to PDF"
 <p>Let’s get through an example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pythonist!&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greet_word</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet(greet_word=&quot;Hello&quot;, name=&quot;Pythonist!&quot;):
+    print(f&quot;{greet_word} {name}!&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hey&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet(&quot;Hey&quot;)
 </pre></div>
 </div>
 </div>
@@ -618,17 +617,17 @@ title="Print to PDF"
 <p>But what would be result if we use mutable objects like lists, dictionary 🤔?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_mutable_objects_as_default_argument</span><span class="p">(</span><span class="n">my_list</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;🍰&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def test_mutable_objects_as_default_argument(my_list=[]):
+    my_list.append(&quot;🍰&quot;)
+    print(my_list)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_mutable_objects_as_default_argument</span><span class="p">()</span>  <span class="c1"># Calling the function for the first time.</span>
-<span class="n">test_mutable_objects_as_default_argument</span><span class="p">()</span>  <span class="c1"># Calling the function for the second time.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>test_mutable_objects_as_default_argument()  # Calling the function for the first time.
+test_mutable_objects_as_default_argument()  # Calling the function for the second time.
 </pre></div>
 </div>
 </div>
@@ -644,7 +643,7 @@ title="Print to PDF"
 <p>We could see the default values of our function using the <code class="docutils literal notranslate"><span class="pre">__defaults__</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_mutable_objects_as_default_argument</span><span class="o">.</span><span class="vm">__defaults__</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>test_mutable_objects_as_default_argument.__defaults__
 </pre></div>
 </div>
 </div>
@@ -659,19 +658,19 @@ title="Print to PDF"
 Use <code class="docutils literal notranslate"><span class="pre">None</span></code> object as default argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_again_as_default_argument_using_none</span><span class="p">(</span><span class="n">my_list</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">my_list</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;🍰&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def test_again_as_default_argument_using_none(my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(&quot;🍰&quot;)
+    print(my_list)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_again_as_default_argument_using_none</span><span class="p">()</span>  <span class="c1"># Calling the function for the first time.</span>
-<span class="n">test_again_as_default_argument_using_none</span><span class="p">()</span>  <span class="c1"># Calling the function for the second time.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>test_again_as_default_argument_using_none()  # Calling the function for the first time.
+test_again_as_default_argument_using_none()  # Calling the function for the second time.
 </pre></div>
 </div>
 </div>
@@ -686,7 +685,7 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
 <p>If we pass a list containing an objects, our cake 🍰 would be appended and printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_again_as_default_argument_using_none</span><span class="p">([</span><span class="s2">&quot;🍹&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>test_again_as_default_argument_using_none([&quot;🍹&quot;])
 </pre></div>
 </div>
 </div>
