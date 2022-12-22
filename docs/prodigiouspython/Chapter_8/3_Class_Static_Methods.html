@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -593,15 +592,15 @@ title="Print to PDF"
 <p>The Static methods are created using the decorator <code class="docutils literal notranslate"><span class="pre">staticmethod</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">StaticMethodExample</span><span class="p">:</span>
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">do_something</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class StaticMethodExample:
+    @staticmethod
+    def do_something():
         
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
     
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: incomplete input
@@ -611,36 +610,36 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Anime</span><span class="p">:</span>
-    <span class="n">list_of_animes</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Anime:
+    list_of_animes = []
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">characters</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">characters</span> <span class="o">=</span> <span class="n">characters</span>
-        <span class="n">Anime</span><span class="o">.</span><span class="n">list_of_animes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    def __init__(self, name, characters):
+        self.name = name
+        self.characters = characters
+        Anime.list_of_animes.append(name)
 
-    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Instance Method.</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Hey weebs! We are </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">. We have awesome characters: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">characters</span><span class="si">}</span><span class="s2"> 🔥&quot;</span>
-        <span class="p">)</span>
+    def introduce(self):  # Instance Method.
+        print(
+            f&quot;Hey weebs! We are {self.name}. We have awesome characters: {self.characters} 🔥&quot;
+        )
 
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">show_list_and_count_of_animes</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>  <span class="c1"># Class Method.</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Animes listed are: </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">list_of_animes</span><span class="si">}</span><span class="s2"> which sums up to </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">list_of_animes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="p">)</span>
+    @classmethod
+    def show_list_and_count_of_animes(cls):  # Class Method.
+        print(
+            f&quot;Animes listed are: {cls.list_of_animes} which sums up to {len(cls.list_of_animes)}&quot;
+        )
 
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">temp</span><span class="p">():</span>
-        <span class="k">return</span> <span class="n">Anime</span><span class="o">.</span><span class="n">list_of_animes</span><span class="p">,</span> <span class="vm">__class__</span><span class="o">.</span><span class="n">list_of_animes</span>
+    @staticmethod
+    def temp():
+        return Anime.list_of_animes, __class__.list_of_animes
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Anime</span><span class="p">(</span><span class="s2">&quot;one piece&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;luffy&quot;</span><span class="p">,))</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">Anime</span><span class="p">(</span><span class="s2">&quot;naruto&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;naruto&quot;</span><span class="p">,))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Anime(&quot;one piece&quot;, (&quot;luffy&quot;,))
+b = Anime(&quot;naruto&quot;, (&quot;naruto&quot;,))
 </pre></div>
 </div>
 </div>

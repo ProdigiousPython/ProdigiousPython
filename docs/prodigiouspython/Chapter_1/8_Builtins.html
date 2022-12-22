@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -540,7 +539,7 @@ title="Print to PDF"
 <h1><span class="section-number">8. </span>Builtins<a class="headerlink" href="#builtins" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import builtins
 </pre></div>
 </div>
 </div>
@@ -550,8 +549,8 @@ title="Print to PDF"
 <p>The function we are using to traverse in <code class="docutils literal notranslate"><span class="pre">dir(builtins)</span></code> and get index and builtin attribute is <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> which is also a bulitin 😉</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">builtin_attribute</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">builtin_attribute</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for index, builtin_attribute in enumerate(dir(builtins)):
+    print(f&quot;{index}) {builtin_attribute}&quot;)
 </pre></div>
 </div>
 </div>

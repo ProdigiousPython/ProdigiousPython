@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -547,38 +546,38 @@ title="Print to PDF"
 <p>Python’s official documentations states that <code class="docutils literal notranslate"><span class="pre">__str__</span></code> should be used to represent a object which is human readable(informal), whereas <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> is used for official representation of an object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from datetime import datetime
 
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+now = datetime.now()
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of now is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of now is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+print(f&quot;The repr of now is: {repr(now)}&quot;)
+print(f&quot;The str of now is: {str(now)}&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 11, 25, 12, 33, 32, 194519)
-The str of now is: 2022-11-25 12:33:32.194519
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2022, 12, 22, 16, 57, 5, 41228)
+The str of now is: 2022-12-22 16:57:05.041228
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProgrammingLanguage</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class ProgrammingLanguage:
+    def __init__(self, language: str):
+        self.language = language
 
 
-<span class="n">language_obj</span> <span class="o">=</span> <span class="n">ProgrammingLanguage</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of language_obj is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">language_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of language_obj is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">language_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+language_obj = ProgrammingLanguage(language=&quot;Python&quot;)
+print(f&quot;The repr of language_obj is: {repr(language_obj)}&quot;)
+print(f&quot;The str of language_obj is: {str(language_obj)}&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f076f59c3d0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f076f59c3d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fe6834d8220&gt;
+The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7fe6834d8220&gt;
 </pre></div>
 </div>
 </div>
@@ -587,28 +586,28 @@ The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f076f5
 <p>Now let’s try to override the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> methods and see how the representations work</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Human:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
 
-    <span class="c1"># overriding __str__ method</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> of age </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span>
+    # overriding __str__ method
+    def __str__(self):
+        return f&quot;I am {self.name} of age {self.age}&quot;
 
-    <span class="c1"># overriding __repr__ method</span>
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Human(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, age=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">) object at </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span>
+    # overriding __repr__ method
+    def __repr__(self):
+        return f&quot;Human(name={self.name}, age={self.age}) object at {hex(id(self))}&quot;
 
 
-<span class="n">human_obj</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;IronMan&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The repr of human_obj is: </span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">human_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The str of human_obj is: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">human_obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+human_obj = Human(name=&quot;IronMan&quot;, age=48)
+print(f&quot;The repr of human_obj is: {repr(human_obj)}&quot;)
+print(f&quot;The str of human_obj is: {str(human_obj)}&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f076f59c340
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7fe6834d9f00
 The str of human_obj is: I am IronMan of age 48
 </pre></div>
 </div>
