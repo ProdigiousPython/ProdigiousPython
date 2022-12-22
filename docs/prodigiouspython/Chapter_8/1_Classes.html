@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -627,8 +626,8 @@ title="Print to PDF"
 <p>Let’s start by creating a simplest possible class 😎</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>
-    <span class="k">pass</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class IAmASimpleClass:
+    pass
 </pre></div>
 </div>
 </div>
@@ -636,9 +635,9 @@ title="Print to PDF"
 <p>Yipee! We did it 😬. Let’s confirm it 👇</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import inspect
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IAmASimpleClass is class: </span><span class="si">{</span><span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">IAmASimpleClass</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+print(f&quot;IAmASimpleClass is class: {inspect.isclass(IAmASimpleClass)}&quot;)
 </pre></div>
 </div>
 </div>
@@ -656,7 +655,7 @@ title="Print to PDF"
 <p>We will be using <code class="docutils literal notranslate"><span class="pre">dir</span></code> function to get to know all the attributes associated with our class</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">IAmASimpleClass</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir(IAmASimpleClass)
 </pre></div>
 </div>
 </div>
@@ -695,14 +694,14 @@ title="Print to PDF"
 <p>We all must have already heard or read that <strong>In Python everything is an Object</strong>. Well, the culprit in the above example is the class <code class="docutils literal notranslate"><span class="pre">object</span></code> ⚔️. All the above attributes or methods in the output are inherited from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>. In Python3, by default every class inherits <code class="docutils literal notranslate"><span class="pre">object</span></code> class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>  <span class="c1"># Python3 takes care of inheriting object.</span>
-    <span class="k">pass</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class IAmASimpleClass:  # Python3 takes care of inheriting object.
+    pass
 
 
-<span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">(</span>
-    <span class="nb">object</span>
-<span class="p">):</span>  <span class="c1"># We can explicitly inherit object, although not required.</span>
-    <span class="k">pass</span>
+class IAmASimpleClass(
+    object
+):  # We can explicitly inherit object, although not required.
+    pass
 </pre></div>
 </div>
 </div>
@@ -716,16 +715,16 @@ title="Print to PDF"
 <p>As we have reached our first milestone of creating a simple class, let’s get to know a bit more about class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperHero</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span>
-    <span class="p">):</span>  <span class="c1"># One of the special/magic/dunder method.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Instance attributes.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">power_level</span> <span class="o">=</span> <span class="n">power_level</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">special_power</span> <span class="o">=</span> <span class="n">special_power</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class SuperHero:
+    def __init__(
+        self, name, power_level, special_power
+    ):  # One of the special/magic/dunder method.
+        self.name = name  # Instance attributes.
+        self.power_level = power_level
+        self.special_power = special_power
 
-    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Method.</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hey! I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, my special power is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">special_power</span><span class="si">}</span><span class="s2"> and have a crazy power level of </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">power_level</span><span class="si">}</span><span class="s2"> 🔥&quot;</span>
+    def introduce(self):  # Method.
+        return f&quot;Hey! I am {self.name}, my special power is {self.special_power} and have a crazy power level of {self.power_level} 🔥&quot;
 </pre></div>
 </div>
 </div>
@@ -742,7 +741,7 @@ title="Print to PDF"
 <p>While creating objects for our class, we pass the parameters as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">super_hero</span> <span class="o">=</span> <span class="n">SuperHero</span><span class="p">(</span><span class="s2">&quot;Iron Man&quot;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">,</span> <span class="s2">&quot;Jarvis&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>super_hero = SuperHero(&quot;Iron Man&quot;, 1000000, &quot;Jarvis&quot;)
 </pre></div>
 </div>
 </div>
@@ -778,7 +777,7 @@ title="Print to PDF"
 <p>In our <code class="docutils literal notranslate"><span class="pre">SuperHero</span></code> class, we have a method called <code class="docutils literal notranslate"><span class="pre">introduce</span></code>. let’s call it 🔛.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">super_hero</span><span class="o">.</span><span class="n">introduce</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>super_hero.introduce()
 </pre></div>
 </div>
 </div>

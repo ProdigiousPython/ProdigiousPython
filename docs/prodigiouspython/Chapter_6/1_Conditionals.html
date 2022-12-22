@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4115314770592073"
-     crossorigin="anonymous"></script>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
@@ -732,8 +731,8 @@ title="Print to PDF"
 <p>If the expression results in Truth value equivalent to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then our interpreter gets into the block of code written in the <code class="docutils literal notranslate"><span class="pre">if</span></code> block, else it skips the <code class="docutils literal notranslate"><span class="pre">if</span></code> block.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yup!, 3 is greater than 1&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if 3 &gt; 1:
+    print(&quot;Yup!, 3 is greater than 1&quot;)
 </pre></div>
 </div>
 </div>
@@ -746,19 +745,19 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">One</span> <span class="pre">more:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just for demonstration, we are doing a bit long way.</span>
-<span class="n">tuple_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">tuple_2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Just for demonstration, we are doing a bit long way.
+tuple_1 = (3, 2, 1)
+tuple_2 = (1, 2, 3)
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">tuple_1</span> <span class="o">&gt;</span> <span class="n">tuple_2</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tuple_1 is greater than tuple_2&quot;</span><span class="p">)</span>
+result = tuple_1 &gt; tuple_2
+print(f&quot;The result is {result}&quot;)
+if result:
+    print(&quot;tuple_1 is greater than tuple_2&quot;)
 
-<span class="n">result_2</span> <span class="o">=</span> <span class="n">tuple_1</span> <span class="o">&lt;</span> <span class="n">tuple_2</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result_2 is </span><span class="si">{</span><span class="n">result_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">result_2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;😬 The interpreter doesn&#39;t run this code&quot;</span><span class="p">)</span>
+result_2 = tuple_1 &lt; tuple_2
+print(f&quot;The result_2 is {result_2}&quot;)
+if result_2:
+    print(&quot;😬 The interpreter doesn&#39;t run this code&quot;)
 </pre></div>
 </div>
 </div>
@@ -774,9 +773,9 @@ The result_2 is False
 <p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">containing</span> <span class="pre">few</span> <span class="pre">objects</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="s2">&quot;🐍&quot;</span><span class="p">]</span>
-<span class="k">if</span> <span class="n">my_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am inside of the if block&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_list = [1, 2, None, &quot;abc&quot;, &quot;🐍&quot;]
+if my_list:
+    print(&quot;I am inside of the if block&quot;)
 </pre></div>
 </div>
 </div>
@@ -790,9 +789,9 @@ The result_2 is False
 <p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">empty</span> <span class="pre">list</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">if</span> <span class="n">empty_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nah! I won&#39;t get executed&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>empty_list = []
+if empty_list:
+    print(&quot;Nah! I won&#39;t get executed&quot;)
 </pre></div>
 </div>
 </div>
@@ -808,12 +807,12 @@ The result_2 is False
 <p>The <code class="docutils literal notranslate"><span class="pre">elif</span></code> is a short hand of <code class="docutils literal notranslate"><span class="pre">else-if</span></code>, if the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition written above the <code class="docutils literal notranslate"><span class="pre">elif</span></code> gets Falsy condition, then only the interpreter gets to the <code class="docutils literal notranslate"><span class="pre">elif</span></code> block. There could be 0 or any number of <code class="docutils literal notranslate"><span class="pre">elif</span></code> conditions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span>
-        <span class="s2">&quot;3 is greater than 4! 😅&quot;</span>
-    <span class="p">)</span>  <span class="c1"># This wouldn&#39;t get executed as 3 is not greater than 4.</span>
-<span class="k">elif</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4 is greater than 3! 😊&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if 3 &gt; 4:
+    print(
+        &quot;3 is greater than 4! 😅&quot;
+    )  # This wouldn&#39;t get executed as 3 is not greater than 4.
+elif 4 &gt; 3:
+    print(&quot;4 is greater than 3! 😊&quot;)
 </pre></div>
 </div>
 </div>
@@ -829,12 +828,12 @@ The result_2 is False
 <p><code class="docutils literal notranslate"><span class="pre">else</span></code> condition doesn’t have a condition statement, it works if the above <code class="docutils literal notranslate"><span class="pre">if</span></code> or <code class="docutils literal notranslate"><span class="pre">elif</span></code> doesn’t gets executed as the conditional statement in it has falsy values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 is greater than 2&quot;</span><span class="p">)</span>  <span class="c1"># doesn&#39;t gets executed as 1&gt;2 is False.</span>
-<span class="k">elif</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 is greater than 4&quot;</span><span class="p">)</span>  <span class="c1"># doesn&#39;t gets executed as well as 3&gt;4 is False.</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hey! I am inside else condition!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>if 1 &gt; 2:
+    print(&quot;1 is greater than 2&quot;)  # doesn&#39;t gets executed as 1&gt;2 is False.
+elif 3 &gt; 4:
+    print(&quot;3 is greater than 4&quot;)  # doesn&#39;t gets executed as well as 3&gt;4 is False.
+else:
+    print(&quot;Hey! I am inside else condition!&quot;)
 </pre></div>
 </div>
 </div>
@@ -866,12 +865,12 @@ The result_2 is False
 <p>Let’s find if a number is even or odd</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="k">if</span> <span class="n">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">is_even</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">is_even</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_even</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>value = 4
+if value % 2 == 0:
+    is_even = True
+else:
+    is_even = False
+print(is_even)
 </pre></div>
 </div>
 </div>
@@ -884,9 +883,9 @@ The result_2 is False
 <p>The above if-else conditions can be written in a single line using if-else statements as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">is_even</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">False</span>  <span class="c1"># single line if-else statement.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_even</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>value = 4
+is_even = True if value % 2 == 0 else False  # single line if-else statement.
+print(is_even)
 </pre></div>
 </div>
 </div>
@@ -904,23 +903,23 @@ The result_2 is False
 <p>Current alternate way of simple switch-case in Python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">int_1</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am integer one&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def int_1():
+    print(&quot;I am integer one&quot;)
 
 
-<span class="k">def</span> <span class="nf">int_2</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am integer two&quot;</span><span class="p">)</span>
+def int_2():
+    print(&quot;I am integer two&quot;)
 
 
-<span class="k">def</span> <span class="nf">python</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am one of the great programming language 🐍!&quot;</span><span class="p">)</span>
+def python():
+    print(&quot;I am one of the great programming language 🐍!&quot;)
 
 
-<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="n">int_1</span><span class="p">,</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="n">int_2</span><span class="p">,</span>
-    <span class="s2">&quot;Python&quot;</span><span class="p">:</span> <span class="n">python</span><span class="p">,</span>
-<span class="p">}</span>
+my_dict = {
+    1: int_1,
+    2: int_2,
+    &quot;Python&quot;: python,
+}
 </pre></div>
 </div>
 </div>
@@ -928,18 +927,18 @@ The result_2 is False
 <p>In the above code, we have written 3 functions <code class="docutils literal notranslate"><span class="pre">int_1</span></code>, <code class="docutils literal notranslate"><span class="pre">int_2</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code>, each function has a print statement, which in real world applications can be any code. We created a dictionary called <code class="docutils literal notranslate"><span class="pre">my_dict</span></code> which has keys as <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">Python</span></code> and those keys have values as function objects <code class="docutils literal notranslate"><span class="pre">int_1</span></code>, <code class="docutils literal notranslate"><span class="pre">int_2</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code> respectively. <strong>Note</strong>: We are not calling the functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Getting the function object.</span>
-    <span class="n">func</span><span class="p">()</span>  <span class="c1"># Executing the function object.</span>
-    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-    <span class="n">func</span><span class="p">()</span>
-    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">]</span>
-    <span class="n">func</span><span class="p">()</span>
-    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span>
-        <span class="s2">&quot;Random Key&quot;</span>
-    <span class="p">]</span>  <span class="c1"># We don&#39;t have a key called &quot;Random Key&quot;. Hence, it raises KeyError.</span>
-<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ouch, there is no switch for the value: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
+    func = my_dict[1]  # Getting the function object.
+    func()  # Executing the function object.
+    func = my_dict[2]
+    func()
+    func = my_dict[&quot;Python&quot;]
+    func()
+    func = my_dict[
+        &quot;Random Key&quot;
+    ]  # We don&#39;t have a key called &quot;Random Key&quot;. Hence, it raises KeyError.
+except KeyError as exc:
+    print(f&quot;Ouch, there is no switch for the value: {exc}&quot;)
 </pre></div>
 </div>
 </div>
