@@ -568,24 +568,24 @@ title="Print to PDF"
 <section class="tex2jax_ignore mathjax_ignore" id="development-setup">
 <h1>Development setup<a class="headerlink" href="#development-setup" title="Permalink to this headline">#</a></h1>
 <p>First things first, We need to clone our repo</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ProdigiousPython/ProdigiousPython.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProdigiousPython/ProdigiousPython.git
 </pre></div>
 </div>
 <p>We use <a class="reference external" href="https://python-poetry.org/">Poetry</a> for the dependency mangement.</p>
 <p>Let’s install the packages required using the below command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install
 </pre></div>
 </div>
 <p>To run the jupyter-lab:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jupyter-lab
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>jupyter-lab
 </pre></div>
 </div>
 <p>To convert the notebooks to html</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build .
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>jb<span class="w"> </span>build<span class="w"> </span>.
 </pre></div>
 </div>
 <p>To convert the notebooks to pdf</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry run jb build --builder<span class="o">=</span>pdfhtml .
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>jb<span class="w"> </span>build<span class="w"> </span>--builder<span class="o">=</span>pdfhtml<span class="w"> </span>.
 </pre></div>
 </div>
 <p>The generated files would be present in <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder.</p>
