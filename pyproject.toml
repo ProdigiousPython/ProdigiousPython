@@ -12,7 +12,7 @@ jupyterlab = "^3.5.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2"
-black = {extras = ["jupyter"], version = "^22.12"}
+black = {extras = ["jupyter"], version = "^23.1"}
 black-nb = "^0.7"
 
 [tool.poetry.group.dev.dependencies]
