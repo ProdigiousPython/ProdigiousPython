@@ -51,5 +51,25 @@ poetry run jb build --builder=pdfhtml .
 ```
 The generated files would be present in `_build` folder.
 
+# TOC
+
+
+<details>
+  <summary>1. Introduction to Python</summary>
+
+  1. [Getting Started with Python language](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/1_Getting_Started_With_Python_Language.ipynb)
+  2. [Creating Variables and assigning values](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/2_Creating_Variables_and_Assigning_Values.ipynb)
+  3. [Keywords and Variable Naming](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/3_Keywords_and_Variable_naming.ipynb)
+  4. [Datatypes](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/4_Datatypes.ipynb)
+  5. [Collection Types](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/5_Collection_Types.ipynb)
+  6. [IDEs for Python](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/6_IDEs_for_Python.ipynb)
+  7. [User Input](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/7_User_Input.ipynb)
+  8. [Builtins](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/8_Builtins.ipynb)
+  9. [Modules](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/9_Modules.ipynb)
+  10. [String Representation of Objects](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/10_String_representations_of_objects.ipynb)
+  11. [Installing Packages](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/11_Installing_Packages.ipynb)
+  12. [Help Utility](https://github.com/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/12_Help_Utility.ipynb)
+</details>
+
 
 **Made with ❤️**
