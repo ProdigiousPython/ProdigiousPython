@@ -600,8 +600,8 @@ title="Print to PDF"
 <h1><span class="section-number">3. </span>Python Keywords and allowed Variable names<a class="headerlink" href="#python-keywords-and-allowed-variable-names" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># To retrieve the python keyword list, we can use the keyword built-in package.
-import keyword
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To retrieve the python keyword list, we can use the keyword built-in package.</span>
+<span class="kn">import</span> <span class="nn">keyword</span>
 </pre></div>
 </div>
 </div>
@@ -611,7 +611,7 @@ import keyword
 <p>We are using *(starred) expression to print the values returned by keyword.kwlist each separated by “\n”(newline).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(*keyword.kwlist, sep=&quot;\n&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -667,13 +667,13 @@ yield
 <h3><span class="section-number">3.1.1. </span>Allowed Variable names<a class="headerlink" href="#allowed-variable-names" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = True
-_x = False
-x_y = &quot;Hey Python geek!&quot;
-x9 = &quot;alphabet_number&quot;
-# Python is a case sensitive language, so `x` is different from `X`. Let&#39;s give it a try.
-X = &quot;one more variable&quot;
-print(f&quot;x is equal to X:{x==X}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">_x</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">x_y</span> <span class="o">=</span> <span class="s2">&quot;Hey Python geek!&quot;</span>
+<span class="n">x9</span> <span class="o">=</span> <span class="s2">&quot;alphabet_number&quot;</span>
+<span class="c1"># Python is a case sensitive language, so `x` is different from `X`. Let&#39;s give it a try.</span>
+<span class="n">X</span> <span class="o">=</span> <span class="s2">&quot;one more variable&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x is equal to X:</span><span class="si">{</span><span class="n">x</span><span class="o">==</span><span class="n">X</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -690,12 +690,12 @@ print(f&quot;x is equal to X:{x==X}&quot;)
 <p><code class="docutils literal notranslate"><span class="pre">exec</span></code> takes the string argument and interprets the string as a python code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># variable name starting with number.
-code_string = &quot;9x=True&quot;
-try:
-    exec(code_string)
-except SyntaxError as exc:
-    print(f&quot;Ouch! In the exception: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variable name starting with number.</span>
+<span class="n">code_string</span> <span class="o">=</span> <span class="s2">&quot;9x=True&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">exec</span><span class="p">(</span><span class="n">code_string</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">SyntaxError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ouch! In the exception: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -707,12 +707,12 @@ except SyntaxError as exc:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># variable name starting with a symbol(other than underscore&quot;_&quot;).
-code_string = &quot;$g = 10&quot;
-try:
-    exec(code_string)
-except SyntaxError as exc:
-    print(f&quot;Ouch! In the exception: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variable name starting with a symbol(other than underscore&quot;_&quot;).</span>
+<span class="n">code_string</span> <span class="o">=</span> <span class="s2">&quot;$g = 10&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">exec</span><span class="p">(</span><span class="n">code_string</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">SyntaxError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ouch! In the exception: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

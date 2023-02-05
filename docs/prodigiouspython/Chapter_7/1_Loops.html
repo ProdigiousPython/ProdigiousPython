@@ -775,11 +775,11 @@ title="Print to PDF"
 <p>I just had an heated argument 🔥 with my girlfriend. I need to write 5 times <strong>I love you ❤️</strong> as punishment. Let’s start writing 🙁</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;I love you ❤️&quot;)
-print(&quot;I love you ❤️&quot;)
-print(&quot;I love you ❤️&quot;)
-print(&quot;I love you ❤️&quot;)
-print(&quot;I love you ❤️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -797,10 +797,10 @@ I love you ❤️
 <p>Here comes our saviours <strong>Loops</strong>. Let’s do the same, but using a loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count = 0
-while count &lt; 5:
-    count += 1
-    print(&quot;I love you ❤️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I love you ❤️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -837,11 +837,11 @@ I love you ❤️
 <p>let’s find even numbers until 20.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>number = 0
-while number &lt;= 20:
-    if number % 2 == 0:
-        print(f&quot;{number} is even.&quot;)
-    number += 1
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even.&quot;</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -870,9 +870,9 @@ while number &lt;= 20:
 <p>We have another loop called <code class="docutils literal notranslate"><span class="pre">for</span></code>, which is used for iterating over the iterator or sequences like <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> etc..</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_list = [&quot;🐍&quot;, &quot;🚀&quot;, &quot;😊&quot;]
-for obj in my_list:
-    print(obj)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;🐍&quot;</span><span class="p">,</span> <span class="s2">&quot;🚀&quot;</span><span class="p">,</span> <span class="s2">&quot;😊&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -887,8 +887,8 @@ for obj in my_list:
 <p>We can even iterate over strings</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for char in &quot;Python&quot;:
-    print(char)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s2">&quot;Python&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -910,8 +910,8 @@ n
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for number in range(5, 15, 2):
-    print(number)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -932,13 +932,13 @@ n
 <p>First things first, what are nested-loops? The name itself is self explanatory 😎, loop containing a loop is called nested loop. Yup, we got to know about it. let’s start solving the assignment ⚡️.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>assignment_numbers = (2, 6, 7, 8, 9, 10)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">assignment_numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
-for number in assignment_numbers:  # First loop.
-    factorial = number
-    for num in range(1, number):  # Nested Loop.
-        factorial *= num
-    print(f&quot;Factorial of {number} is {factorial}&quot;)
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">assignment_numbers</span><span class="p">:</span>  <span class="c1"># First loop.</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">number</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>  <span class="c1"># Nested Loop.</span>
+        <span class="n">factorial</span> <span class="o">*=</span> <span class="n">num</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Factorial of </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">factorial</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -966,14 +966,14 @@ Factorial of 10 is 3628800
 <p>I want to know if a particular number is present in a list or not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_list = [10, 23, 13, 345, 0, 8]
-number_to_be_searched_for = 13
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">345</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">number_to_be_searched_for</span> <span class="o">=</span> <span class="mi">13</span>
 
-for number in my_list:
-    print(f&quot;We are checking on the number: {number}&quot;)
-    if number == number_to_be_searched_for:
-        print(&quot;We found the number 🏁&quot;)
-        break
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are checking on the number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">number_to_be_searched_for</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We found the number 🏁&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
 </pre></div>
 </div>
 </div>
@@ -995,11 +995,11 @@ We found the number 🏁
 <p>How do we know if we exited the loop? As we can see that only 3 print statements saying <strong>We are checking on the number:</strong> can be found. If we don’t have a break, we would be having three more print statements as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Without break
-for number in my_list:
-    print(f&quot;We are checking on the number: {number}&quot;)
-    if number == number_to_be_searched_for:
-        print(&quot;We found the number 🏁&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Without break</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are checking on the number: </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">number_to_be_searched_for</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We found the number 🏁&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1022,16 +1022,16 @@ We are checking on the number: 8
 <p>I am now in a shopping mall, picked a lot of items and now reached the billing counter, just got to remember that I just have 100 bucks with me 😱. I started looking at the cumulative total one by one being billed at the counter. I am good unless the bill crosses 100 bucks.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>items_costs = (12, 3, 23, 32, 13, 38, 8, 14, 9)
-cumulative_cost = 0  # Before starting the billing.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">items_costs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">cumulative_cost</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Before starting the billing.</span>
 
-for cost in items_costs:
-    cumulative_cost += cost
-    if cumulative_cost &lt;= 100:
-        continue
-    print(
-        f&quot;⚠️ Oops! I have breached my budget, cumulative cost is {cumulative_cost} on addition of item of cost: {cost}&quot;
-    )
+<span class="k">for</span> <span class="n">cost</span> <span class="ow">in</span> <span class="n">items_costs</span><span class="p">:</span>
+    <span class="n">cumulative_cost</span> <span class="o">+=</span> <span class="n">cost</span>
+    <span class="k">if</span> <span class="n">cumulative_cost</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;⚠️ Oops! I have breached my budget, cumulative cost is </span><span class="si">{</span><span class="n">cumulative_cost</span><span class="si">}</span><span class="s2"> on addition of item of cost: </span><span class="si">{</span><span class="n">cost</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1060,22 +1060,22 @@ for cost in items_costs:
 <p>The first question I had when I got to see code having <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">loop</span></code> <strong>What the heck is else doing here?</strong>, but later I got to know that else can be used after the loop. Well, what does it do? We just got to know about the use of <code class="docutils literal notranslate"><span class="pre">break</span></code> in the loops, right? If the loop explicitly exits by the keyword <code class="docutils literal notranslate"><span class="pre">break</span></code>, the <code class="docutils literal notranslate"><span class="pre">else</span></code> block <strong>doesn’t</strong> gets executed, else <code class="docutils literal notranslate"><span class="pre">else</span></code> block gets executed. let’s see an example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def loop_else(value):
-    my_list = [1, 234, 22, 13, 9, 3]
-    for number in my_list:
-        if number == value:
-            print(f&quot;value {value} found in my_list&quot;)
-            break
-    else:
-        print(f&quot;value {value} not found in my_list&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_else</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> found in my_list&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> not found in my_list&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># 234 is present in the list, so the break statement gets executed, so else block gets skipped.
-loop_else(234)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 234 is present in the list, so the break statement gets executed, so else block gets skipped.</span>
+<span class="n">loop_else</span><span class="p">(</span><span class="mi">234</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1087,8 +1087,8 @@ loop_else(234)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># 783 is not present in the list, so the break statement never gets executed, so else block gets executed.
-loop_else(783)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 783 is not present in the list, so the break statement never gets executed, so else block gets executed.</span>
+<span class="n">loop_else</span><span class="p">(</span><span class="mi">783</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1105,11 +1105,11 @@ loop_else(783)
 <p><code class="docutils literal notranslate"><span class="pre">break</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>while True:
-    try:
-        break
-    finally:
-        print(&quot;in finally block&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in finally block&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1122,12 +1122,12 @@ loop_else(783)
 <p><code class="docutils literal notranslate"><span class="pre">continue</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>while True:
-    try:
-        continue
-    finally:
-        print(&quot;in finally block&quot;)
-        break  # Using break here to prevent an infinite loop.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;in finally block&quot;</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c1"># Using break here to prevent an infinite loop.</span>
 </pre></div>
 </div>
 </div>

@@ -656,15 +656,15 @@ title="Print to PDF"
 <h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet():
-    print(&quot;Hello Pythoneer! 😎&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello Pythoneer! 😎&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet()  # Calling the function
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">()</span>  <span class="c1"># Calling the function</span>
 </pre></div>
 </div>
 </div>
@@ -678,16 +678,16 @@ title="Print to PDF"
 <p>We could return objects from the function using the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet():
-    return &quot;Hello Pythoneer! 😎&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello Pythoneer! 😎&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet_word = greet()
-print(greet_word)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet_word</span> <span class="o">=</span> <span class="n">greet</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greet_word</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -705,24 +705,24 @@ print(greet_word)
 <h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def first_function():
-    print(&quot;One Pint of 🍺&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One Pint of 🍺&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def second_function(func):
-    func()
-    print(&quot;Two Pints of beer 🍺🍺&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">second_function</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="n">func</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Two Pints of beer 🍺🍺&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>second_function(first_function)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">second_function</span><span class="p">(</span><span class="n">first_function</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -739,16 +739,16 @@ Two Pints of beer 🍺🍺
 <h3><span class="section-number">15.2.2. </span>Assigning the function to a variable<a class="headerlink" href="#assigning-the-function-to-a-variable" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># note that we are not calling the function, we are just assigning,
-# if we call the function, the returned value would be assigned to our variable.
-i_am_a_variable = first_function
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that we are not calling the function, we are just assigning,</span>
+<span class="c1"># if we call the function, the returned value would be assigned to our variable.</span>
+<span class="n">i_am_a_variable</span> <span class="o">=</span> <span class="n">first_function</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i_am_a_variable()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i_am_a_variable</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -763,23 +763,23 @@ i_am_a_variable = first_function
 <h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def lets_return_a_function():
-    return first_function
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lets_return_a_function</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">first_function</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj = lets_return_a_function()
-print(f&quot;obj is {obj}&quot;)
-print(f&quot;obj name is {obj.__name__}&quot;)
-print(f&quot;Is obj callable? {callable(obj)}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">lets_return_a_function</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;obj is </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;obj name is </span><span class="si">{</span><span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is obj callable? </span><span class="si">{</span><span class="n">callable</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7f8427dfed40&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7fecf9b20550&gt;
 obj name is first_function
 Is obj callable? True
 </pre></div>
@@ -793,8 +793,8 @@ Is obj callable? True
 <p>As we already know that everything in Python is an object, even function as well is an object. We can even delete our function using the <code class="docutils literal notranslate"><span class="pre">del</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>del first_function
-first_function()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">first_function</span>
+<span class="n">first_function</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

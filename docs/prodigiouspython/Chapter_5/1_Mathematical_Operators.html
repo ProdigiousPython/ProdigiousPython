@@ -811,31 +811,31 @@ title="Print to PDF"
 <p>Let’s go through each example 😊</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Let&#39;s create a few attributes of different datatypes.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s create a few attributes of different datatypes.</span>
 
-# Integers.
-integer_a: int = 2
-integer_b: int = 6
+<span class="c1"># Integers.</span>
+<span class="n">integer_a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">integer_b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">6</span>
 
-# Floats.
-float_a: float = 1.4
-float_b: float = 5.2
+<span class="c1"># Floats.</span>
+<span class="n">float_a</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">float_b</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.2</span>
 
-# complex.
-complex_a: complex = 2 + 9j
-complex_b: complex = 9 - 1j
+<span class="c1"># complex.</span>
+<span class="n">complex_a</span><span class="p">:</span> <span class="nb">complex</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="n">j</span>
+<span class="n">complex_b</span><span class="p">:</span> <span class="nb">complex</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">-</span> <span class="mi">1</span><span class="n">j</span>
 
-# list.
-list_a: list = [1, 2, 3]
-list_b: list = [4, 5, 6]
+<span class="c1"># list.</span>
+<span class="n">list_a</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">list_b</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
-# tuple.
-tuple_a: tuple = (1, 2, 3)
-tuple_b: tuple = (4, 5, 6)
+<span class="c1"># tuple.</span>
+<span class="n">tuple_a</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">tuple_b</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 
-# str.
-str_a: str = &quot;Hey &quot;
-str_b: str = &quot;Pythonist 🐍&quot;
+<span class="c1"># str.</span>
+<span class="n">str_a</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hey &quot;</span>
+<span class="n">str_b</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Pythonist 🐍&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -845,7 +845,7 @@ str_b: str = &quot;Pythonist 🐍&quot;
 <h3><span class="section-number">23.1.1. </span>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a + integer_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">+</span> <span class="n">integer_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -860,7 +860,7 @@ str_b: str = &quot;Pythonist 🐍&quot;
 <h3><span class="section-number">23.1.2. </span>Floats<a class="headerlink" href="#floats" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(float_a + float_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">+</span> <span class="n">float_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -875,7 +875,7 @@ str_b: str = &quot;Pythonist 🐍&quot;
 <h3><span class="section-number">23.1.3. </span>Complex<a class="headerlink" href="#complex" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(complex_a + complex_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">+</span> <span class="n">complex_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -888,17 +888,17 @@ str_b: str = &quot;Pythonist 🐍&quot;
 <p>There’s no restriction on the operands type here, we can even add integers with floats, integers with complex, float with complex</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Integer with float.
-int_with_float = integer_a + float_a
-print(int_with_float)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer with float.</span>
+<span class="n">int_with_float</span> <span class="o">=</span> <span class="n">integer_a</span> <span class="o">+</span> <span class="n">float_a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span>
 
-# Integer with complex.
-int_with_complex = integer_a + complex_a
-print(int_with_complex)
+<span class="c1"># Integer with complex.</span>
+<span class="n">int_with_complex</span> <span class="o">=</span> <span class="n">integer_a</span> <span class="o">+</span> <span class="n">complex_a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">int_with_complex</span><span class="p">)</span>
 
-# Float with complex
-float_with_complex = float_a + complex_a
-print(float_with_complex)
+<span class="c1"># Float with complex</span>
+<span class="n">float_with_complex</span> <span class="o">=</span> <span class="n">float_a</span> <span class="o">+</span> <span class="n">complex_a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_with_complex</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -913,9 +913,9 @@ print(float_with_complex)
 <p>Let’s check the datatype of the above results <code class="docutils literal notranslate"><span class="pre">int_with_float</span></code>, <code class="docutils literal notranslate"><span class="pre">int_with_complex</span></code>, ‘<code class="docutils literal notranslate"><span class="pre">float_with_complex</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&quot;{type(int_with_float)=}&quot;)
-print(f&quot;{type(int_with_complex)=}&quot;)
-print(f&quot;{type(float_with_complex)=}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_complex</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">float_with_complex</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -933,7 +933,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <p>In simple terms using <code class="docutils literal notranslate"><span class="pre">=</span></code> in the f-strings make the above print function equivalent to:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&quot;type(int_with_float)={type(int_with_float)}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(int_with_float)=</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">int_with_float</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -953,7 +953,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.1.4. </span>lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(list_a + list_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_a</span> <span class="o">+</span> <span class="n">list_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -969,7 +969,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.1.5. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(tuple_a + tuple_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tuple_a</span> <span class="o">+</span> <span class="n">tuple_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -984,7 +984,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.1.6. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(str_a + str_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">+</span> <span class="n">str_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1006,7 +1006,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.2.1. </span>Integers<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a - integer_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">-</span> <span class="n">integer_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1021,7 +1021,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.2.2. </span>Floats<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(float_a - float_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">-</span> <span class="n">float_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1038,7 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h3><span class="section-number">23.2.3. </span>Complex<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(complex_a - complex_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">-</span> <span class="n">complex_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1059,9 +1059,9 @@ type(float_with_complex)=&lt;class &#39;complex&#39;&gt;
 <h2><span class="section-number">23.3. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a * integer_b)
-print(float_a * float_b)
-print(complex_a * complex_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">*</span> <span class="n">integer_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">*</span> <span class="n">float_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">*</span> <span class="n">complex_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1078,7 +1078,7 @@ print(complex_a * complex_b)
 <h3><span class="section-number">23.3.1. </span>Strings<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(str_a * 5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1094,7 +1094,7 @@ print(complex_a * complex_b)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(str_a * 5.5)  # Raises TypeError.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">str_a</span> <span class="o">*</span> <span class="mf">5.5</span><span class="p">)</span>  <span class="c1"># Raises TypeError.</span>
 </pre></div>
 </div>
 </div>
@@ -1114,11 +1114,11 @@ print(complex_a * complex_b)
 <h3><span class="section-number">23.3.2. </span>List/Tuple<a class="headerlink" href="#list-tuple" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># list
-print(list_a * 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 
-# tuple
-print(tuple_a * 3)
+<span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tuple_a</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1137,9 +1137,9 @@ print(tuple_a * 3)
 <p>Division operator only works for numerical attributes like integer, float and complex.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a / integer_b)
-print(float_a / float_b)
-print(complex_a / complex_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">/</span> <span class="n">integer_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">/</span> <span class="n">float_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span> <span class="o">/</span> <span class="n">complex_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1157,11 +1157,11 @@ print(complex_a / complex_b)
 <p>In the division section we have seen the results in fractions. Floor division operator <code class="docutils literal notranslate"><span class="pre">//</span></code> works similar, just that it neglects the fractional part. In Math terms, the result of Floor division is always the quotient.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a // integer_b)
-print(float_a // float_b)
-print(
-    5 // 2
-)  # When divided result should be 2.5, but for floor division the result would be just 2.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">//</span> <span class="n">integer_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">//</span> <span class="n">float_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="p">)</span>  <span class="c1"># When divided result should be 2.5, but for floor division the result would be just 2.</span>
 </pre></div>
 </div>
 </div>
@@ -1183,8 +1183,8 @@ print(
 <p>As we have already seen that Floor division results in Quotient of the a division, the modulus operator returns the remainder of the division. The Modulus operator is denoted by the symbol <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a % integer_b)
-print(float_a % float_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span> <span class="o">%</span> <span class="n">integer_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span> <span class="o">%</span> <span class="n">float_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1201,9 +1201,9 @@ print(float_a % float_b)
 <p>The Exponentiation/Power operator is denoted as <code class="docutils literal notranslate"><span class="pre">**</span></code>. Power operator on two operands <code class="docutils literal notranslate"><span class="pre">x**y</span></code> is said as the value of x raised to the power y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(integer_a**integer_b)
-print(float_a**float_b)
-print(complex_a**complex_b)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">integer_a</span><span class="o">**</span><span class="n">integer_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_a</span><span class="o">**</span><span class="n">float_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_a</span><span class="o">**</span><span class="n">complex_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -591,14 +591,14 @@ title="Print to PDF"
 <p><strong>Code speaks louder than words 🥁</strong>. Let’s get into an example 🙂:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class SuperMarket:
-    discount = 0  # Here&#39;s the class attribute.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperMarket</span><span class="p">:</span>
+    <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Here&#39;s the class attribute.</span>
 
-    def __init__(self, item_price):
-        self.item_price = item_price
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item_price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span> <span class="o">=</span> <span class="n">item_price</span>
 
-    def get_bill(self):
-        return self.item_price - ((SuperMarket.discount / 100) * self.item_price)
+    <span class="k">def</span> <span class="nf">get_bill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span> <span class="o">-</span> <span class="p">((</span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">item_price</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -608,7 +608,7 @@ title="Print to PDF"
 <p><strong>Checking if Instance attribute is bound to Class?</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.item_price
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">item_price</span>
 </pre></div>
 </div>
 </div>
@@ -627,7 +627,7 @@ title="Print to PDF"
 <p><strong>Checking if Class Attribute is bound to Class?</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -642,7 +642,7 @@ title="Print to PDF"
 <p>Well, there’s no reason for you to trust me 😬, So let’s look at the attributes present for the class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.__dict__
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="vm">__dict__</span>
 </pre></div>
 </div>
 </div>
@@ -664,7 +664,7 @@ title="Print to PDF"
 <p>First of all, let’s check what is the value of discount?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -677,14 +677,14 @@ title="Print to PDF"
 <p>Let’s create an object of <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj = SuperMarket(100)  # Creation of object of the class SuperMarket.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">SuperMarket</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Creation of object of the class SuperMarket.</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -698,7 +698,7 @@ title="Print to PDF"
 <p>Let’s change the <code class="docutils literal notranslate"><span class="pre">discount</span></code> class attribute through the class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount = 10
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
@@ -706,7 +706,7 @@ title="Print to PDF"
 <p>We have changed the value of the class attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code> to 10.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -718,7 +718,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -732,7 +732,7 @@ title="Print to PDF"
 <p><strong>But, what if we change the class attribute via the object? Does it changes the actual Class Attribute? 🤔”</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -744,7 +744,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -757,14 +757,14 @@ title="Print to PDF"
 <p>At present, we have both <code class="docutils literal notranslate"><span class="pre">SuperMarket.discount</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.discount</span></code> values to be 10.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount = 20  # Changing the object&#39;s discount value to 20.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># Changing the object&#39;s discount value to 20.</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount  # Checking if the object&#39;s discount changed to 20?
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>  <span class="c1"># Checking if the object&#39;s discount changed to 20?</span>
 </pre></div>
 </div>
 </div>
@@ -776,7 +776,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>SuperMarket.discount  # Checking for the class Attribute &#39;discount&#39; bound to the class.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SuperMarket</span><span class="o">.</span><span class="n">discount</span>  <span class="c1"># Checking for the class Attribute &#39;discount&#39; bound to the class.</span>
 </pre></div>
 </div>
 </div>
@@ -790,7 +790,7 @@ title="Print to PDF"
 <p>To identify what paved the way for the above behaviour, let’s create another object of the class <code class="docutils literal notranslate"><span class="pre">SuperMarket</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj2 = SuperMarket(100)  # Creating a new object.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span> <span class="o">=</span> <span class="n">SuperMarket</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Creating a new object.</span>
 </pre></div>
 </div>
 </div>
@@ -798,7 +798,7 @@ title="Print to PDF"
 <p>Now let’s look at the instance attributes of <code class="docutils literal notranslate"><span class="pre">obj2</span></code> by using the special/magic method <code class="docutils literal notranslate"><span class="pre">__dict__</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj2.__dict__
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj2</span><span class="o">.</span><span class="vm">__dict__</span>
 </pre></div>
 </div>
 </div>
@@ -811,7 +811,7 @@ title="Print to PDF"
 <p>We see that <code class="docutils literal notranslate"><span class="pre">obj2</span></code> has only item <code class="docutils literal notranslate"><span class="pre">item_price</span></code>. let’s look at <code class="docutils literal notranslate"><span class="pre">obj</span></code> also on which we tried to change the value of class attribute <code class="docutils literal notranslate"><span class="pre">discount</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.__dict__
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span>
 </pre></div>
 </div>
 </div>
@@ -826,7 +826,7 @@ title="Print to PDF"
 <p>Easy Peasy! we just need to delete the attribute of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> using <code class="docutils literal notranslate"><span class="pre">del</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>del obj.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -834,7 +834,7 @@ title="Print to PDF"
 <p>Now, let’s look at the value of <code class="docutils literal notranslate"><span class="pre">obj.discount</span></code> which was earlier 20.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>obj.discount
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">discount</span>
 </pre></div>
 </div>
 </div>
@@ -856,14 +856,14 @@ title="Print to PDF"
 <p>Definitely, they are accessible within the class. Let’s write a new class for the demonstration.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Counter:
-    no_of_objects_created = 0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+    <span class="n">no_of_objects_created</span> <span class="o">=</span> <span class="mi">0</span>
 
-    def __init__(self):
-        Counter.no_of_objects_created += 1
-        print(
-            f&quot;Number of objects created of Counter class are: {Counter.no_of_objects_created}&quot;
-        )
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Number of objects created of Counter class are: </span><span class="si">{</span><span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -871,7 +871,7 @@ title="Print to PDF"
 <p>We have created a class called <code class="docutils literal notranslate"><span class="pre">Counter</span></code>, its only purpose here is to count the number of objects created out of it. <code class="docutils literal notranslate"><span class="pre">no_of_objects_created</span></code> is the class attribute here. Initially it’s value is 0, for every object created of <code class="docutils literal notranslate"><span class="pre">Counter</span></code> class, <code class="docutils literal notranslate"><span class="pre">no_of_objects_created</span></code> gets increased by 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Counter.no_of_objects_created
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Counter</span><span class="o">.</span><span class="n">no_of_objects_created</span>
 </pre></div>
 </div>
 </div>
@@ -883,8 +883,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>counter_1 = Counter()
-counter_2 = Counter()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter_1</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">counter_2</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -899,22 +899,22 @@ Number of objects created of Counter class are: 2
 <p>In the above example to access the class attribute we used <code class="docutils literal notranslate"><span class="pre">Counter.no_of_objects_created</span></code> which is <code class="docutils literal notranslate"><span class="pre">&lt;Class&gt;.&lt;class_attribute&gt;</span></code>, There’s another way to access it using <code class="docutils literal notranslate"><span class="pre">self</span></code>. Let’s give it a try:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class NewCounter:
-    no_of_objects_created = 0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewCounter</span><span class="p">:</span>
+    <span class="n">no_of_objects_created</span> <span class="o">=</span> <span class="mi">0</span>
 
-    def __init__(self):
-        self.no_of_objects_created += 1
-        print(
-            f&quot;Number of objects created of Counter class are: {self.no_of_objects_created}&quot;
-        )
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">no_of_objects_created</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Number of objects created of Counter class are: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">no_of_objects_created</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>new_counter_1 = NewCounter()
-new_counter_2 = NewCounter()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_counter_1</span> <span class="o">=</span> <span class="n">NewCounter</span><span class="p">()</span>
+<span class="n">new_counter_2</span> <span class="o">=</span> <span class="n">NewCounter</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

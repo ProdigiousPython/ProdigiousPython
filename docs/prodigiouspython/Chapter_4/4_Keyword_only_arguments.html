@@ -546,8 +546,8 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">Example:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet(*, greet_word, name):
-    print(f&quot;{greet_word} {name}!&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">greet_word</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greet_word</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -555,7 +555,7 @@ title="Print to PDF"
 <p>Now if we want to try calling our new function <code class="docutils literal notranslate"><span class="pre">greet</span></code> as <code class="docutils literal notranslate"><span class="pre">greet(&quot;Hello&quot;,</span> <span class="pre">&quot;Pythonist♥️&quot;)</span></code>, we should be seeing a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet(&quot;Hello&quot;, &quot;Pythonist ♥️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -573,7 +573,7 @@ title="Print to PDF"
 <p>The only way we can call our <code class="docutils literal notranslate"><span class="pre">greet</span></code> function is by passing our both <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> values with keyword names.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet(greet_word=&quot;Hello&quot;, name=&quot;Pythonist ♥️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="n">greet_word</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Pythonist ♥️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

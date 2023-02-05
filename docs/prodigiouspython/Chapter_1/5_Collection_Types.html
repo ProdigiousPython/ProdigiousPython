@@ -633,7 +633,7 @@ title="Print to PDF"
 <p>Example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ip_address_port = (&quot;127.0.0.1&quot;, 8080)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ip_address_port</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -641,11 +641,11 @@ title="Print to PDF"
 <p>A tuple with a single member needs to have a trailing comma, else the type of the variable would be the datatype of the member itself.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Proper way to create a single member tuple.
-single_member_tuple = (&quot;one&quot;,)
-print(type(single_member_tuple))
-single_member_tuple = (&quot;one&quot;,)
-print(type(single_member_tuple))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proper way to create a single member tuple.</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -658,9 +658,9 @@ print(type(single_member_tuple))
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Improper way trying to create a single member tuple.
-single_member_tuple = &quot;one&quot;
-print(type(single_member_tuple))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Improper way trying to create a single member tuple.</span>
+<span class="n">single_member_tuple</span> <span class="o">=</span> <span class="s2">&quot;one&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">single_member_tuple</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -676,16 +676,16 @@ print(type(single_member_tuple))
 <p>List collection types are similar to tuples, the only difference would be that new objects can be created, removed or object’s data can be modified 😉.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>int_list = [1, 2, 3]
-string_list = [&quot;abc&quot;, &quot;defghi&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">int_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">string_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="s2">&quot;defghi&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># A list can be empty:
-empty_list = []
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A list can be empty:</span>
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </div>
@@ -693,7 +693,7 @@ empty_list = []
 <p>objects in the list are not restricted to be of a particular datatype. let’s see an example 👇.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>mixed_list = [1, &quot;abc&quot;, True, 3.14, None]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -701,7 +701,7 @@ empty_list = []
 <p>list can contain lists as objects too. These are called nested lists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nested_list = [[1, 2, 3], [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nested_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -709,15 +709,15 @@ empty_list = []
 <p>The objects present in the list can be accessed by the index it is placed. The index starts from 0 👻.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_list = [&quot;Iron man&quot;, &quot;Thor&quot;, &quot;Wonder Woman&quot;, &quot;Wolverine&quot;, &quot;Naruto&quot;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Iron man&quot;</span><span class="p">,</span> <span class="s2">&quot;Thor&quot;</span><span class="p">,</span> <span class="s2">&quot;Wonder Woman&quot;</span><span class="p">,</span> <span class="s2">&quot;Wolverine&quot;</span><span class="p">,</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(my_list[0])
-print(my_list[1])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -732,10 +732,10 @@ Thor
 <p>As there is no 100th element, we would be seeing an <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> exception.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
-    print(my_list[100])
-except IndexError as exc:
-    print(f&quot;👻 Ouch! we got into IndexError exception: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;👻 Ouch! we got into IndexError exception: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -749,8 +749,8 @@ except IndexError as exc:
 <p>But we have one good way to do it by negative index, example: <code class="docutils literal notranslate"><span class="pre">-2</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Access the 2nd element from the last.
-print(my_list[-2])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the 2nd element from the last.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -765,10 +765,10 @@ print(my_list[-2])
 <p><code class="docutils literal notranslate"><span class="pre">append</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Append a new item to the list.
-# We use append method of the list.
-my_list.append(&quot;Zoro&quot;)
-print(my_list)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Append a new item to the list.</span>
+<span class="c1"># We use append method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Zoro&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -781,14 +781,14 @@ print(my_list)
 <p><code class="docutils literal notranslate"><span class="pre">remove</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove the item present in the list.
-# We use remove method of the list.
-# If there&#39;s no object that we are trying to remove in the list, then ValueError would be raised.
-try:
-    my_list.remove(&quot;Zoro&quot;)
-    print(my_list)
-except ValueError as exc:
-    print(f&quot;Caught ValueError: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the item present in the list.</span>
+<span class="c1"># We use remove method of the list.</span>
+<span class="c1"># If there&#39;s no object that we are trying to remove in the list, then ValueError would be raised.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Zoro&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught ValueError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -801,10 +801,10 @@ except ValueError as exc:
 <p><code class="docutils literal notranslate"><span class="pre">insert</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Insert a object at a particular index.
-# We use insert method of the list.
-my_list.insert(1, &quot;Super Man&quot;)
-print(my_list)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Insert a object at a particular index.</span>
+<span class="c1"># We use insert method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Super Man&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -817,18 +817,18 @@ print(my_list)
 <p><code class="docutils literal notranslate"><span class="pre">reverse</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Reverse the objects in the list.
-# we use reverse method of the list.
-my_list.reverse()
-print(my_list)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reverse the objects in the list.</span>
+<span class="c1"># we use reverse method of the list.</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 
-# revert to the actual order
-my_list.reverse()
+<span class="c1"># revert to the actual order</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 
-# We have one more method too for this 🙃
-# The indexing of the list would be in the form of list[start: end: step]
-# We will use step as -1 to get the elements in reverse order 😉
-print(my_list[::-1])
+<span class="c1"># We have one more method too for this 🙃</span>
+<span class="c1"># The indexing of the list would be in the form of list[start: end: step]</span>
+<span class="c1"># We will use step as -1 to get the elements in reverse order 😉</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -842,13 +842,13 @@ print(my_list[::-1])
 <p><code class="docutils literal notranslate"><span class="pre">index</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Index of an object in the list.
-# we use index method of the list.
-# raises a ValueError, if no given object is found in the list.
-try:
-    print(my_list.index(&quot;Naruto&quot;))
-except ValueError as exc:
-    print(f&quot;Caught ValueError: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index of an object in the list.</span>
+<span class="c1"># we use index method of the list.</span>
+<span class="c1"># raises a ValueError, if no given object is found in the list.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Naruto&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught ValueError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -861,16 +861,16 @@ except ValueError as exc:
 <p><code class="docutils literal notranslate"><span class="pre">pop</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pop is used to remove and return the element present at the last in the list(index=-1) by default.
-# When index argument is passed, it would remove and return the element at that index.
-# raises IndexError when no object is present at the given Index.
-try:
-    last_element = (
-        my_list.pop()
-    )  # can be passed index argument value, if required to pop at a specific index.
-    print(last_element)
-except IndexError as exc:
-    print(f&quot;Caught IndexError: {exc}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pop is used to remove and return the element present at the last in the list(index=-1) by default.</span>
+<span class="c1"># When index argument is passed, it would remove and return the element at that index.</span>
+<span class="c1"># raises IndexError when no object is present at the given Index.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">last_element</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="p">)</span>  <span class="c1"># can be passed index argument value, if required to pop at a specific index.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught IndexError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -889,13 +889,13 @@ except IndexError as exc:
 <p>PS 🔔: If we need to have a empty set, <code class="docutils literal notranslate"><span class="pre">{}</span></code> won’t create a set, it creates a empty dictionary instead. So we need to create a empty set by using <code class="docutils literal notranslate"><span class="pre">set()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>anime = {&quot;Dragon ball&quot;, &quot;One Piece&quot;, &quot;Death Note&quot;, &quot;Full Metal Alchemist&quot;, &quot;Naruto&quot;}
-print(anime)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Dragon ball&quot;</span><span class="p">,</span> <span class="s2">&quot;One Piece&quot;</span><span class="p">,</span> <span class="s2">&quot;Death Note&quot;</span><span class="p">,</span> <span class="s2">&quot;Full Metal Alchemist&quot;</span><span class="p">,</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Naruto&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Full Metal Alchemist&#39;, &#39;Naruto&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Death Note&#39;}
 </pre></div>
 </div>
 </div>
@@ -903,13 +903,13 @@ print(anime)
 <p><code class="docutils literal notranslate"><span class="pre">add</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>anime.add(&quot;Tokyo Ghoul&quot;)
-print(anime)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Tokyo Ghoul&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;Tokyo Ghoul&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Naruto&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Full Metal Alchemist&#39;, &#39;Naruto&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Death Note&#39;, &#39;Tokyo Ghoul&#39;}
 </pre></div>
 </div>
 </div>
@@ -918,18 +918,18 @@ print(anime)
 <p>remove method of set can be used to remove a particular object from the set, if the object is not present, KeyError would be raised.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
-    anime.remove(&quot;Tokyo Ghoul&quot;)
-    print(anime)
-except KeyError as exc:
-    print(
-        f&quot;Caught KeyError as there&#39;s given anime series present in the anime set: {exc}&quot;
-    )
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">anime</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Tokyo Ghoul&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Caught KeyError as there&#39;s given anime series present in the anime set: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Death Note&#39;, &#39;Full Metal Alchemist&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Naruto&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Full Metal Alchemist&#39;, &#39;Naruto&#39;, &#39;Dragon ball&#39;, &#39;One Piece&#39;, &#39;Death Note&#39;}
 </pre></div>
 </div>
 </div>
@@ -941,14 +941,14 @@ except KeyError as exc:
 <p>The Key and Value can be of any object. Each Key-Value pair is separated by a <code class="docutils literal notranslate"><span class="pre">,</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>anime_protagonist = {
-    &quot;Dragon Ball&quot;: &quot;Goku&quot;,
-    &quot;One Piece&quot;: &quot;Luffy&quot;,
-    &quot;Death Note&quot;: &quot;Yagami Light&quot;,
-    &quot;Full Metal Alchemist&quot;: &quot;Edward Elric&quot;,
-    &quot;Naruto&quot;: &quot;Naruto&quot;,
-}
-print(anime_protagonist)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anime_protagonist</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Dragon Ball&quot;</span><span class="p">:</span> <span class="s2">&quot;Goku&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;One Piece&quot;</span><span class="p">:</span> <span class="s2">&quot;Luffy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Death Note&quot;</span><span class="p">:</span> <span class="s2">&quot;Yagami Light&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Full Metal Alchemist&quot;</span><span class="p">:</span> <span class="s2">&quot;Edward Elric&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Naruto&quot;</span><span class="p">:</span> <span class="s2">&quot;Naruto&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">anime_protagonist</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -962,12 +962,12 @@ print(anime_protagonist)
 If there’s no <code class="docutils literal notranslate"><span class="pre">&lt;key&gt;</span></code> in the dictionary, we would be seeing an KeyError 🔑❌</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
-    print(anime_protagonist[&quot;Dragon Ball&quot;])
-except KeyError as exc:
-    print(
-        f&quot;👻 Ouch, KeyError has been raised as no given key is found in the dictionary: {exc}&quot;
-    )
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">anime_protagonist</span><span class="p">[</span><span class="s2">&quot;Dragon Ball&quot;</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;👻 Ouch, KeyError has been raised as no given key is found in the dictionary: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -980,20 +980,20 @@ except KeyError as exc:
 <p>Iterate over keys, values and both in the dictionary 🐇</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Keys
-print(&quot;===Keys===&quot;)
-for my_key in anime_protagonist.keys():
-    print(my_key)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Keys===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_key</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_key</span><span class="p">)</span>
 
-# Values
-print(&quot;===Values===&quot;)
-for my_value in anime_protagonist.values():
-    print(my_value)
+<span class="c1"># Values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Values===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_value</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_value</span><span class="p">)</span>
 
-# Key-Values
-print(&quot;===Key-Values===&quot;)
-for my_key, my_value in anime_protagonist.items():
-    print(f&quot;{my_key} : {my_value}&quot;)
+<span class="c1"># Key-Values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===Key-Values===&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">my_key</span><span class="p">,</span> <span class="n">my_value</span> <span class="ow">in</span> <span class="n">anime_protagonist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">my_key</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">my_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

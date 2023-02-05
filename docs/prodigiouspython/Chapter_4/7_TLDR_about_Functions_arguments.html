@@ -553,16 +553,16 @@ title="Print to PDF"
 <p>Let’s build a complete function with all the types of arguments 😎.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def function(positional_only, /, position=&quot;🐍&quot;, *varargs, keyword_only, **keyword):
-    print(f&quot;{positional_only=}&quot;)
-    print(f&quot;{position=}&quot;)
-    print(f&quot;{varargs=}&quot;)
-    print(f&quot;{keyword_only=}&quot;)
-    print(f&quot;{keyword=}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">positional_only</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;🐍&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">varargs</span><span class="p">,</span> <span class="n">keyword_only</span><span class="p">,</span> <span class="o">**</span><span class="n">keyword</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">positional_only</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">position</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">varargs</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">keyword_only</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">keyword</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    # datatype of varargs and keyword.
-    print(f&quot;The datatype of varargs is {type(varargs)}&quot;)
-    print(f&quot;The datatype of keyword is {type(keyword)}&quot;)
+    <span class="c1"># datatype of varargs and keyword.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The datatype of varargs is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">varargs</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The datatype of keyword is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -570,16 +570,16 @@ title="Print to PDF"
 <p>Let’s call our beautiful function ♥️</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>function(
-    &quot;Python&quot;,
-    &quot;♥️&quot;,
-    &quot;Python&quot;,
-    &quot;is&quot;,
-    &quot;Cool&quot;,
-    keyword_only=&quot;😋&quot;,
-    key1=&quot;value1&quot;,
-    key2=&quot;value2&quot;,
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="p">(</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;♥️&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;is&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Cool&quot;</span><span class="p">,</span>
+    <span class="n">keyword_only</span><span class="o">=</span><span class="s2">&quot;😋&quot;</span><span class="p">,</span>
+    <span class="n">key1</span><span class="o">=</span><span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+    <span class="n">key2</span><span class="o">=</span><span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -598,13 +598,13 @@ The datatype of keyword is &lt;class &#39;dict&#39;&gt;
 <p>The above calling of function can also be written as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>function(
-    &quot;Python&quot;,
-    &quot;♥️&quot;,
-    *[&quot;Python&quot;, &quot;is&quot;, &quot;Cool&quot;],
-    keyword_only=&quot;😋&quot;,
-    **{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
-)  # Unpacking.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="p">(</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;♥️&quot;</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;Cool&quot;</span><span class="p">],</span>
+    <span class="n">keyword_only</span><span class="o">=</span><span class="s2">&quot;😋&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="p">{</span><span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span> <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">},</span>
+<span class="p">)</span>  <span class="c1"># Unpacking.</span>
 </pre></div>
 </div>
 </div>
@@ -623,12 +623,12 @@ The datatype of keyword is &lt;class &#39;dict&#39;&gt;
 <p>Let’s make <code class="docutils literal notranslate"><span class="pre">position</span></code> be it’s default value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>function(
-    &quot;Python&quot;,
-    *[&quot;Python&quot;, &quot;is&quot;, &quot;Cool&quot;],
-    keyword_only=&quot;😋&quot;,
-    **{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="p">(</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;Cool&quot;</span><span class="p">],</span>
+    <span class="n">keyword_only</span><span class="o">=</span><span class="s2">&quot;😋&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="p">{</span><span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span> <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">},</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -647,12 +647,12 @@ The datatype of keyword is &lt;class &#39;dict&#39;&gt;
 <p>Ouch, we see that <code class="docutils literal notranslate"><span class="pre">position</span></code> has taken the <code class="docutils literal notranslate"><span class="pre">Python</span></code> as it’s value which we intended to be one of the value of our <code class="docutils literal notranslate"><span class="pre">varargs</span></code>. The solution for this is to pass our <code class="docutils literal notranslate"><span class="pre">*[&quot;Python&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;Cool&quot;]</span></code> as keyword argument like <code class="docutils literal notranslate"><span class="pre">varargs=[&quot;Python&quot;,</span> <span class="pre">&quot;is&quot;,</span> <span class="pre">&quot;Cool&quot;]</span></code>. <strong>NOTE</strong> that there won’t be unpacking symbol <code class="docutils literal notranslate"><span class="pre">*</span></code> here.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>function(
-    &quot;Python&quot;,
-    varargs=[&quot;Python&quot;, &quot;is&quot;, &quot;Cool&quot;],
-    keyword_only=&quot;😋&quot;,
-    **{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;},
-)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="p">(</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="n">varargs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;Cool&quot;</span><span class="p">],</span>
+    <span class="n">keyword_only</span><span class="o">=</span><span class="s2">&quot;😋&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="p">{</span><span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span> <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">},</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>

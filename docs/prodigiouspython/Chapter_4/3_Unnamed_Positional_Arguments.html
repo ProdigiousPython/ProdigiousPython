@@ -577,15 +577,15 @@ title="Print to PDF"
 <p>let’s think we need to count the number of bucks I spent from the past 3 days. I could write a function as below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def count_my_expenses_for_last_3_days(day_1, day_2, day_3):
-    print(f&quot;The total expenses for last 3 days is : {day_1 + day_2 + day_3}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_my_expenses_for_last_3_days</span><span class="p">(</span><span class="n">day_1</span><span class="p">,</span> <span class="n">day_2</span><span class="p">,</span> <span class="n">day_3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The total expenses for last 3 days is : </span><span class="si">{</span><span class="n">day_1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">day_2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">day_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_my_expenses_for_last_3_days(88, 12, 15)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses_for_last_3_days</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -607,12 +607,12 @@ title="Print to PDF"
 <h2><span class="section-number">17.1. </span>Using Unnamed Positional Arguments to find our expenses<a class="headerlink" href="#using-unnamed-positional-arguments-to-find-our-expenses" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def count_my_expenses(*expenses):
-    # We could use sum function like sum(expenses). But, for now let&#39;s go the raw way.
-    total = 0
-    for expense in expenses:
-        total += expense
-    print(f&quot;Total expenses for last {len(expenses)} is {total}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_my_expenses</span><span class="p">(</span><span class="o">*</span><span class="n">expenses</span><span class="p">):</span>
+    <span class="c1"># We could use sum function like sum(expenses). But, for now let&#39;s go the raw way.</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">expense</span> <span class="ow">in</span> <span class="n">expenses</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">expense</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total expenses for last </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">expenses</span><span class="p">)</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -620,7 +620,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">3</span> <span class="pre">days:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_my_expenses(100, 23, 4544)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -633,7 +633,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">5</span> <span class="pre">days:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_my_expenses(100, 23, 4544, 4, 13)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -646,7 +646,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">8</span> <span class="pre">days:</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_my_expenses(100, 23, 4544, 4, 13, 34, 86, 123)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_my_expenses</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -660,8 +660,8 @@ title="Print to PDF"
 <p>We can even pass the already present objects in a iterable to our function, just that we need to unpack the iterable using the <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_expenses = [100, 23, 4544, 4, 13, 34, 86, 123]
-count_my_expenses(*my_expenses)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_expenses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4544</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">123</span><span class="p">]</span>
+<span class="n">count_my_expenses</span><span class="p">(</span><span class="o">*</span><span class="n">my_expenses</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -674,13 +674,13 @@ count_my_expenses(*my_expenses)
 <p>let’s check what is the datatype of the the Unnamed positional arguments passed tp the function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def example(*args):
-    print(f&quot;The datatype of args is {type(args)}&quot;)
-    print(f&quot;The contents of the args are: {args}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The datatype of args is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The contents of the args are: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 
-# Calling the function.
-example(&quot;abc&quot;)
+<span class="c1"># Calling the function.</span>
+<span class="n">example</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -695,7 +695,7 @@ The contents of the args are: (&#39;abc&#39;,)
 <p>🔔 By the way, this is not our first time using Unnamed Positional arguments. We have already used <code class="docutils literal notranslate"><span class="pre">print</span></code> function many times and it accepts Unnamed Positional arguments to be printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&quot;Hello&quot;, &quot;Pythonist!&quot;, &quot;⭐️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="s2">&quot;Pythonist!&quot;</span><span class="p">,</span> <span class="s2">&quot;⭐️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

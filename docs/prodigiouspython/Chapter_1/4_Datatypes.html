@@ -819,21 +819,21 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 <p>We would be using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module’s <code class="docutils literal notranslate"><span class="pre">getenv</span></code> method to fetch the environment variable’s value, if there isn’t that environment variable, it would be returning <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-# let&#39;s set a env variable first
-new_environment_variable_name: str = &quot;Python&quot;
-new_environment_variable_value: str = &quot;1991&quot;
-os.environ[new_environment_variable_name] = new_environment_variable_value
+<span class="c1"># let&#39;s set a env variable first</span>
+<span class="n">new_environment_variable_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">new_environment_variable_value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1991&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">new_environment_variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_environment_variable_value</span>
 
-# Now let&#39;s try to fetch a environment&#39;s variable value
-value = os.getenv(new_environment_variable_name)
-if value is None:
-    print(f&quot;There is no environment variable named {new_environment_variable_name}&quot;)
-else:
-    print(
-        f&quot;The value assigned for the environment variable named {new_environment_variable_name} is {value}&quot;
-    )
+<span class="c1"># Now let&#39;s try to fetch a environment&#39;s variable value</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="n">new_environment_variable_name</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There is no environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;The value assigned for the environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -852,8 +852,8 @@ else:
 <p>bytes objects can be created by prefixing <code class="docutils literal notranslate"><span class="pre">b</span></code> before the string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>bytes_obj: bytes = b&quot;Hello Python Enthusiast!&quot;
-print(bytes_obj)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bytes_obj</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Hello Python Enthusiast!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bytes_obj</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -868,7 +868,7 @@ print(bytes_obj)
 It’s pretty simple 😉! We can typecast the bytes object to a list and we see each character as it’s respective ASCII value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(list(bytes_obj))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">bytes_obj</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -884,11 +884,11 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 <p>bool objects have only two values: <code class="docutils literal notranslate"><span class="pre">True</span></code>✅ and <code class="docutils literal notranslate"><span class="pre">False</span></code>❌, integer equivalent of True is 1 and for False is 0</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>do_we_love_python = True
-if do_we_love_python:
-    print(&quot;🐍 Python too loves and takes care of you ❤️&quot;)
-else:
-    print(&quot;🐍 Python still loves you ❤️&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">do_we_love_python</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">do_we_love_python</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍 Python too loves and takes care of you ❤️&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🐍 Python still loves you ❤️&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -905,11 +905,11 @@ else:
 <p>int objects are any mathematical Integers. pretty easy right 😎</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Integer values can be used for any integer arithmetics.
-# A few simple operations are addition, subtraction, multiplication, division etc..
-operand_1 = 5
-operand_2 = 3
-print(operand_1 + operand_2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer values can be used for any integer arithmetics.</span>
+<span class="c1"># A few simple operations are addition, subtraction, multiplication, division etc..</span>
+<span class="n">operand_1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">operand_2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">operand_1</span> <span class="o">+</span> <span class="n">operand_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -925,12 +925,12 @@ print(operand_1 + operand_2)
 <p>float objects are any rational numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Like integer objects float objects are used for decimal arithmetics
-# A few simple operations are addition, subtraction, multiplication, division etc..
-# We are typecasting integer or float value to float values explicitly.
-operand_1 = 3.18
-operand_2 = 6.24
-print(operand_1 + operand_2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Like integer objects float objects are used for decimal arithmetics</span>
+<span class="c1"># A few simple operations are addition, subtraction, multiplication, division etc..</span>
+<span class="c1"># We are typecasting integer or float value to float values explicitly.</span>
+<span class="n">operand_1</span> <span class="o">=</span> <span class="mf">3.18</span>
+<span class="n">operand_2</span> <span class="o">=</span> <span class="mf">6.24</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">operand_1</span> <span class="o">+</span> <span class="n">operand_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -948,9 +948,9 @@ print(operand_1 + operand_2)
 While creating the complex object, we would be having a <code class="docutils literal notranslate"><span class="pre">j</span></code> beside the imaginary number.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>operand_1 = 10 + 5j
-operand_2 = 3 + 4j
-print(operand_1 * operand_2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">operand_1</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span><span class="n">j</span>
+<span class="n">operand_2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">operand_1</span> <span class="o">*</span> <span class="n">operand_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -976,8 +976,8 @@ print(operand_1 * operand_2)
 <p>string objects hold an sequence of characters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_string = &quot;🐍 Python is cool&quot;
-print(my_string)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;🐍 Python is cool&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -995,22 +995,22 @@ print(my_string)
 <p>The objects in the tuple are ordered, So the objects in the tuple can be accessed by using its index ranging from 0 to (number of elements - 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># tuples are best suited for having data which doesn&#39;t change in it&#39;s lifetime.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tuples are best suited for having data which doesn&#39;t change in it&#39;s lifetime.</span>
 
-apple_and_its_colour = (&quot;apple&quot;, &quot;red&quot;)
-watermelon_and_its_colour = (&quot;watermelon&quot;, &quot;green&quot;)
+<span class="n">apple_and_its_colour</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">watermelon_and_its_colour</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;watermelon&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
 
-language_initial_release_year = (&quot;Golang&quot;, 2012)
-language_initial_release_year = (&quot;Angular&quot;, 2010)
-language_initial_release_year = (&quot;Python&quot;, 1990)
+<span class="n">language_initial_release_year</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Golang&quot;</span><span class="p">,</span> <span class="mi">2012</span><span class="p">)</span>
+<span class="n">language_initial_release_year</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Angular&quot;</span><span class="p">,</span> <span class="mi">2010</span><span class="p">)</span>
+<span class="n">language_initial_release_year</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="mi">1990</span><span class="p">)</span>
 
-# We can&#39;t add new data types objects, delete the existing datatype objects, or change the values
-# of the existing objects.
+<span class="c1"># We can&#39;t add new data types objects, delete the existing datatype objects, or change the values</span>
+<span class="c1"># of the existing objects.</span>
 
-# We can get the values by index.
-print(
-    f&quot;{language_initial_release_year[0]} is released in {language_initial_release_year[1]}&quot;
-)
+<span class="c1"># We can get the values by index.</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> is released in </span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1026,21 +1026,21 @@ print(
 <p>list objects are similar to tuple, the differences are the list object is mutable, so we can add or remove objects in the list even after its creation. It is created by using <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>about_python = [
-    &quot;interpreted&quot;,
-    &quot;object-oriented&quot;,
-    &quot;dynamically typed&quot;,
-    &quot;open source&quot;,
-    &quot;high level language&quot;,
-    &quot;🐍&quot;,
-    1990,
-]
-print(about_python)
-# We can add more values to the above list. append method of list object is used to add a new object.
-# let&#39;s give a try 🙃
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">about_python</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;interpreted&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;object-oriented&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dynamically typed&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;open source&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;high level language&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;🐍&quot;</span><span class="p">,</span>
+    <span class="mi">1990</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">about_python</span><span class="p">)</span>
+<span class="c1"># We can add more values to the above list. append method of list object is used to add a new object.</span>
+<span class="c1"># let&#39;s give a try 🙃</span>
 
-about_python.append(&quot;Guido Van Rossum&quot;)
-print(about_python)
+<span class="n">about_python</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Guido Van Rossum&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">about_python</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1061,10 +1061,10 @@ it is created by using <code class="docutils literal notranslate"><span class="p
 <p>set objects are good for having the mathematical set operations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>set_obj = {6, 4, 4, 3, 10, &quot;Python&quot;, &quot;Python&quot;, &quot;Golang&quot;}
-# We see that we have created a set with 8 objects.
-print(set_obj)
-# But when printed, we see that only 6 are present because set doesn&#39;t allow same objects repeated.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">set_obj</span> <span class="o">=</span> <span class="p">{</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Golang&quot;</span><span class="p">}</span>
+<span class="c1"># We see that we have created a set with 8 objects.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_obj</span><span class="p">)</span>
+<span class="c1"># But when printed, we see that only 6 are present because set doesn&#39;t allow same objects repeated.</span>
 </pre></div>
 </div>
 </div>
@@ -1081,16 +1081,16 @@ print(set_obj)
 <p>The object assigned to a key can be fetched by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;[key]</span></code> which raises a KeyError when no given key is found. The other way to fetch is by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;.get(key)</span></code> which returns <code class="docutils literal notranslate"><span class="pre">None</span></code> by default if no key is found.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dict_datatype = {
-    &quot;language&quot;: &quot;Python&quot;,
-    &quot;Inventor&quot;: &quot;Guido Van Rossum&quot;,
-    &quot;release_year&quot;: 1991,
-}
-print(f&quot;The programming language is: {dict_datatype[&#39;language&#39;]}&quot;)
-# We could use get method to prevent KeyError if the given Key is not found.
-result = dict_datatype.get(&quot;LatestRelease&quot;)
-# Value of the result would be None as the key LatestRelease is not present in dict_datatype
-print(f&quot;The result is: {result}&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_datatype</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Inventor&quot;</span><span class="p">:</span> <span class="s2">&quot;Guido Van Rossum&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;release_year&quot;</span><span class="p">:</span> <span class="mi">1991</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The programming language is: </span><span class="si">{</span><span class="n">dict_datatype</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># We could use get method to prevent KeyError if the given Key is not found.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">dict_datatype</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LatestRelease&quot;</span><span class="p">)</span>
+<span class="c1"># Value of the result would be None as the key LatestRelease is not present in dict_datatype</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The result is: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

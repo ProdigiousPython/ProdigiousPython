@@ -679,20 +679,20 @@ title="Print to PDF"
 <p>To find the Truth Value of objects, we can do as <code class="docutils literal notranslate"><span class="pre">bool(&lt;obj&gt;)</span></code>. All the above mentioned objects returns <code class="docutils literal notranslate"><span class="pre">False</span></code> when tried <code class="docutils literal notranslate"><span class="pre">bool(&lt;obj&gt;)</span></code>. Let’s see examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&quot;{bool(None)}&quot;)  # On None.
-print(f&quot;{bool(False)}&quot;)  # On False.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On None.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On False.</span>
 
-print(f&quot;{bool(0)}&quot;)  # On Integer 0.
-print(f&quot;{bool(0.0)}&quot;)  # On Float 0.0
-print(f&quot;{bool(0j)}&quot;)  # On Complex 0j.
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Integer 0.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Float 0.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On Complex 0j.</span>
 
-empty_string = &quot;&quot;
-print(f&quot;{bool(empty_string)}&quot;)  # On empty string.
-print(f&quot;{bool(())}&quot;)  # On empty tuple.
-print(f&quot;{bool([])}&quot;)  # On empty list.
-print(f&quot;{bool({})}&quot;)  # On empty dictionary.
-print(f&quot;{bool(set())}&quot;)  # On empty set.
-print(f&quot;{bool(range(0))}&quot;)  # On range(0).
+<span class="n">empty_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="n">empty_string</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty tuple.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">([])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty list.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">({})</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty dictionary.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="nb">set</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On empty set.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">bool</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># On range(0).</span>
 </pre></div>
 </div>
 </div>
@@ -743,11 +743,11 @@ False
 <p>In <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code>, if x’s truth value is false, then y, else x, which means <code class="docutils literal notranslate"><span class="pre">or</span></code> evaluates to first operand if either one of the operands is truthy, Otherwise it evaluates only to the second operand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Boolean objects
-print(True or True)
-print(True or False)
-print(False or True)
-print(False or False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean objects</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -762,9 +762,9 @@ False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Numerals
-print(1 or 0)
-print(0 or 1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numerals</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">or</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -785,11 +785,11 @@ print(0 or 1)
 <p>In <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code>, if x’s truth value is false, then x, else y, which means <code class="docutils literal notranslate"><span class="pre">and</span></code> evaluates to second operand if and only if both the operands are truthy, Otherwise it evaluates only to the first operand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Boolean objects
-print(True and True)
-print(True and False)
-print(False and True)
-print(False and False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean objects</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -804,9 +804,9 @@ False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Numerals
-print(1 and 0)
-print(0 and 1)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numerals</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -824,8 +824,8 @@ print(0 and 1)
 <p><em>One more example, but both the operand’s truth values are <code class="docutils literal notranslate"><span class="pre">True</span></code>:</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(2 and 3)
-print(3 and 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -844,17 +844,17 @@ print(3 and 2)
 <p><code class="docutils literal notranslate"><span class="pre">not</span></code> operation is pretty easy, it just returns opposite of Truth value of object. If the truth value of object is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">&lt;obj&gt;</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code> and vice versa 🙃.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># On boolean.
-print(not True)
-print(not False)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On boolean.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="kc">False</span><span class="p">)</span>
 
-# On integers.
-print(not 1)
-print(not 0)
+<span class="c1"># On integers.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">0</span><span class="p">)</span>
 
-# On list.
-print(not [1, 2, 3])
-print(not [])
+<span class="c1"># On list.</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="p">[])</span>
 </pre></div>
 </div>
 </div>

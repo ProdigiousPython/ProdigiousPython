@@ -582,25 +582,25 @@ title="Print to PDF"
 <p>Each group of statements are indented using spaces or tabs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Example:
-    # Every method belonging to a class must be indented equally.
-    def __init__(self):
-        name = &quot;indentation example&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Example</span><span class="p">:</span>
+    <span class="c1"># Every method belonging to a class must be indented equally.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;indentation example&quot;</span>
 
-    def check_for_odd_or_even(self, number: int):
-        # Everything that belongs to this method are indented as well.
-        if number % 2 == 0:
-            print(f&quot;{number} is even.&quot;)
-        else:
-            print(f&quot;{number} is odd.&quot;)
+    <span class="k">def</span> <span class="nf">check_for_odd_or_even</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="c1"># Everything that belongs to this method are indented as well.</span>
+        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is odd.&quot;</span><span class="p">)</span>
 
 
-# We can see that the say_hello_multiple_times is not indented inside the Example class.
-# Hence, say_hello_multiple_times function doesn&#39;t belong to Example class.
-def say_hello_multiple_times(count: int):
-    for _ in range(count):
-        # Loops or conditions are also needed to be intended.
-        print(&quot;Hello&quot;)
+<span class="c1"># We can see that the say_hello_multiple_times is not indented inside the Example class.</span>
+<span class="c1"># Hence, say_hello_multiple_times function doesn&#39;t belong to Example class.</span>
+<span class="k">def</span> <span class="nf">say_hello_multiple_times</span><span class="p">(</span><span class="n">count</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+        <span class="c1"># Loops or conditions are also needed to be intended.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
