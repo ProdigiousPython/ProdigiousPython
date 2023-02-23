@@ -16,7 +16,7 @@ black = {extras = ["jupyter"], version = "^23.1"}
 black-nb = "^0.7"
 
 [tool.poetry.group.dev.dependencies]
-jupyter-book = "^0.13.1"
+jupyter-book = "^0.13.2"
 sphinx-sitemap = "^2.5.0"
 
 [build-system]
