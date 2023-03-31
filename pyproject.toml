@@ -14,7 +14,7 @@ jupyterlab = "^3.6.3"
 jupyter-book = "^0.15.1"
 sphinx-sitemap = "^2.5.0"
 pytest = "^7.2"
-black = {extras = ["jupyter"], version = "^23.1"}
+black = {extras = ["jupyter"], version = "^23.3"}
 black-nb = "^0.7"
 
 [build-system]
