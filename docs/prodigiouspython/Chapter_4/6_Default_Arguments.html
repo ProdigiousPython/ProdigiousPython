@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>20. Default Arguments &#8212; Prodigious Python 🐍</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -74,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="21. TLDR regarding function arguments 💡" href="7_TLDR_about_Functions_arguments.html" />
     <link rel="prev" title="19. Keyword arguments" href="5_Keyword_arguments.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -423,7 +424,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="default-arguments">
-<h1><span class="section-number">20. </span>Default Arguments<a class="headerlink" href="#default-arguments" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">20. </span>Default Arguments<a class="headerlink" href="#default-arguments" title="Permalink to this heading">#</a></h1>
 <p>Default arguments are the ones when calling the function, no object is given in its place, its default value would be considered 🔔.</p>
 <p>Default arguments are assigned in the function signature as</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">arg</span><span class="o">=&lt;</span><span class="n">obj</span><span class="o">&gt;</span><span class="p">):</span>
@@ -452,7 +453,7 @@ document.write(`
 </div>
 <p>We see that the output for the above example is <code class="docutils literal notranslate"><span class="pre">Hey</span> <span class="pre">Pythonist!</span></code>, we have passed just <code class="docutils literal notranslate"><span class="pre">Hey</span></code> for <code class="docutils literal notranslate"><span class="pre">greet_word</span></code> argument, as we have passed object for <code class="docutils literal notranslate"><span class="pre">greet_word</span></code>, it took “Hey” as its value, but coming to <code class="docutils literal notranslate"><span class="pre">name</span></code> argument, we haven’t passed any value to it, so it took default object for <code class="docutils literal notranslate"><span class="pre">name</span></code> as <code class="docutils literal notranslate"><span class="pre">Pythonist!</span></code></p>
 <section id="note-on-default-arguments-with-respect-to-mutable-objects">
-<h2><span class="section-number">20.1. </span>Note on default arguments with respect to mutable objects<a class="headerlink" href="#note-on-default-arguments-with-respect-to-mutable-objects" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.1. </span>Note on default arguments with respect to mutable objects<a class="headerlink" href="#note-on-default-arguments-with-respect-to-mutable-objects" title="Permalink to this heading">#</a></h2>
 <p>In the previous example, we have made default argument values to be string objects, and we already know that string objects are immutable objects and it works really fine as we expected.</p>
 <p>But what would be result if we use mutable objects like lists, dictionary 🤔?</p>
 <div class="cell docutils container">
@@ -537,7 +538,7 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
 </div>
 </section>
 <section id="tidbits">
-<h2><span class="section-number">20.2. </span>Tidbits 💡<a class="headerlink" href="#tidbits" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.2. </span>Tidbits 💡<a class="headerlink" href="#tidbits" title="Permalink to this heading">#</a></h2>
 <p>We can’t assign default arguments to Unnamed positional arguments (VarArgs) and Keyword arguments as there are optional in first place with default values as empty tuple <code class="docutils literal notranslate"><span class="pre">()</span></code> for Unnamed positional arguments and empty dictionary <code class="docutils literal notranslate"><span class="pre">{}</span></code> for Keyword arguments. If we try assigning default argument to Unnamed positional arguments r Keyword arguments, we would see <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> spawned 👻.</p>
 </section>
 </section>
@@ -568,7 +569,10 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="5_Keyword_arguments.html"
@@ -588,7 +592,10 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -613,7 +620,7 @@ Use <code class="docutils literal notranslate"><span class="pre">None</span></co
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -650,7 +657,7 @@ By Prodigious Python
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -659,8 +666,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

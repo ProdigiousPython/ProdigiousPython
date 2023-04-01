@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>14. Comments and Docstrings &#8212; Prodigious Python 🐍</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -74,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="15. Functions" href="../Chapter_4/1_Functions.html" />
     <link rel="prev" title="13. Indentation" href="../Chapter_2/1_Indentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -438,7 +439,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="comments-and-docstrings">
-<h1><span class="section-number">14. </span>Comments and Docstrings<a class="headerlink" href="#comments-and-docstrings" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">14. </span>Comments and Docstrings<a class="headerlink" href="#comments-and-docstrings" title="Permalink to this heading">#</a></h1>
 <p>Comments are used to explain the code. The interpreter doesn’t execute the comments. There are 3 types of comments in Python:</p>
 <ul class="simple">
 <li><p>Single Line</p></li>
@@ -446,21 +447,21 @@ document.write(`
 <li><p>Multi Line</p></li>
 </ul>
 <section id="single-line">
-<h2><span class="section-number">14.1. </span>Single Line<a class="headerlink" href="#single-line" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.1. </span>Single Line<a class="headerlink" href="#single-line" title="Permalink to this heading">#</a></h2>
 <p>Single line comments are written in a single line. Single line comments start with <code class="docutils literal notranslate"><span class="pre">#</span></code></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here&#39;s a single line comment</span>
 </pre></div>
 </div>
 </section>
 <section id="in-line">
-<h2><span class="section-number">14.2. </span>In-Line<a class="headerlink" href="#in-line" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.2. </span>In-Line<a class="headerlink" href="#in-line" title="Permalink to this heading">#</a></h2>
 <p>In-Line comments are written beside the code.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>  <span class="c1"># Here&#39;s a In-Line comment</span>
 </pre></div>
 </div>
 </section>
 <section id="multi-line">
-<h2><span class="section-number">14.3. </span>Multi Line<a class="headerlink" href="#multi-line" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.3. </span>Multi Line<a class="headerlink" href="#multi-line" title="Permalink to this heading">#</a></h2>
 <p>Sometimes we need to write a huge explanation using comments, in those cases we do use multi-line comments. multiline comments are enclosed in <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">'''</span></code></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Here&#39;s a </span>
@@ -470,7 +471,7 @@ document.write(`
 </div>
 </section>
 <section id="docstrings">
-<h2><span class="section-number">14.4. </span>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.4. </span>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this heading">#</a></h2>
 <p>Docstrings are specific type of comments that are stored as a attribute to the module, class, method or function.</p>
 <p>Docstrings are written similar to the multi-line comments using <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span> <span class="pre">'''</span></code>, the only difference would be they are written exactly at the start(first statement) of the module, class, method or function.</p>
 <p>Docstrings can be programmatically accessed using the <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> method or through the built-in function <code class="docutils literal notranslate"><span class="pre">help</span></code>. Let’s give a try 😎.</p>
@@ -484,7 +485,7 @@ document.write(`
 </div>
 </div>
 <section id="using-help">
-<h3><span class="section-number">14.4.1. </span>Using help<a class="headerlink" href="#using-help" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">14.4.1. </span>Using help<a class="headerlink" href="#using-help" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">help</span></code> function provides the docstrings as well as the information about the module, class, method or function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -503,7 +504,7 @@ double_the_value(value: int)
 </div>
 </section>
 <section id="using-doc">
-<h3><span class="section-number">14.4.2. </span>Using <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#using-doc" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">14.4.2. </span>Using <code class="docutils literal notranslate"><span class="pre">__doc__</span></code><a class="headerlink" href="#using-doc" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">double_the_value</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -542,14 +543,14 @@ double_the_value(value: int)
 </section>
 </section>
 <section id="docstrings-for-documentation-of-code">
-<h2><span class="section-number">14.5. </span>Docstrings for documentation of code.<a class="headerlink" href="#docstrings-for-documentation-of-code" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.5. </span>Docstrings for documentation of code.<a class="headerlink" href="#docstrings-for-documentation-of-code" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">PEP-257</a> defines two types of docstrings.</p>
 <ul class="simple">
 <li><p>One-Line docstring</p></li>
 <li><p>Multi-Line docstring</p></li>
 </ul>
 <section id="one-line-docstring">
-<h3><span class="section-number">14.5.1. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#one-line-docstrings">One-Line docstring</a><a class="headerlink" href="#one-line-docstring" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">14.5.1. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#one-line-docstrings">One-Line docstring</a><a class="headerlink" href="#one-line-docstring" title="Permalink to this heading">#</a></h3>
 <p>One-line docstrings are suited for short and simple Modules, classes, methods or functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -562,7 +563,7 @@ double_the_value(value: int)
 </div>
 </section>
 <section id="multi-line-docstring">
-<h3><span class="section-number">14.5.2. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">Multi-Line docstring</a><a class="headerlink" href="#multi-line-docstring" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">14.5.2. </span><a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">Multi-Line docstring</a><a class="headerlink" href="#multi-line-docstring" title="Permalink to this heading">#</a></h3>
 <p>Multi-line docstrings are suited for long, complex Modules, classes, methods or functions</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -582,13 +583,13 @@ double_the_value(value: int)
 </section>
 </section>
 <section id="styles-of-docstrings">
-<h2><span class="section-number">14.6. </span>Styles of docstrings<a class="headerlink" href="#styles-of-docstrings" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.6. </span>Styles of docstrings<a class="headerlink" href="#styles-of-docstrings" title="Permalink to this heading">#</a></h2>
 <p>There are multiple styles of writing docstrings such as <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>, <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Google Python Style Guide</a>, <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">Numpy style</a>.</p>
 <p>We could use any of the above docstrings style as long as we stay consistent.</p>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> is a tool that generated beautiful HTML based documentation 📜 from the docstrings we provide in our code. reStructuredText is the default style, for other styles like Google Python style, numpy we could use plugins like <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">Napoleon</a>.</p>
 <p>Sphinx also provides various templates we can choose from to create the HTML documentation out of it. 😎♥️</p>
 <section id="a-meme-on-documentation">
-<h3><span class="section-number">14.6.1. </span>A meme on Documentation 😂<a class="headerlink" href="#a-meme-on-documentation" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">14.6.1. </span>A meme on Documentation 😂<a class="headerlink" href="#a-meme-on-documentation" title="Permalink to this heading">#</a></h3>
 <p><img alt="Documentation" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_3/resources/documentation.png?raw=true" /></p>
 <p>It’s always good and professional to have our code documented 🙂.</p>
 </section>
@@ -621,7 +622,10 @@ double_the_value(value: int)
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Chapter_2/1_Indentation.html"
@@ -641,7 +645,10 @@ double_the_value(value: int)
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -681,7 +688,7 @@ double_the_value(value: int)
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -718,7 +725,7 @@ By Prodigious Python
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -727,8 +734,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

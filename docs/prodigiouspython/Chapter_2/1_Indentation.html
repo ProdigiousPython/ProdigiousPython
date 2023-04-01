@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>13. Indentation &#8212; Prodigious Python 🐍</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -74,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="14. Comments and Docstrings" href="../Chapter_3/1_Comments_and_docstrings.html" />
     <link rel="prev" title="12. Help Utility" href="../Chapter_1/12_Help_Utility.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -422,7 +423,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="indentation">
-<h1><span class="section-number">13. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">13. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this heading">#</a></h1>
 <p>I have seen memes of people fighting about opening braces, whether they should be starting in the same line or in next line in the programming languages like C, Java etc… 👻</p>
 <p><img alt="Types of using curly braces" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/type_of_using_curly_braces.jpg?raw=true" /></p>
 <p><strong>Python Developers be like:</strong> Hold my Beer 🍺</p>
@@ -456,7 +457,7 @@ document.write(`
 </div>
 <p><a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP-8</a> recommends to use <strong>4 Spaces instead of Tabs</strong>. Although using of Tabs do work, but ensure <strong>not</strong> to mix both tabs and spaces, as you might get <code class="docutils literal notranslate"><span class="pre">TabError</span></code> for such indentations.</p>
 <section id="a-meme-on-indentation">
-<h2><span class="section-number">13.1. </span>A meme on indentation 😜<a class="headerlink" href="#a-meme-on-indentation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">13.1. </span>A meme on indentation 😜<a class="headerlink" href="#a-meme-on-indentation" title="Permalink to this heading">#</a></h2>
 <p>If using a normal text editor like notepad where it doesn’t show the warnings or errors, sometimes we might get errors due to wrong indentation or mix usage of both tabs and spaces, we get an error and it would be tricky to resolve it as it is invisible.</p>
 <p><img alt="Get Error for extra space" src="https://github.com/ProdigiousPython/AssetStore/blob/main/Chapters_1-5/Chapter_2/resources/funny_get_errors_for_extra_space.jpg?raw=true" /></p>
 </section>
@@ -488,7 +489,10 @@ document.write(`
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Chapter_1/12_Help_Utility.html"
@@ -508,7 +512,10 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -532,7 +539,7 @@ document.write(`
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -569,7 +576,7 @@ By Prodigious Python
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -578,8 +585,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

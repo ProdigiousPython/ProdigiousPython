@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>15. Functions &#8212; Prodigious Python 🐍</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -74,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="16. Positional Arguments" href="2_Positional_Arguments.html" />
     <link rel="prev" title="14. Comments and Docstrings" href="../Chapter_3/1_Comments_and_docstrings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -430,7 +431,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="functions">
-<h1><span class="section-number">15. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">15. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
 <p>The purpose of Functions is grouping the code into organised, readable and reusable format. By using the functions, code redundancy can be reduced.</p>
 <p>A soft rule of functions is that, an function should be <strong>Small</strong> and <strong>Do One Thing</strong> mentioned in Clean Code by Robert C. Martin.</p>
 <p>Functions are nothing new to us. We have already used <code class="docutils literal notranslate"><span class="pre">print</span></code> function in our previous lessons, just that it is a built-in function. There are other built-in functions like <code class="docutils literal notranslate"><span class="pre">help</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">sorted</span></code>, <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">reduce</span></code> etc…</p>
@@ -446,7 +447,7 @@ document.write(`
 <p>By convention function names should be in camelcase 🐪 and be a verb.</p>
 <p>Let’s get started with a basic function</p>
 <section id="simple-function">
-<h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
@@ -492,10 +493,10 @@ document.write(`
 </div>
 </section>
 <section id="functions-first-class-objects">
-<h2><span class="section-number">15.2. </span>Functions - First Class Objects<a class="headerlink" href="#functions-first-class-objects" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.2. </span>Functions - First Class Objects<a class="headerlink" href="#functions-first-class-objects" title="Permalink to this heading">#</a></h2>
 <p>In Python 🐍, Functions are First class objects. There are a few criteria defined for an object to be First class object like functions can be passed as argument, assigned to a variable, return a function.</p>
 <section id="passing-the-function-to-a-different-function">
-<h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
@@ -529,7 +530,7 @@ Two Pints of beer 🍺🍺
 <p>Yippeee! We have successfully passed our <code class="docutils literal notranslate"><span class="pre">first_function</span></code> to the <code class="docutils literal notranslate"><span class="pre">second_function</span></code> where <code class="docutils literal notranslate"><span class="pre">first_function</span></code> is being called inside the <code class="docutils literal notranslate"><span class="pre">second_function</span></code></p>
 </section>
 <section id="assigning-the-function-to-a-variable">
-<h3><span class="section-number">15.2.2. </span>Assigning the function to a variable<a class="headerlink" href="#assigning-the-function-to-a-variable" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">15.2.2. </span>Assigning the function to a variable<a class="headerlink" href="#assigning-the-function-to-a-variable" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that we are not calling the function, we are just assigning,</span>
@@ -553,7 +554,7 @@ Two Pints of beer 🍺🍺
 </div>
 </section>
 <section id="returning-a-function">
-<h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lets_return_a_function</span><span class="p">():</span>
@@ -572,7 +573,7 @@ Two Pints of beer 🍺🍺
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7faba0db8e50&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7f8bf44d0280&gt;
 obj name is first_function
 Is obj callable? True
 </pre></div>
@@ -582,7 +583,7 @@ Is obj callable? True
 <p>Cheers again 🍻! We accomplished mission of returning the function. In the above example, we are printing the the <code class="docutils literal notranslate"><span class="pre">obj</span></code> itself which provides the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> representation of the obj, next we are printing the name of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> which is the function name itself, and finally we are checking if our <code class="docutils literal notranslate"><span class="pre">obj</span></code> is callable, if an object is callable, then <code class="docutils literal notranslate"><span class="pre">callable</span></code> function returns <code class="docutils literal notranslate"><span class="pre">True</span></code> else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </section>
 <section id="deletion-of-function-object">
-<h3><span class="section-number">15.2.4. </span>Deletion of function object<a class="headerlink" href="#deletion-of-function-object" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">15.2.4. </span>Deletion of function object<a class="headerlink" href="#deletion-of-function-object" title="Permalink to this heading">#</a></h3>
 <p>As we already know that everything in Python is an object, even function as well is an object. We can even delete our function using the <code class="docutils literal notranslate"><span class="pre">del</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -607,7 +608,7 @@ Is obj callable? True
 </section>
 </section>
 <section id="types-of-arguments">
-<h2><span class="section-number">15.3. </span>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.3. </span>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Permalink to this heading">#</a></h2>
 <p>As we already know we can pass the parameters to the function, we can give a try on those too.. But before trying out, let’s know about the types of Arguments we can define in the function signature. We have the below 4 types of Arguments:</p>
 <ul class="simple">
 <li><p>Positional Arguments</p></li>
@@ -644,7 +645,10 @@ Is obj callable? True
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Chapter_3/1_Comments_and_docstrings.html"
@@ -664,7 +668,10 @@ Is obj callable? True
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -696,7 +703,7 @@ Is obj callable? True
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -733,7 +740,7 @@ By Prodigious Python
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -742,8 +749,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

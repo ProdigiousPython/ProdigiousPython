@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4. Data types &#8212; Prodigious Python 🐍</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,12 +38,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -74,7 +75,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="5. Collection Types" href="5_Collection_Types.html" />
     <link rel="prev" title="3. Python Keywords and allowed Variable names" href="3_Keywords_and_Variable_naming.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -435,12 +436,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-types">
-<h1><span class="section-number">4. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">Kiddo</span> <span class="pre">explanation</span> <span class="pre">😇:</span> </code></p>
 <p>We might use many materials like sand, bricks, concrete to construct a house. These are basic and essential needs to have the construction done and each of them have a specific role or usage.</p>
 <p>Likewise, we need various data types like string, boolean, integer, dictionary etc.. for the development of a code. We need to know where to use a specific data type and it’s functionality.😊</p>
 <p>We have various built-in data types that come out of the box 😎.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Data type</p></th>
 <th class="head"><p>Mutable?</p></th>
@@ -485,10 +486,10 @@ document.write(`
 <p>The First question we would be interested in is “What is Mutable?🤔”.
 If a object can be altered after its creation, then it is Mutable, else Immutable.</p>
 <section id="none">
-<h2><span class="section-number">4.1. </span><strong>None</strong><a class="headerlink" href="#none" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span><strong>None</strong><a class="headerlink" href="#none" title="Permalink to this heading">#</a></h2>
 <p>None is a singleton object, which represents empty or null.</p>
 <section id="example-of-none-usage">
-<h3><span class="section-number">4.1.1. </span><em>Example of None usage</em>:<a class="headerlink" href="#example-of-none-usage" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.1. </span><em>Example of None usage</em>:<a class="headerlink" href="#example-of-none-usage" title="Permalink to this heading">#</a></h3>
 <p>In this example, Let’s try getting the environment variables 😉</p>
 <p>We would be using the <code class="docutils literal notranslate"><span class="pre">os</span></code> module’s <code class="docutils literal notranslate"><span class="pre">getenv</span></code> method to fetch the environment variable’s value, if there isn’t that environment variable, it would be returning <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <div class="cell docutils container">
@@ -520,7 +521,7 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 </section>
 </section>
 <section id="bytes">
-<h2><span class="section-number">4.2. </span><strong>bytes</strong><a class="headerlink" href="#bytes" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span><strong>bytes</strong><a class="headerlink" href="#bytes" title="Permalink to this heading">#</a></h2>
 <p>byte objects are the sequences of bytes, these are machine readable form and can be stored on the disk. Based on the encoding format, the bytes yield results.</p>
 <p>bytes can be converted to string by decoding it, vice-versa is known as encoding.</p>
 <p>bytes objects can be created by prefixing <code class="docutils literal notranslate"><span class="pre">b</span></code> before the string.</p>
@@ -554,7 +555,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </div>
 </section>
 <section id="bool">
-<h2><span class="section-number">4.3. </span><strong>bool</strong><a class="headerlink" href="#bool" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3. </span><strong>bool</strong><a class="headerlink" href="#bool" title="Permalink to this heading">#</a></h2>
 <p>bool objects have only two values: <code class="docutils literal notranslate"><span class="pre">True</span></code>✅ and <code class="docutils literal notranslate"><span class="pre">False</span></code>❌, integer equivalent of True is 1 and for False is 0</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -575,7 +576,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 <p>PS: Boolean values in simple terms mean <strong>Yes</strong> for <code class="docutils literal notranslate"><span class="pre">True</span></code> and <strong>No</strong> for <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </section>
 <section id="int">
-<h2><span class="section-number">4.4. </span><strong>int</strong><a class="headerlink" href="#int" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.4. </span><strong>int</strong><a class="headerlink" href="#int" title="Permalink to this heading">#</a></h2>
 <p>int objects are any mathematical Integers. pretty easy right 😎</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -595,7 +596,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </div>
 </section>
 <section id="float">
-<h2><span class="section-number">4.5. </span><strong>float</strong><a class="headerlink" href="#float" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.5. </span><strong>float</strong><a class="headerlink" href="#float" title="Permalink to this heading">#</a></h2>
 <p>float objects are any rational numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -616,7 +617,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </div>
 </section>
 <section id="complex">
-<h2><span class="section-number">4.6. </span><strong>complex</strong><a class="headerlink" href="#complex" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.6. </span><strong>complex</strong><a class="headerlink" href="#complex" title="Permalink to this heading">#</a></h2>
 <p>complex objects aren’t so complex to understand 😉</p>
 <p>complex objects hold a Real number and an imaginary number.
 While creating the complex object, we would be having a <code class="docutils literal notranslate"><span class="pre">j</span></code> beside the imaginary number.</p>
@@ -646,7 +647,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 </section>
 <section id="str">
-<h2><span class="section-number">4.7. </span><strong>str</strong><a class="headerlink" href="#str" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.7. </span><strong>str</strong><a class="headerlink" href="#str" title="Permalink to this heading">#</a></h2>
 <p>string objects hold an sequence of characters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -663,7 +664,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 </section>
 <section id="tuple">
-<h2><span class="section-number">4.8. </span><strong>tuple</strong><a class="headerlink" href="#tuple" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.8. </span><strong>tuple</strong><a class="headerlink" href="#tuple" title="Permalink to this heading">#</a></h2>
 <p>tuple object is an immutable datatype which can have any datatype objects inside it and is created by enclosing parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code> and objects are separated by a comma.</p>
 <p>Once the tuple object is created, the tuple can’t be modified, although if the objects in the tuple are mutable, they can be changed 😊</p>
 <p>The objects in the tuple are ordered, So the objects in the tuple can be accessed by using its index ranging from 0 to (number of elements - 1).</p>
@@ -696,7 +697,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 </section>
 <section id="list">
-<h2><span class="section-number">4.9. </span><strong>list</strong><a class="headerlink" href="#list" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.9. </span><strong>list</strong><a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
 <p>list objects are similar to tuple, the differences are the list object is mutable, so we can add or remove objects in the list even after its creation. It is created by using <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -727,7 +728,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 </section>
 <section id="set">
-<h2><span class="section-number">4.10. </span><strong>set</strong><a class="headerlink" href="#set" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.10. </span><strong>set</strong><a class="headerlink" href="#set" title="Permalink to this heading">#</a></h2>
 <p>set objects are unordered, unindexed, non repetitive collection of objects.
 Mathematical set theory operations can be applied using set datatype objects. 😊
 it is created by using <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
@@ -743,14 +744,14 @@ it is created by using <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3, 4, 6, &#39;Golang&#39;, 10, &#39;Python&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3, 4, &#39;Golang&#39;, 6, &#39;Python&#39;, 10}
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="dict">
-<h2><span class="section-number">4.11. </span><strong>dict</strong><a class="headerlink" href="#dict" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.11. </span><strong>dict</strong><a class="headerlink" href="#dict" title="Permalink to this heading">#</a></h2>
 <p>dictionary objects are used for creating key-value pairs, Here keys would be unique while values can be repeated.</p>
 <p>The object assigned to a key can be fetched by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;[key]</span></code> which raises a KeyError when no given key is found. The other way to fetch is by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;.get(key)</span></code> which returns <code class="docutils literal notranslate"><span class="pre">None</span></code> by default if no key is found.</p>
 <div class="cell docutils container">
@@ -804,7 +805,10 @@ The result is: None
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="3_Keywords_and_Variable_naming.html"
@@ -824,7 +828,10 @@ The result is: None
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -861,7 +868,7 @@ The result is: None
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -898,7 +905,7 @@ By Prodigious Python
 </div>
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -907,8 +914,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
