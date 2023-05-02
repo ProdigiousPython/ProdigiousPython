@@ -5,13 +5,15 @@ title: Prodigious Python 🐍
 author: Prodigious Python
 logo: logo.png
 email: "mr.naveen8@gmail.com"
+copyright: "2023"
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
   allow_errors: true
-  only_build_toc_files: true
+  
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -29,12 +31,16 @@ repository:
 
 launch_buttons:
   notebook_interface: "jupyterlab"
+  binder_url: https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/develop
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: "favicon.png"
   use_issues_button: true
   use_repository_button: true
+  home_page_in_navbar: true
+  baseurl: "https://prodigiouspython.github.io/ProdigiousPython/"
   google_analytics_id: G-1KZH2STPPK
   extra_footer: |
     <p>
@@ -44,6 +50,6 @@ html:
 
 sphinx:
   config:
-    html_baseurl: 'https://prodigiouspython.github.io/ProdigiousPython/'
+    html_baseurl: https://prodigiouspython.github.io/ProdigiousPython/
   extra_extensions:
     - sphinx_sitemap
