@@ -488,7 +488,7 @@ document.write(`
 If a object can be altered after its creation, then it is Mutable, else Immutable.</p>
 <section id="none">
 <h2><span class="section-number">4.1. </span><strong>None</strong><a class="headerlink" href="#none" title="Permalink to this heading">#</a></h2>
-<p>None is a singleton object, which represents empty or null.</p>
+<p><code class="docutils literal notranslate"><span class="pre">None</span></code> is a singleton object, which represents empty or null.</p>
 <section id="example-of-none-usage">
 <h3><span class="section-number">4.1.1. </span><em>Example of None usage</em>:<a class="headerlink" href="#example-of-none-usage" title="Permalink to this heading">#</a></h3>
 <p>In this example, Let’s try getting the environment variables 😉</p>
@@ -507,9 +507,7 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There is no environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;The value assigned for the environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value assigned for the environment variable named </span><span class="si">{</span><span class="n">new_environment_variable_name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -523,9 +521,9 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 </section>
 <section id="bytes">
 <h2><span class="section-number">4.2. </span><strong>bytes</strong><a class="headerlink" href="#bytes" title="Permalink to this heading">#</a></h2>
-<p>byte objects are the sequences of bytes, these are machine readable form and can be stored on the disk. Based on the encoding format, the bytes yield results.</p>
-<p>bytes can be converted to string by decoding it, vice-versa is known as encoding.</p>
-<p>bytes objects can be created by prefixing <code class="docutils literal notranslate"><span class="pre">b</span></code> before the string.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bytes</span></code> objects are the sequences of bytes, these are machine readable form and can be stored on the disk. Based on the encoding format, the bytes yield results.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bytes</span></code> can be converted to string by decoding it, vice-versa is known as encoding.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bytes</span></code> objects can be created by prefixing <code class="docutils literal notranslate"><span class="pre">b</span></code> before the string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bytes_obj</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;Hello Python Enthusiast!&quot;</span>
@@ -539,9 +537,16 @@ If a object can be altered after its creation, then it is Mutable, else Immutabl
 </div>
 </div>
 </div>
-<p>We see that they are visually the same as string when printed. But actually they are ASCII values, for the convenience of the developer, we see them as human readable strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Need to check the encoding format.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that they are visually the same as string when printed. But actually they are UTF-8 values, for the convenience of the developer, we see them as human readable strings.</p>
 <p>But how to see the actual representation of bytes object? 🤔
-It’s pretty simple 😉! We can typecast the bytes object to a list and we see each character as it’s respective ASCII value.</p>
+It’s pretty simple 😉! We can typecast the bytes object to a list and we see each character as it’s respective UTF-8 value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">bytes_obj</span><span class="p">))</span>
@@ -557,7 +562,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </section>
 <section id="bool">
 <h2><span class="section-number">4.3. </span><strong>bool</strong><a class="headerlink" href="#bool" title="Permalink to this heading">#</a></h2>
-<p>bool objects have only two values: <code class="docutils literal notranslate"><span class="pre">True</span></code>✅ and <code class="docutils literal notranslate"><span class="pre">False</span></code>❌, integer equivalent of True is 1 and for False is 0</p>
+<p><code class="docutils literal notranslate"><span class="pre">bool</span></code> objects have only two values: <code class="docutils literal notranslate"><span class="pre">True</span></code>✅ and <code class="docutils literal notranslate"><span class="pre">False</span></code>❌, integer equivalent of True is 1 and for False is 0</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">do_we_love_python</span> <span class="o">=</span> <span class="kc">True</span>
@@ -578,7 +583,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </section>
 <section id="int">
 <h2><span class="section-number">4.4. </span><strong>int</strong><a class="headerlink" href="#int" title="Permalink to this heading">#</a></h2>
-<p>int objects are any mathematical Integers. pretty easy right 😎</p>
+<p><code class="docutils literal notranslate"><span class="pre">int</span></code> objects are any mathematical Integers. pretty easy right 😎</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integer values can be used for any integer arithmetics.</span>
@@ -598,7 +603,7 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </section>
 <section id="float">
 <h2><span class="section-number">4.5. </span><strong>float</strong><a class="headerlink" href="#float" title="Permalink to this heading">#</a></h2>
-<p>float objects are any rational numbers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">float</span></code> objects are any rational numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Like integer objects float objects are used for decimal arithmetics</span>
@@ -619,9 +624,9 @@ It’s pretty simple 😉! We can typecast the bytes object to a list and we see
 </section>
 <section id="complex">
 <h2><span class="section-number">4.6. </span><strong>complex</strong><a class="headerlink" href="#complex" title="Permalink to this heading">#</a></h2>
-<p>complex objects aren’t so complex to understand 😉</p>
-<p>complex objects hold a Real number and an imaginary number.
-While creating the complex object, we would be having a <code class="docutils literal notranslate"><span class="pre">j</span></code> beside the imaginary number.</p>
+<p><code class="docutils literal notranslate"><span class="pre">complex</span></code> objects aren’t so complex to understand 😉</p>
+<p><code class="docutils literal notranslate"><span class="pre">complex</span></code> objects hold a Real number and an imaginary number.
+While creating the <code class="docutils literal notranslate"><span class="pre">complex</span></code> object, we would be having a <code class="docutils literal notranslate"><span class="pre">j</span></code> beside the imaginary number.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">operand_1</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span><span class="n">j</span>
@@ -636,7 +641,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </div>
 </div>
 </div>
-<p>explanation for the above math: 😉</p>
+<p><em>explanation for the above math:</em> 😉</p>
 <div class="highlight-math notranslate"><div class="highlight"><pre><span></span>(3+4j)*(10+5j)
 3(10+5j) + 4j(10+5j)
 30 + 15j + 40j + 20(j*j)
@@ -649,7 +654,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </section>
 <section id="str">
 <h2><span class="section-number">4.7. </span><strong>str</strong><a class="headerlink" href="#str" title="Permalink to this heading">#</a></h2>
-<p>string objects hold an sequence of characters.</p>
+<p><code class="docutils literal notranslate"><span class="pre">string</span></code> objects hold an sequence of characters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;🐍 Python is cool&quot;</span>
@@ -666,7 +671,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </section>
 <section id="tuple">
 <h2><span class="section-number">4.8. </span><strong>tuple</strong><a class="headerlink" href="#tuple" title="Permalink to this heading">#</a></h2>
-<p>tuple object is an immutable datatype which can have any datatype objects inside it and is created by enclosing parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code> and objects are separated by a comma.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tuple</span></code> object is an immutable datatype which can have any datatype objects inside it and is created by enclosing parenthesis <code class="docutils literal notranslate"><span class="pre">()</span></code> and objects are separated by a comma.</p>
 <p>Once the tuple object is created, the tuple can’t be modified, although if the objects in the tuple are mutable, they can be changed 😊</p>
 <p>The objects in the tuple are ordered, So the objects in the tuple can be accessed by using its index ranging from 0 to (number of elements - 1).</p>
 <div class="cell docutils container">
@@ -684,9 +689,7 @@ While creating the complex object, we would be having a <code class="docutils li
 <span class="c1"># of the existing objects.</span>
 
 <span class="c1"># We can get the values by index.</span>
-<span class="nb">print</span><span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> is released in </span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> is released in </span><span class="si">{</span><span class="n">language_initial_release_year</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -730,7 +733,7 @@ While creating the complex object, we would be having a <code class="docutils li
 </section>
 <section id="set">
 <h2><span class="section-number">4.10. </span><strong>set</strong><a class="headerlink" href="#set" title="Permalink to this heading">#</a></h2>
-<p>set objects are unordered, unindexed, non repetitive collection of objects.
+<p><code class="docutils literal notranslate"><span class="pre">set</span></code> objects are unordered, unindexed, non repetitive collection of objects.
 Mathematical set theory operations can be applied using set datatype objects. 😊
 it is created by using <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
 <p>PS: <code class="docutils literal notranslate"><span class="pre">{}</span></code> denotes a dictionary, we need to use <code class="docutils literal notranslate"><span class="pre">set()</span></code> for creating an empty set, there won’t be this issue when creating set objects containing objects, for example: <code class="docutils literal notranslate"><span class="pre">{1,&quot;a&quot;}</span></code></p>
@@ -745,7 +748,7 @@ it is created by using <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3, 4, 6, 10, &#39;Python&#39;, &#39;Golang&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Python&#39;, 3, 4, 6, &#39;Golang&#39;, 10}
 </pre></div>
 </div>
 </div>
@@ -753,7 +756,7 @@ it is created by using <code class="docutils literal notranslate"><span class="p
 </section>
 <section id="dict">
 <h2><span class="section-number">4.11. </span><strong>dict</strong><a class="headerlink" href="#dict" title="Permalink to this heading">#</a></h2>
-<p>dictionary objects are used for creating key-value pairs, Here keys would be unique while values can be repeated.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dictionary</span></code> objects are used for creating key-value pairs, Here keys would be unique while values can be repeated.</p>
 <p>The object assigned to a key can be fetched by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;[key]</span></code> which raises a KeyError when no given key is found. The other way to fetch is by using <code class="docutils literal notranslate"><span class="pre">&lt;dict_obj&gt;.get(key)</span></code> which returns <code class="docutils literal notranslate"><span class="pre">None</span></code> by default if no key is found.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

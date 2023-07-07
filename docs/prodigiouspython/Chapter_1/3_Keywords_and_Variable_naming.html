@@ -438,8 +438,8 @@ document.write(`
 </div>
 </div>
 <p>Let’s print the keywords present.</p>
-<p>keyword.kwlist returns python’s keywords in a list datatype.</p>
-<p>We are using *(starred) expression to print the values returned by keyword.kwlist each separated by “\n”(newline).</p>
+<p><code class="docutils literal notranslate"><span class="pre">keyword.kwlist</span></code> returns python’s keywords in a list datatype.</p>
+<p>We are using *(starred) expression to print the values returned by <code class="docutils literal notranslate"><span class="pre">keyword.kwlist</span></code> each separated by “\n”(newline).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -488,7 +488,7 @@ yield
 </div>
 <section id="variable-names">
 <h2><span class="section-number">3.1. </span>Variable Names<a class="headerlink" href="#variable-names" title="Permalink to this heading">#</a></h2>
-<p>TLDR:</p>
+<p><strong>TLDR:</strong></p>
 <ul class="simple">
 <li><p>Variable names shouldn’t be same as that of built-in keywords.</p></li>
 <li><p>Variable name shouldn’t start with a number or with a symbol(except “_”, protected and private attributes are created using underscore, 🤔 it’s better to say it as name mangling rather than protected or private. That’s for a different notebook session 😀).</p></li>

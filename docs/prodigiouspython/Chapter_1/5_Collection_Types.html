@@ -678,9 +678,7 @@ Thor
 <span class="c1"># When index argument is passed, it would remove and return the element at that index.</span>
 <span class="c1"># raises IndexError when no object is present at the given Index.</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">last_element</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-    <span class="p">)</span>  <span class="c1"># can be passed index argument value, if required to pop at a specific index.</span>
+    <span class="n">last_element</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># can be passed index argument value, if required to pop at a specific index.</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">last_element</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught IndexError: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -708,7 +706,7 @@ Thor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Naruto&#39;, &#39;One Piece&#39;, &#39;Full Metal Alchemist&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Naruto&#39;, &#39;Death Note&#39;, &#39;One Piece&#39;, &#39;Dragon ball&#39;, &#39;Full Metal Alchemist&#39;}
 </pre></div>
 </div>
 </div>
@@ -722,7 +720,7 @@ Thor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Naruto&#39;, &#39;One Piece&#39;, &#39;Tokyo Ghoul&#39;, &#39;Full Metal Alchemist&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Naruto&#39;, &#39;Tokyo Ghoul&#39;, &#39;Death Note&#39;, &#39;One Piece&#39;, &#39;Dragon ball&#39;, &#39;Full Metal Alchemist&#39;}
 </pre></div>
 </div>
 </div>
@@ -735,14 +733,12 @@ Thor
     <span class="n">anime</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Tokyo Ghoul&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">anime</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;Caught KeyError as there&#39;s given anime series present in the anime set: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught KeyError as there&#39;s given anime series present in the anime set: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Dragon ball&#39;, &#39;Death Note&#39;, &#39;Naruto&#39;, &#39;One Piece&#39;, &#39;Full Metal Alchemist&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Naruto&#39;, &#39;Death Note&#39;, &#39;One Piece&#39;, &#39;Dragon ball&#39;, &#39;Full Metal Alchemist&#39;}
 </pre></div>
 </div>
 </div>
@@ -778,9 +774,7 @@ If there’s no <code class="docutils literal notranslate"><span class="pre">&lt
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">anime_protagonist</span><span class="p">[</span><span class="s2">&quot;Dragon Ball&quot;</span><span class="p">])</span>
 <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;👻 Ouch, KeyError has been raised as no given key is found in the dictionary: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;👻 Ouch, KeyError has been raised as no given key is found in the dictionary: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
