@@ -30,8 +30,10 @@ repository:
   branch: develop  # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
-  notebook_interface: "jupyterlab"
-  binder_url: https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/develop
+  notebook_interface: "jupyterlab" # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository

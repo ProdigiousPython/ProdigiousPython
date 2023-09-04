@@ -264,6 +264,73 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/develop?urlpath=lab/tree/prodigiouspython/Chapter_5/3_Comparison_Operators.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_5/3_Comparison_Operators.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -770,8 +837,8 @@ True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140139308804480
-140139308804480
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140023719550208
+140023719550208
 id of a is equal to id of b: True
 </pre></div>
 </div>
@@ -792,7 +859,7 @@ id of a is equal to id of b: True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140139308889792 and b is 140139308882816
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of a is 140023719557568 and b is 140023719557824
 True
 False
 </pre></div>
@@ -836,7 +903,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140139308884608 and y is 140139308891648
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id of x is 140023719550208 and y is 140023719513600
 True
 </pre></div>
 </div>
@@ -879,8 +946,8 @@ False
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "ProdigiousPython/ProdigiousPython",
+            ref: "develop",
         },
         codeMirrorConfig: {
             theme: "abcdef",

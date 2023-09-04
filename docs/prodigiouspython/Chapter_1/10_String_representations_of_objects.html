@@ -264,6 +264,73 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/ProdigiousPython/ProdigiousPython/develop?urlpath=lab/tree/prodigiouspython/Chapter_1/10_String_representations_of_objects.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ProdigiousPython/ProdigiousPython/blob/develop/prodigiouspython/Chapter_1/10_String_representations_of_objects.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -434,8 +501,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2023, 9, 4, 10, 30, 58, 976586)
-The str of now is: 2023-09-04 10:30:58.976586
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of now is: datetime.datetime(2023, 9, 4, 15, 9, 3, 655082)
+The str of now is: 2023-09-04 15:09:03.655082
 </pre></div>
 </div>
 </div>
@@ -454,8 +521,8 @@ The str of now is: 2023-09-04 10:30:58.976586
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f3aaac290d0&gt;
-The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f3aaac290d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8eee7553d0&gt;
+The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f8eee7553d0&gt;
 </pre></div>
 </div>
 </div>
@@ -485,7 +552,7 @@ The str of language_obj is: &lt;__main__.ProgrammingLanguage object at 0x7f3aaac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f3aaac35b50
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The repr of human_obj is: Human(name=IronMan, age=48) object at 0x7f8eee754250
 The str of human_obj is: I am IronMan of age 48
 </pre></div>
 </div>
@@ -498,8 +565,8 @@ The str of human_obj is: I am IronMan of age 48
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "ProdigiousPython/ProdigiousPython",
+            ref: "develop",
         },
         codeMirrorConfig: {
             theme: "abcdef",
