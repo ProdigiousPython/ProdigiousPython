@@ -594,7 +594,9 @@ The result_2 is False
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 is greater than 4! 😅&quot;</span><span class="p">)</span>  <span class="c1"># This wouldn&#39;t get executed as 3 is not greater than 4.</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;3 is greater than 4! 😅&quot;</span>
+    <span class="p">)</span>  <span class="c1"># This wouldn&#39;t get executed as 3 is not greater than 4.</span>
 <span class="k">elif</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4 is greater than 3! 😊&quot;</span><span class="p">)</span>
 </pre></div>
@@ -718,7 +720,9 @@ The result_2 is False
     <span class="n">func</span><span class="p">()</span>
     <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">]</span>
     <span class="n">func</span><span class="p">()</span>
-    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;Random Key&quot;</span><span class="p">]</span>  <span class="c1"># We don&#39;t have a key called &quot;Random Key&quot;. Hence, it raises KeyError.</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span>
+        <span class="s2">&quot;Random Key&quot;</span>
+    <span class="p">]</span>  <span class="c1"># We don&#39;t have a key called &quot;Random Key&quot;. Hence, it raises KeyError.</span>
 <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ouch, there is no switch for the value: </span><span class="si">{</span><span class="n">exc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>

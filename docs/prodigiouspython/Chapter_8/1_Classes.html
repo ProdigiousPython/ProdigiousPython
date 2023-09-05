@@ -578,7 +578,9 @@ document.write(`
     <span class="k">pass</span>
 
 
-<span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># We can explicitly inherit object, although not required.</span>
+<span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">(</span>
+    <span class="nb">object</span>
+<span class="p">):</span>  <span class="c1"># We can explicitly inherit object, although not required.</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -594,7 +596,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperHero</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span><span class="p">):</span>  <span class="c1"># One of the special/magic/dunder method.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span>
+    <span class="p">):</span>  <span class="c1"># One of the special/magic/dunder method.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Instance attributes.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">power_level</span> <span class="o">=</span> <span class="n">power_level</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">special_power</span> <span class="o">=</span> <span class="n">special_power</span>
