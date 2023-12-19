@@ -1,6 +1,6 @@
 # Prodigious Python
 
-![Prodigious Python cover](https://github.com/ProdigiousPython/AssetStore/blob/main/Prodigious%20Python%20Cover.png?raw=true)
+![Prodigious Python cover](https://prodigiouspython.github.io/ProdigiousPython/assets/Prodigious%20Python%20Cover.png)
 
 🚀 [Homepage](https://prodigiouspython.github.io/ProdigiousPython)
 
