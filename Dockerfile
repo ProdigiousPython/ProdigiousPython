@@ -14,7 +14,7 @@ RUN adduser --disabled-password \
 # Switching to workdirectory.
 WORKDIR ${HOME}
 
-COPY pyproject.toml poetry.lock ${HOME}/
+COPY pyproject.toml poetry.lock README.md ${HOME}/
 
 # Upgrading PIP.
 RUN python -m pip install -U pip
