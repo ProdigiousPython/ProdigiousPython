@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>15. Functions &#8212; Prodigious Python 🐍</title>
   
@@ -19,43 +18,41 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -68,10 +65,22 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-1KZH2STPPK');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'prodigiouspython/Chapter_4/1_Functions';</script>
     <link rel="canonical" href="https://prodigiouspython.github.io/ProdigiousPython/prodigiouspython/Chapter_4/1_Functions.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="16. Positional Arguments" href="2_Positional_Arguments.html" />
@@ -85,10 +94,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -129,11 +137,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -167,7 +178,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -510,10 +532,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="functions">
-<h1><span class="section-number">15. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">15. </span>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h1>
 <p>The purpose of Functions is grouping the code into organised, readable and reusable format. By using the functions, code redundancy can be reduced.</p>
 <p>A soft rule of functions is that, an function should be <strong>Small</strong> and <strong>Do One Thing</strong> mentioned in Clean Code by Robert C. Martin.</p>
 <p>Functions are nothing new to us. We have already used <code class="docutils literal notranslate"><span class="pre">print</span></code> function in our previous lessons, just that it is a built-in function. There are other built-in functions like <code class="docutils literal notranslate"><span class="pre">help</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">sorted</span></code>, <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">reduce</span></code> etc…</p>
@@ -529,7 +551,7 @@ document.write(`
 <p>By convention function names should be in camelcase 🐪 and be a verb.</p>
 <p>Let’s get started with a basic function</p>
 <section id="simple-function">
-<h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
@@ -575,10 +597,10 @@ document.write(`
 </div>
 </section>
 <section id="functions-first-class-objects">
-<h2><span class="section-number">15.2. </span>Functions - First Class Objects<a class="headerlink" href="#functions-first-class-objects" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">15.2. </span>Functions - First Class Objects<a class="headerlink" href="#functions-first-class-objects" title="Link to this heading">#</a></h2>
 <p>In Python 🐍, Functions are First class objects. There are a few criteria defined for an object to be First class object like functions can be passed as argument, assigned to a variable, return a function.</p>
 <section id="passing-the-function-to-a-different-function">
-<h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
@@ -612,7 +634,7 @@ Two Pints of beer 🍺🍺
 <p>Yippeee! We have successfully passed our <code class="docutils literal notranslate"><span class="pre">first_function</span></code> to the <code class="docutils literal notranslate"><span class="pre">second_function</span></code> where <code class="docutils literal notranslate"><span class="pre">first_function</span></code> is being called inside the <code class="docutils literal notranslate"><span class="pre">second_function</span></code></p>
 </section>
 <section id="assigning-the-function-to-a-variable">
-<h3><span class="section-number">15.2.2. </span>Assigning the function to a variable<a class="headerlink" href="#assigning-the-function-to-a-variable" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">15.2.2. </span>Assigning the function to a variable<a class="headerlink" href="#assigning-the-function-to-a-variable" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that we are not calling the function, we are just assigning,</span>
@@ -636,7 +658,7 @@ Two Pints of beer 🍺🍺
 </div>
 </section>
 <section id="returning-a-function">
-<h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lets_return_a_function</span><span class="p">():</span>
@@ -655,7 +677,7 @@ Two Pints of beer 🍺🍺
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7fe058320180&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7f06f019c180&gt;
 obj name is first_function
 Is obj callable? True
 </pre></div>
@@ -665,7 +687,7 @@ Is obj callable? True
 <p>Cheers again 🍻! We accomplished mission of returning the function. In the above example, we are printing the the <code class="docutils literal notranslate"><span class="pre">obj</span></code> itself which provides the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> representation of the obj, next we are printing the name of the <code class="docutils literal notranslate"><span class="pre">obj</span></code> which is the function name itself, and finally we are checking if our <code class="docutils literal notranslate"><span class="pre">obj</span></code> is callable, if an object is callable, then <code class="docutils literal notranslate"><span class="pre">callable</span></code> function returns <code class="docutils literal notranslate"><span class="pre">True</span></code> else <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </section>
 <section id="deletion-of-function-object">
-<h3><span class="section-number">15.2.4. </span>Deletion of function object<a class="headerlink" href="#deletion-of-function-object" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">15.2.4. </span>Deletion of function object<a class="headerlink" href="#deletion-of-function-object" title="Link to this heading">#</a></h3>
 <p>As we already know that everything in Python is an object, even function as well is an object. We can even delete our function using the <code class="docutils literal notranslate"><span class="pre">del</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -690,7 +712,7 @@ Is obj callable? True
 </section>
 </section>
 <section id="types-of-arguments">
-<h2><span class="section-number">15.3. </span>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">15.3. </span>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Link to this heading">#</a></h2>
 <p>As we already know we can pass the parameters to the function, we can give a try on those too.. But before trying out, let’s know about the types of Arguments we can define in the function signature. We have the below 4 types of Arguments:</p>
 <ul class="simple">
 <li><p>Positional Arguments</p></li>
@@ -757,6 +779,7 @@ Is obj callable? True
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -828,8 +851,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>27. Loops &#8212; Prodigious Python 🐍</title>
   
@@ -19,43 +18,41 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -68,10 +65,22 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-1KZH2STPPK');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'prodigiouspython/Chapter_7/1_Loops';</script>
     <link rel="canonical" href="https://prodigiouspython.github.io/ProdigiousPython/prodigiouspython/Chapter_7/1_Loops.html" />
-    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="28. Class" href="../Chapter_8/1_Classes.html" />
@@ -85,10 +94,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -129,11 +137,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -167,7 +178,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -514,10 +536,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="loops">
-<h1><span class="section-number">27. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">27. </span>Loops<a class="headerlink" href="#loops" title="Link to this heading">#</a></h1>
 <p>I just had an heated argument 🔥 with my girlfriend. I need to write 5 times <strong>I love you ❤️</strong> as punishment. Let’s start writing 🙁</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -573,7 +595,7 @@ I love you ❤️
 </ul>
 <p>To exit the loops explicitly, we can use <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword. <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword exits the right loop which it is indented in.</p>
 <section id="while">
-<h2><span class="section-number">27.1. </span><code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">27.1. </span><code class="docutils literal notranslate"><span class="pre">while</span></code><a class="headerlink" href="#while" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop also works based on the Truth values of the condition/object, if the truth value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the loop continues to execute, else breaks the loop. The syntax of <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">&lt;</span><span class="n">condtion</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">...</span>
@@ -612,7 +634,7 @@ I love you ❤️
 <p><code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">+=</span> <span class="pre">1</span></code>, don’t forget this unless you want to get into infinite loop 😬. For each iteration in <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, <code class="docutils literal notranslate"><span class="pre">number</span></code> increments by 1, once the number is incremented to 21, the while loop breaks and doesn’t execute anymore as it is resulting Falsy for the condition <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code>.</p>
 </section>
 <section id="for">
-<h2><span class="section-number">27.2. </span><code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">27.2. </span><code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#for" title="Link to this heading">#</a></h2>
 <p>We have another loop called <code class="docutils literal notranslate"><span class="pre">for</span></code>, which is used for iterating over the iterator or sequences like <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> etc..</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,7 +695,7 @@ n
 </div>
 </section>
 <section id="nested-loops">
-<h2><span class="section-number">27.3. </span>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">27.3. </span>Nested loops<a class="headerlink" href="#nested-loops" title="Link to this heading">#</a></h2>
 <p>Just now my lecturer gave me an assignment to find factorial for a few numbers 2, 6, 7, 8, 9, 10. Might be my lecturer doesn’t knew how easily we could use nested-loops to find the factorial of each number given.</p>
 <p>First things first, what are nested-loops? The name itself is self explanatory 😎, loop containing a loop is called nested loop. Yup, we got to know about it. let’s start solving the assignment ⚡️.</p>
 <div class="cell docutils container">
@@ -702,13 +724,13 @@ Factorial of 10 is 3628800
 <p>Yup! We did it 😊! We used first <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each number which are given as in our assignment, in the nested for loop, we are ranging from 0 to the number(exclusive) and multiplying each number <code class="docutils literal notranslate"><span class="pre">num</span></code> in the nested for loop. Once the nested for loop is exhausted, we are printing the result for the factorial of the number. In this way nested loops work. Same applies to the <code class="docutils literal notranslate"><span class="pre">while</span></code> loops.</p>
 </section>
 <section id="break-and-continue">
-<h2><span class="section-number">27.4. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">27.4. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> are used to explicitly control the flow of loops by residing in the loop.</p>
 <p>If all the objects in the iteration are completed or while condition turns falsy, the loop gets exited, but if we want to exit the loop explicitly or before completion of all objects in the loop, <code class="docutils literal notranslate"><span class="pre">break</span></code> comes in handy. we just need to have a break statement as <code class="docutils literal notranslate"><span class="pre">break</span></code> and the nearest enclosing loop in which this <code class="docutils literal notranslate"><span class="pre">break</span></code> is present exits.</p>
 <p><code class="docutils literal notranslate"><span class="pre">continue</span></code> in a loop stop s the execution of the next code in the current iteration and starts the next iteration of the enclosing loop.</p>
 <p>🙈 Sometimes sentences make the explanation harder to understand. In this case, it’s better to understand using examples.</p>
 <section id="break">
-<h3><span class="section-number">27.4.1. </span><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">27.4.1. </span><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Link to this heading">#</a></h3>
 <p>I want to know if a particular number is present in a list or not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,7 +785,7 @@ We are checking on the number: 8
 </div>
 </section>
 <section id="continue">
-<h3><span class="section-number">27.4.2. </span><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">27.4.2. </span><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements skips execution of the code present after it and continues to execute the next iteration of the loop.</p>
 <p>I am now in a shopping mall, picked a lot of items and now reached the billing counter, just got to remember that I just have 100 bucks with me 😱. I started looking at the cumulative total one by one being billed at the counter. I am good unless the bill crosses 100 bucks.</p>
 <div class="cell docutils container">
@@ -795,14 +817,14 @@ We are checking on the number: 8
 </section>
 </section>
 <section id="hidden-treasures-in-looping">
-<h2><span class="section-number">27.5. </span>Hidden treasures in looping 💰<a class="headerlink" href="#hidden-treasures-in-looping" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">27.5. </span>Hidden treasures in looping 💰<a class="headerlink" href="#hidden-treasures-in-looping" title="Link to this heading">#</a></h2>
 <p>There are a few things that few people miss out to know about while learning loops in Python, I was one of them 😅. Let’s see what did we miss:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> block after loops</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> effect in loops having <code class="docutils literal notranslate"><span class="pre">finally</span></code> blocks</p></li>
 </ul>
 <section id="else-block-after-loops">
-<h3><span class="section-number">27.5.1. </span><code class="docutils literal notranslate"><span class="pre">else</span></code> block after loops<a class="headerlink" href="#else-block-after-loops" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">27.5.1. </span><code class="docutils literal notranslate"><span class="pre">else</span></code> block after loops<a class="headerlink" href="#else-block-after-loops" title="Link to this heading">#</a></h3>
 <p>The first question I had when I got to see code having <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">loop</span></code> <strong>What the heck is else doing here?</strong>, but later I got to know that else can be used after the loop. Well, what does it do? We just got to know about the use of <code class="docutils literal notranslate"><span class="pre">break</span></code> in the loops, right? If the loop explicitly exits by the keyword <code class="docutils literal notranslate"><span class="pre">break</span></code>, the <code class="docutils literal notranslate"><span class="pre">else</span></code> block <strong>doesn’t</strong> gets executed, else <code class="docutils literal notranslate"><span class="pre">else</span></code> block gets executed. let’s see an example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -846,7 +868,7 @@ We are checking on the number: 8
 </div>
 </section>
 <section id="break-and-continue-effect-in-loops-having-finally-blocks">
-<h3><span class="section-number">27.5.2. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> effect in loops having <code class="docutils literal notranslate"><span class="pre">finally</span></code> blocks<a class="headerlink" href="#break-and-continue-effect-in-loops-having-finally-blocks" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">27.5.2. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> effect in loops having <code class="docutils literal notranslate"><span class="pre">finally</span></code> blocks<a class="headerlink" href="#break-and-continue-effect-in-loops-having-finally-blocks" title="Link to this heading">#</a></h3>
 <p>If the loop consists of <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">except</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> or <code class="docutils literal notranslate"><span class="pre">try</span></code>-<code class="docutils literal notranslate"><span class="pre">finally</span></code> block. If either <code class="docutils literal notranslate"><span class="pre">break</span></code> or <code class="docutils literal notranslate"><span class="pre">continue</span></code> is executed, the interpreter reaches the <code class="docutils literal notranslate"><span class="pre">finally</span></code> block to execute the code present in it before breaking or continuing the loop.</p>
 <p><code class="docutils literal notranslate"><span class="pre">break</span></code></p>
 <div class="cell docutils container">
@@ -944,6 +966,7 @@ We are checking on the number: 8
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -1018,8 +1041,8 @@ By Prodigious Python
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
