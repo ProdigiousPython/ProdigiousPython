@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -536,7 +536,7 @@ document.write(`
 <p>Let’s start by creating a simplest possible class 😎</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">IAmASimpleClass</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -545,7 +545,7 @@ document.write(`
 <p>Yipee! We did it 😬. Let’s confirm it 👇</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">inspect</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IAmASimpleClass is class: </span><span class="si">{</span><span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="n">IAmASimpleClass</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -605,11 +605,11 @@ document.write(`
 <p>We all must have already heard or read that <strong>In Python everything is an Object</strong>. Well, the culprit in the above example is the class <code class="docutils literal notranslate"><span class="pre">object</span></code> ⚔️. All the above attributes or methods in the output are inherited from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>. In Python3, by default every class inherits <code class="docutils literal notranslate"><span class="pre">object</span></code> class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">:</span>  <span class="c1"># Python3 takes care of inheriting object.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">IAmASimpleClass</span><span class="p">:</span>  <span class="c1"># Python3 takes care of inheriting object.</span>
     <span class="k">pass</span>
 
 
-<span class="k">class</span> <span class="nc">IAmASimpleClass</span><span class="p">(</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">IAmASimpleClass</span><span class="p">(</span>
     <span class="nb">object</span>
 <span class="p">):</span>  <span class="c1"># We can explicitly inherit object, although not required.</span>
     <span class="k">pass</span>
@@ -626,15 +626,15 @@ document.write(`
 <p>As we have reached our first milestone of creating a simple class, let’s get to know a bit more about class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperHero</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SuperHero</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span>
     <span class="p">):</span>  <span class="c1"># One of the special/magic/dunder method.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Instance attributes.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">power_level</span> <span class="o">=</span> <span class="n">power_level</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">special_power</span> <span class="o">=</span> <span class="n">special_power</span>
 
-    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Method.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># Method.</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hey! I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, my special power is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">special_power</span><span class="si">}</span><span class="s2"> and have a crazy power level of </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">power_level</span><span class="si">}</span><span class="s2"> 🔥&quot;</span>
 </pre></div>
 </div>
@@ -646,7 +646,7 @@ document.write(`
 <h3><span class="section-number">28.1.1. </span><code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#init" title="Link to this heading">#</a></h3>
 <p>The first line inside our class <code class="docutils literal notranslate"><span class="pre">SuperHero</span></code>, we see a function(actually a method) called <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. This is one of the special/magic/dunder methods present in Python classes. Whenever we try to create a new instance of class, <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method gets called.</p>
 <p>But, what is the role of parameters in the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> signature as?</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">power_level</span><span class="p">,</span> <span class="n">special_power</span><span class="p">):</span>
 </pre></div>
 </div>
 <p>While creating objects for our class, we pass the parameters as:</p>

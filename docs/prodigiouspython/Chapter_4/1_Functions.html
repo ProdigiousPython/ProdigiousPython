@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -535,7 +535,7 @@ document.write(`
 <p>A soft rule of functions is that, an function should be <strong>Small</strong> and <strong>Do One Thing</strong> mentioned in Clean Code by Robert C. Martin.</p>
 <p>Functions are nothing new to us. We have already used <code class="docutils literal notranslate"><span class="pre">print</span></code> function in our previous lessons, just that it is a built-in function. There are other built-in functions like <code class="docutils literal notranslate"><span class="pre">help</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">sorted</span></code>, <code class="docutils literal notranslate"><span class="pre">map</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">reduce</span></code> etc…</p>
 <p>In Python functions are created by using the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> followed by the function name and if required parameters.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function_name</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
     <span class="c1"># statements...</span>
     <span class="o">...</span>
     <span class="o">...</span>
@@ -549,7 +549,7 @@ document.write(`
 <h2><span class="section-number">15.1. </span>Simple function<a class="headerlink" href="#simple-function" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello Pythoneer! 😎&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -571,7 +571,7 @@ document.write(`
 <p>We could return objects from the function using the keyword <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
     <span class="k">return</span> <span class="s2">&quot;Hello Pythoneer! 😎&quot;</span>
 </pre></div>
 </div>
@@ -598,7 +598,7 @@ document.write(`
 <h3><span class="section-number">15.2.1. </span>Passing the function to a different function<a class="headerlink" href="#passing-the-function-to-a-different-function" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">first_function</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One Pint of 🍺&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -606,7 +606,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">second_function</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">second_function</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
     <span class="n">func</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Two Pints of beer 🍺🍺&quot;</span><span class="p">)</span>
 </pre></div>
@@ -656,7 +656,7 @@ Two Pints of beer 🍺🍺
 <h3><span class="section-number">15.2.3. </span>Returning a function<a class="headerlink" href="#returning-a-function" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lets_return_a_function</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">lets_return_a_function</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">first_function</span>
 </pre></div>
 </div>
@@ -672,7 +672,7 @@ Two Pints of beer 🍺🍺
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7e34fa1c94e0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>obj is &lt;function first_function at 0x7dc8b3d765c0&gt;
 obj name is first_function
 Is obj callable? True
 </pre></div>

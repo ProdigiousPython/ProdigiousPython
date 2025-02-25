@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -823,7 +823,7 @@ We are checking on the number: 8
 <p>The first question I had when I got to see code having <code class="docutils literal notranslate"><span class="pre">else</span></code> block after a <code class="docutils literal notranslate"><span class="pre">loop</span></code> <strong>What the heck is else doing here?</strong>, but later I got to know that else can be used after the loop. Well, what does it do? We just got to know about the use of <code class="docutils literal notranslate"><span class="pre">break</span></code> in the loops, right? If the loop explicitly exits by the keyword <code class="docutils literal notranslate"><span class="pre">break</span></code>, the <code class="docutils literal notranslate"><span class="pre">else</span></code> block <strong>doesn’t</strong> gets executed, else <code class="docutils literal notranslate"><span class="pre">else</span></code> block gets executed. let’s see an example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_else</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">loop_else</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>

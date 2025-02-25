@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-1KZH2STPPK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -522,14 +522,14 @@ document.write(`
 </ul>
 <p>Let’s give it a shot with all the above arguments in a function 😎</p>
 <p>The complete syntax of a function eliding varargs and keyword arguments defined in <a class="reference external" href="https://www.python.org/dev/peps/pep-0570/">PEP-570</a> would be as:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">positional_only_parameters</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">positional_or_keyword_parameters</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_parameters</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="n">positional_only_parameters</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">positional_or_keyword_parameters</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">keyword_only_parameters</span><span class="p">):</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Example:</span></code></p>
 <p>Let’s build a complete function with all the types of arguments 😎.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">positional_only</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;🐍&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">varargs</span><span class="p">,</span> <span class="n">keyword_only</span><span class="p">,</span> <span class="o">**</span><span class="n">keyword</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">positional_only</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;🐍&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">varargs</span><span class="p">,</span> <span class="n">keyword_only</span><span class="p">,</span> <span class="o">**</span><span class="n">keyword</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">positional_only</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">position</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">varargs</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
